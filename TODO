@@ -1,0 +1,28 @@
+TODO list for OggConvert
+------------------------
+
+* Come up with a name which sucks less
+ 
+* Make the MediaChecker class callback based rather than blocking as a present
+
+* Add a preroll timeout -- currently OggConvert hangs in a rather ugly manner if
+  the pipeline gets stuck.
+  
+* Add a check to see whether encoding has stalled (whether the position has
+  changed since the last update should be sufficient). Some pipelines, for whatever
+  reason, write about 100k of the target file and then just hang
+  
+* Start using Python logging, and a command line option to display this
+
+* Add support for schroenc
+
+* If the input file already contains a theora/vorbis stream, copy it rather than
+  reencoding (or better, ask the user what they want to do). Decodebin2 will
+  make this much easier
+  
+* Rewrite in C so that we use about a quarter of the memory!
+
+* Ask someone very nicely to draw a Tango-ish icon
+
+* What about a PyQt front-end too? (Possible licence difficulties?) Or wxPython
+  for Windows and MacOS?
