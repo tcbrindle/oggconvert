@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=OggConvert
+Comment=Convert media files to Free formats
+Type=Application
+Exec=oggconvert
+Categories=Application;AudioVideo;
+Terminal=false
+StartupNotify=false

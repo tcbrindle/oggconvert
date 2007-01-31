@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.0.2 on Wed Jan 24 16:17:35 2007 by tristan@jetengine-edgy32-->
+<!--Generated with glade3 3.0.2 on Wed Jan 31 23:22:23 2007 by tristan@jetengine-->
 <glade-interface>
   <widget class="GtkWindow" id="app_window">
+    <property name="title">OggConvert</property>
     <property name="resizable">False</property>
-    <signal name="destroy_event" handler="on_app_window_destroy"/>
+    <property name="destroy_with_parent">True</property>
+    <signal name="delete_event" handler="on_app_window_delete"/>
     <child>
       <widget class="GtkVBox" id="vbox1">
         <property name="visible">True</property>
@@ -55,12 +57,11 @@
                 <child>
                   <widget class="GtkAlignment" id="alignment2">
                     <property name="visible">True</property>
-                    <property name="top_padding">6</property>
                     <property name="left_padding">12</property>
                     <child>
                       <widget class="GtkTable" id="table1">
                         <property name="visible">True</property>
-                        <property name="n_rows">2</property>
+                        <property name="n_rows">3</property>
                         <property name="n_columns">2</property>
                         <property name="column_spacing">12</property>
                         <property name="row_spacing">6</property>
@@ -74,8 +75,8 @@
                           <packing>
                             <property name="left_attach">1</property>
                             <property name="right_attach">2</property>
-                            <property name="top_attach">1</property>
-                            <property name="bottom_attach">2</property>
+                            <property name="top_attach">2</property>
+                            <property name="bottom_attach">3</property>
                           </packing>
                         </child>
                         <child>
@@ -88,6 +89,8 @@
                           <packing>
                             <property name="left_attach">1</property>
                             <property name="right_attach">2</property>
+                            <property name="top_attach">1</property>
+                            <property name="bottom_attach">2</property>
                           </packing>
                         </child>
                         <child>
@@ -96,8 +99,8 @@
                             <property name="label" translatable="yes">Audio Quality:</property>
                           </widget>
                           <packing>
-                            <property name="top_attach">1</property>
-                            <property name="bottom_attach">2</property>
+                            <property name="top_attach">2</property>
+                            <property name="bottom_attach">3</property>
                             <property name="x_options">GTK_FILL</property>
                           </packing>
                         </child>
@@ -107,7 +110,32 @@
                             <property name="label" translatable="yes">Video Quality:</property>
                           </widget>
                           <packing>
+                            <property name="top_attach">1</property>
+                            <property name="bottom_attach">2</property>
                             <property name="x_options">GTK_FILL</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="format_label">
+                            <property name="no_show_all">True</property>
+                            <property name="label" translatable="yes">Video Format:</property>
+                          </widget>
+                          <packing>
+                            <property name="x_options">GTK_FILL</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkComboBox" id="format_combobox">
+                            <property name="no_show_all">True</property>
+                            <property name="tooltip" translatable="yes">Dirac: Better quality, slower encode, still experimental
+Theora: Faster encoding, better compatability, lower quality</property>
+                            <property name="items" translatable="yes">Theora
+Dirac</property>
+                          </widget>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="right_attach">2</property>
+                            <property name="y_padding">6</property>
                           </packing>
                         </child>
                       </widget>
@@ -275,6 +303,7 @@
     <property name="title" translatable="yes">Ogg Converter</property>
     <property name="resizable">False</property>
     <property name="transient_for">app_window</property>
+    <signal name="delete_event" handler="on_progress_window_delete"/>
     <child>
       <widget class="GtkVBox" id="vbox2">
         <property name="visible">True</property>
@@ -315,6 +344,19 @@
                 <property name="show_text">True</property>
                 <property name="text" translatable="yes"></property>
               </widget>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="convert_label">
+                <property name="visible">True</property>
+                <property name="xalign">0</property>
+                <property name="use_markup">True</property>
+                <property name="ellipsize">PANGO_ELLIPSIZE_END</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">1</property>
+              </packing>
             </child>
           </widget>
           <packing>

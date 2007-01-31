@@ -1,0 +1,25 @@
+
+OggConvert 0.1
+--------------
+
+This is the first alpha release of OggConvert, a simple Gnome utility to convert
+media files into the patent-free Theora and Vorbis formats.
+
+OggConvert is written in Python using PyGTK and PyGST. It is released under the 
+GNU LGPL.
+
+
+
+Known issues with this release:
+
+* With GStreamer 0.10.10 (the version used in Ubuntu Edgy), transcoding from
+  certain containers (Matroka and ASF in particular) will result in very choppy
+  audio. This is fixed for GStreamer 0.10.11 (included in Feisty).
+  
+* OggConvert uses the GStreamer decodebin, so it *should* be able to convert any
+  file which is playable in Totem. However, there is currently a problem with
+  files which use the pitfdll/W32codecs package, whereby the pipeline doesn't
+  preroll and OggConvert just hangs. I'm still investigating why this happens.
+  
+* OggConvert should Just Work(tm) with the Fluendo codec packages. However, I 
+  don't own a copy of these plugins, so it hasn't been tested.

@@ -53,7 +53,7 @@ def timeremaining(elapsed, percent):
             return "%s %s" %(h_string, m_string)
         elif secs_rem > 180:
             return "%s" %(m_string)
-        elif secs_rem > 60:
+        elif secs_rem > 59:
             return "%s %s" %(m_string, s_string)
         else:
             return "%s" %(s_string)
@@ -86,4 +86,52 @@ def confirm_overwrite(path, window=None):
     response = dialogue.run()
     dialogue.destroy()
     if response ==1: return True
+    else: return False
+    
+def dirac_warning(window=None):
+    """
+    Displays a warning box asking the user to make sure they realise Dirac is
+    experimental.
+    Returns True if the user chooses to continue, False otherwise
+    """
+    
+    dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_WARNING,
+                 gtk.BUTTONS_NONE, "Dirac encoding still experimental")
+                 
+    dialogue.format_secondary_text("The Dirac encoder is still experimental. \
+Files you convert with this version may not be viewable with future versions \
+of the decoder.")
+
+    dialogue.add_buttons(gtk.STOCK_CANCEL, 0, "_Continue", 1)
+    response = dialogue.run()
+    dialogue.destroy()
+    if response==1: return True
+    else: return False
+    
+def stall_warning(window=None):
+    """
+    Displays a box warning the user that encoding has stalled, and they should
+    quit
+    """
+    
+    dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_WARNING,
+                gtk.BUTTONS_CLOSE, "Encoding seems to have stalled")
+    
+    # Three sentences. Too much?
+    dialogue.format_secondary_text("If encoding was nearly complete, then it probably finished successfully. At other times, it means there has was problem with the encoder. In either case, it is recommended you cancel the encoding process and check the output file.")
+    dialogue.run()
+    dialogue.destroy()
+    
+def cancel_check(window=None):
+
+    dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_QUESTION,
+                gtk.BUTTONS_NONE, "Are you sure you wish to cancel?")
+    
+    dialogue.format_secondary_text("Encoding is not complete. Are you sure you wish to cancel?")
+    
+    dialogue.add_buttons("_Continue", 0, "C_ancel", 1)
+    
+    response = dialogue.run()
+    dialogue.destroy()
+    if response==1: return True
     else: return False

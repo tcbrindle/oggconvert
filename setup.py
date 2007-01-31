@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 #
 #
 # OggConvert -- Converts media files to Free formats
@@ -19,24 +20,21 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-import pygst
-pygst.require("0.10")
-import gst
-import ocv_constants
-
-gstver = gst.version()
-
-if ocv_constants.USE_AUDIORATE == None:
-    if gstver[2] > 10:
-        ocv_constants.USE_AUDIORATE = True
-    else:
-        ocv_constants.USE_AUDIORATE = False
+from distutils.core import setup
 
 
-if ocv_constants.HAVE_SCHRO == None:
-    ocv_constants.HAVE_SCHRO = False
-    if gstver[2] > 10:
-        if not gst.element_factory_find("schroenc")==None:
-            print "Schroedinger encoder found, using"
-            ocv_constants.HAVE_SCHRO = True
 
+setup(name='oggconvert',
+      version='0.1.0',
+      author='Tristan Brindle',
+      author_email='t.c.brindle at gmail dot com',
+      maintainer= 'Tristan Brindle',
+      maintainer_email = 't.c.brindle at gmail dot com',
+      description='A simple Gnome application to convert media to Free formats',
+      url = 'http://launchpad.net/oggconvert',
+      license='GNU LGPL',
+      packages=['OggConvert'],
+      package_data={'OggConvert' : ['*.glade']},
+      scripts=['oggconvert'],
+      data_files=[('share/applications/', ['oggconvert.desktop'])]
+     )

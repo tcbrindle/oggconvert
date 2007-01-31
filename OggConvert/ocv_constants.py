@@ -26,11 +26,15 @@
 # If you want to override this for any reason, you can set this to True of False
 # as appropriate. Be warned that setting this to True for GStreamer versions 
 # older than 0.10.11 is likely to stop the pipeline working completely.
+USE_AUDIORATE = None
 
-USE_AUDIORATE = False
+# Leave this set to None to have OggConvert detect whether schroenc is installed
+# on this computer. This is recommended. If you really want to though, you can
+# set this to True or False as you like. Be aware that setting it to True when
+# schroenc doesn't exist will cause problems if you try to encode to Dirac
+HAVE_SCHRO = None
 
-
-
+FORMATS = ["THEORA", "SCHRO"]
 
 THEORA_QUALITY_MAPPING = {1 : 1
                         , 2 : 7
@@ -61,3 +65,5 @@ VORBIS_QUALITY_MAPPING = {1 : 0.1
 VORBIS_OPTS = {}
 
 OGGMUX_OPTS = {}
+
+SCHRO_OPTS = {}
