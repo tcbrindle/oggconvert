@@ -22,6 +22,7 @@
 
 import gtk
 import os.path
+import ocv_info
 
 def timeremaining(elapsed, percent):
     """Returns a string with the remaining time for an operation.        
@@ -82,10 +83,10 @@ def confirm_overwrite(path, window=None):
     dirname = os.path.basename(os.path.dirname(path)) # Urgh!
     dialogue.format_secondary_text("The file already exists in \"%s\". Replacing it will overwrite its contents." %dirname)
     
-    dialogue.add_buttons(gtk.STOCK_CANCEL, 0, "_Replace", 1)
+    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, "_Replace", gtk.RESPONSE_OK)
     response = dialogue.run()
     dialogue.destroy()
-    if response ==1: return True
+    if response ==gtk.RESPONSE_OK: return True
     else: return False
     
 def dirac_warning(window=None):
@@ -102,10 +103,10 @@ def dirac_warning(window=None):
 Files you convert with this version may not be viewable with future versions \
 of the decoder.")
 
-    dialogue.add_buttons(gtk.STOCK_CANCEL, 0, "_Continue", 1)
+    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, "Contin_ue", gtk.RESPONSE_OK)
     response = dialogue.run()
     dialogue.destroy()
-    if response==1: return True
+    if response==gtk.RESPONSE_OK: return True
     else: return False
     
 def stall_warning(window=None):
@@ -123,15 +124,35 @@ def stall_warning(window=None):
     dialogue.destroy()
     
 def cancel_check(window=None):
-
+    """
+    Pops up a dialogue box asking if the user is sure they want to stop encoding
+    Returns True if to stop, False otherwise
+    """
     dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_QUESTION,
-                gtk.BUTTONS_NONE, "Are you sure you wish to cancel?")
+                gtk.BUTTONS_NONE, "Encoding is not complete")
     
-    dialogue.format_secondary_text("Encoding is not complete. Are you sure you wish to cancel?")
+    dialogue.format_secondary_text("Are you sure you wish to cancel?")
     
-    dialogue.add_buttons("_Continue", 0, "C_ancel", 1)
+    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, "Contin_ue", gtk.RESPONSE_OK)
     
     response = dialogue.run()
     dialogue.destroy()
-    if response==1: return True
+    if response==gtk.RESPONSE_CANCEL: return True
     else: return False
+    
+def about_dialogue(window=None):
+    """
+    Pops up a standard GTK About dialogue. Grabs all the info from ocv_info
+    """
+    dialogue = gtk.AboutDialog()
+    dialogue.set_transient_for(window)
+    
+    dialogue.set_name("OggConvert")
+    dialogue.set_authors(ocv_info.authors)
+    dialogue.set_version(ocv_info.version)
+    dialogue.set_copyright(ocv_info.copyright)
+    dialogue.set_license(ocv_info.licence) # Learn to spell!
+    
+    dialogue.run()
+    dialogue.destroy()
+    

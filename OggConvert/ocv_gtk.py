@@ -28,7 +28,7 @@ import os
 import os.path
 from ocv_gst import Transcoder, MediaChecker
 from ocv_util import timeremaining, hourminsec, confirm_overwrite, \
-                dirac_warning, stall_warning, cancel_check
+                dirac_warning, stall_warning, cancel_check, about_dialogue
 import ocv_constants
 
 
@@ -44,6 +44,7 @@ class Main:
 #                  ,"on_app_window_destroy" : self._on_quit
                   ,"on_app_window_delete" : self._on_quit
                   ,"on_filechooserbutton_selection_changed" : self._on_file_changed
+                  ,"on_about_clicked" : self._about
                   }
         
         self._window = self._wtree.get_widget("app_window")
@@ -79,8 +80,6 @@ class Main:
         allgood = True
         # Check destination is writable
         if not os.access(self._outfile_folder, os.W_OK):
-            print self._outfile_folder
-            print os.access(self._outfile_folder, os.W_OK)
             dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
                                 gtk.MESSAGE_ERROR,
                                 gtk.BUTTONS_CLOSE,
@@ -94,6 +93,17 @@ class Main:
         if (os.path.exists(self._outfile) & allgood):
             if not confirm_overwrite(self._outfile, self._window):
                 allgood = False
+        
+        # Check to make sure we're not trying to read & write the same file
+        if os.path.samefile(self._outfile, self._input_file):
+            dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
+                                gtk.MESSAGE_ERROR,
+                                gtk.BUTTONS_CLOSE,
+                                "Using the same file for input and output")
+            dialogue.format_secondary_text("Choose a different name for the save file, or save to a different location.")
+            dialogue.run()
+            dialogue.destroy()            
+            allgood = False            
         
         # If Dirac is selected, flash up a warning to show it's experimental
         format = ocv_constants.FORMATS[int(self._format_combobox.get_active())]        
@@ -150,6 +160,8 @@ class Main:
         self._save_folder_button.set_current_folder(self._outfile_folder)
                 
                 
+    def _about(self, button):
+        about_dialogue(self._window)
     
     def _set_up_filechooser(self):     
         video = gtk.FileFilter()

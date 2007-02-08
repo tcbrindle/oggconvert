@@ -1,16 +1,44 @@
 
-OggConvert 0.1
---------------
+OggConvert 0.2.0
+----------------
 
-This is the first alpha release of OggConvert, a simple Gnome utility to convert
-media files into the patent-free Theora and Vorbis formats.
+This is the second release of OggConvert, a simple Gnome utility to convert
+media files into the patent-free Theora, Dirac and Vorbis formats.
+
+Dirac encoding requires GStreamer 0.10.11 and the Schroedinger encoder. Be aware
+that the encoder is still experimental, and that videos you encode today might
+not be watchable in future as the decoder develops.
 
 OggConvert is written in Python using PyGTK and PyGST. It is released under the 
 GNU LGPL.
 
 
+What's new in this version:
+---------------------------
+
+* Support for Dirac. Wooo!
+ 
+* OggConvert now actually quits when you close it with the window manager
+  (although nobody actually complained about that in the last version)
+  
+* OggConvert no longer crashes horribly with pitfdll (although it still can't
+  use it for encoding)
+  
+* We now check whether the encoder has stalled, and warn the user. This helps 
+  with the common case of the end-of-stream message not being fired correctly, 
+  and the process being stuck on 99.5% or so.
+  
+* A lovely new "about" dialogue!
+
+* Many other small bugfixes
+
+
 
 Known issues with this release:
+-------------------------------
+
+* The video quality setting doesn't do anything for Dirac encoding, due to the
+  encoder not (yet) having this option available.
 
 * With GStreamer 0.10.10 (the version used in Ubuntu Edgy), transcoding from
   certain containers (Matroka and ASF in particular) will result in very choppy
@@ -19,7 +47,9 @@ Known issues with this release:
 * OggConvert uses the GStreamer decodebin, so it *should* be able to convert any
   file which is playable in Totem. However, there is currently a problem with
   files which use the pitfdll/W32codecs package, whereby the pipeline doesn't
-  preroll and OggConvert just hangs. I'm still investigating why this happens.
+  preroll. I'm still investigating why this happens, but at least OggConvert
+  doesn't crash any more ;)
   
 * OggConvert should Just Work(tm) with the Fluendo codec packages. However, I 
-  don't own a copy of these plugins, so it hasn't been tested.
+  don't own a copy of these plugins, so I haven't tested it.
+  
