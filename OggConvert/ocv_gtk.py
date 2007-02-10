@@ -2,20 +2,20 @@
 #
 #
 # OggConvert -- Converts media files to Free formats
-# (c) 2007 Tristan Brindle <t.c.brindle at gmail dot com>
+# (c) 2007 Tristan Brindle <tcbrindle at gmail dot com>
 #
-# This library is free software; you can redistribute it and/or
+# This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 # 
-# This library is distributed in the hope that it will be useful,
+# This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 # Lesser General Public License for more details.
 # 
 # You should have received a copy of the GNU Lesser General Public
-# License along with this library; if not, write to the Free Software
+# License along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
@@ -90,20 +90,20 @@ class Main:
             allgood = False
         
         # Now check whether the file already exists
-        if (os.path.exists(self._outfile) & allgood):
-            if not confirm_overwrite(self._outfile, self._window):
-                allgood = False
-        
-        # Check to make sure we're not trying to read & write the same file
-        if os.path.samefile(self._outfile, self._input_file):
-            dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
-                                gtk.MESSAGE_ERROR,
-                                gtk.BUTTONS_CLOSE,
-                                "Using the same file for input and output")
-            dialogue.format_secondary_text("Choose a different name for the save file, or save to a different location.")
-            dialogue.run()
-            dialogue.destroy()            
-            allgood = False            
+        if (os.path.exists(self._outfile) & allgood):        
+            if os.path.samefile(self._outfile, self._input_file):
+                dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
+                                    gtk.MESSAGE_ERROR,
+                                    gtk.BUTTONS_CLOSE,
+                                    "Using the same file for input and output")
+                dialogue.format_secondary_text("Choose a different name for the save file, or save to a different location.")
+                dialogue.run()
+                dialogue.destroy()            
+                allgood = False      
+            else: 
+                if not confirm_overwrite(self._outfile, self._window):
+                    allgood = False
+              
         
         # If Dirac is selected, flash up a warning to show it's experimental
         format = ocv_constants.FORMATS[int(self._format_combobox.get_active())]        
@@ -249,8 +249,8 @@ class ProgressReport:
         if pos <= self._old_pos:
             if (self._show_stall_warning and self._playing):
                 stall_warning(self._window)
-                self._show_stall_warning = False
-        
+                self._show_stall_warning = False #Only display stall warning once
+                
         self._old_pos = pos
         completed = pos/self._duration
         percent = 100*completed
@@ -282,7 +282,7 @@ class ProgressReport:
             self._pause_button.set_label("_Resume")
         else:
             self._transcoder.play()
-            self._playing = True
+            #self._playing = True
             if self._duration==None:
                 gobject.timeout_add(100, self._pulse_progressbar)
                 self._progressbar.set_text("")
@@ -290,6 +290,7 @@ class ProgressReport:
             else:
                 gobject.timeout_add(1000, self._update_progressbar)
                 self._update_progressbar()
+            self._playing = True
             self._pause_button.set_label("_Pause")
             
                    

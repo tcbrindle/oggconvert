@@ -2,20 +2,20 @@
 #
 #
 # OggConvert -- Converts media files to Free formats
-# (c) 2007 Tristan Brindle <t.c.brindle at gmail dot com>
+# (c) 2007 Tristan Brindle <tcbrindle at gmail dot com>
 #
-# This library is free software; you can redistribute it and/or
+# This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Lesser General Public
 # License as published by the Free Software Foundation; either
 # version 2.1 of the License, or (at your option) any later version.
 # 
-# This library is distributed in the hope that it will be useful,
+# This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 # Lesser General Public License for more details.
 # 
 # You should have received a copy of the GNU Lesser General Public
-# License along with this library; if not, write to the Free Software
+# License along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
@@ -151,7 +151,8 @@ def about_dialogue(window=None):
     dialogue.set_authors(ocv_info.authors)
     dialogue.set_version(ocv_info.version)
     dialogue.set_copyright(ocv_info.copyright)
-    dialogue.set_license(ocv_info.licence) # Learn to spell!
+    dialogue.set_website(ocv_info.website)
+    dialogue.set_license(ocv_info.licence) # Learn to spell, GTK!
     
     dialogue.run()
     dialogue.destroy()

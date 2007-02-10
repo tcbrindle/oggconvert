@@ -28,9 +28,13 @@ What's new in this version:
   with the common case of the end-of-stream message not being fired correctly, 
   and the process being stuck on 99.5% or so.
   
+* OggConvert can now handle GStreamer not being able to report the current 
+  position or duration of the stream (this occasionally happens with files
+  using the ffmpeg demuxers)
+
 * A lovely new "about" dialogue!
 
-* Many other small bugfixes
+* Many, many other small bugfixes
 
 
 
@@ -42,7 +46,7 @@ Known issues with this release:
 
 * With GStreamer 0.10.10 (the version used in Ubuntu Edgy), transcoding from
   certain containers (Matroka and ASF in particular) will result in very choppy
-  audio. This is fixed for GStreamer 0.10.11 (included in Feisty).
+  audio. This is worked around in GStreamer 0.10.11 (included in Ubuntu Feisty)
   
 * OggConvert uses the GStreamer decodebin, so it *should* be able to convert any
   file which is playable in Totem. However, there is currently a problem with

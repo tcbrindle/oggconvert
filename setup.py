@@ -21,15 +21,14 @@
 #
 
 from distutils.core import setup
+from OggConvert import ocv_info
 
 
 
 setup(name='oggconvert',
-      version='0.1.0',
+      version=ocv_info.version,
       author='Tristan Brindle',
-      author_email='t.c.brindle at gmail dot com',
-      maintainer= 'Tristan Brindle',
-      maintainer_email = 't.c.brindle at gmail dot com',
+      author_email='tcbrindle at gmail dot com',
       description='A simple Gnome application to convert media to Free formats',
       url = 'http://launchpad.net/oggconvert',
       license='GNU LGPL',
