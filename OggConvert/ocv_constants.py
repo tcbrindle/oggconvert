@@ -36,6 +36,7 @@ HAVE_SCHRO = None
 
 FORMATS = ["THEORA", "SCHRO"]
 
+
 THEORA_QUALITY_MAPPING = {1 : 1
                         , 2 : 7
                         , 3 : 14
@@ -46,10 +47,13 @@ THEORA_QUALITY_MAPPING = {1 : 1
                         , 8 : 49
                         , 9 : 56
                         , 10: 63}
- 
-THEORA_OPTS = {"sharpness" : 1} 
- 
-                        
+
+THEORA_OPTS = {"sharpness" : 1}
+
+
+SCHRO_OPTS = {}
+
+
 VORBIS_QUALITY_MAPPING = {1 : 0.1
                         , 2 : 0.2
                         , 3 : 0.3
@@ -61,9 +65,11 @@ VORBIS_QUALITY_MAPPING = {1 : 0.1
                         , 9 : 0.9
                         , 10 : 1.0}
 
-
 VORBIS_OPTS = {}
+
+
+FILE_FORMATS = ["OGG", "MATROSKA"]
 
 OGGMUX_OPTS = {}
 
-SCHRO_OPTS = {}
+MATROSKAMUX_OPTS = {}

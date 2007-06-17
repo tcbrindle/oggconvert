@@ -56,14 +56,17 @@ class Main:
         self._go_button = self._wtree.get_widget("go_button")
         self._format_combobox = self._wtree.get_widget("format_combobox")
         self._format_label = self._wtree.get_widget("format_label")
-        
-        
+        self._file_format_combobox = self._wtree.get_widget("file_format_combobox")
+
+
         self._format_combobox.set_active(0)
         if ocv_constants.HAVE_SCHRO:
             self._format_combobox.show()
             self._format_label.show()
-        
-        
+
+        self._file_format_combobox.set_active(0)
+        self._file_format_combobox.show()
+
         self._set_up_filechooser()
               
         self._wtree.signal_autoconnect(signals)
@@ -106,17 +109,23 @@ class Main:
               
         
         # If Dirac is selected, flash up a warning to show it's experimental
-        format = ocv_constants.FORMATS[int(self._format_combobox.get_active())]        
+        format = ocv_constants.FORMATS[int(self._format_combobox.get_active())]
         if format == "SCHRO":
             if not dirac_warning(self._window):
                 allgood = False
-        
+
+        # Get file format choosed.
+        file_format = ocv_constants.FILE_FORMATS[int(
+            self._file_format_combobox.get_active())]
+
         # Now if we're still good to go...        
         if allgood:
             #self._window.hide()
             vquality = self._video_quality_slider.get_value()
             aquality = self._audio_quality_slider.get_value()
-            tc = Transcoder(self._input_file, self._outfile, format, vquality, aquality)
+            tc = Transcoder(
+                self._input_file, self._outfile, format, vquality, aquality,
+                file_format)
             pr = ProgressReport(tc, self._input_file, self._outfile)
             self._window.hide()
             pr.run()
@@ -136,7 +145,12 @@ class Main:
             mc.run()
             if mc.is_media:
                 self._outfile_name = os.path.splitext(os.path.basename(self._input_file))[0]
-                self._outfile_name += ".ogg"
+                file_format = ocv_constants.FILE_FORMATS[int(
+                    self._file_format_combobox.get_active())]
+                if file_format == 'OGG':
+                    self._outfile_name += ".ogg"
+                else:
+                    self._outfile_name += ".mkv"
                 self._outfile_entry.set_text(self._outfile_name)
                 self._go_button.set_sensitive(True)
             else:

@@ -28,17 +28,18 @@ import ocv_constants
 import gtk
 
 class Transcoder:
-    def __init__(self, infile, outfile, vformat, vquality, aquality):
+    def __init__(self, infile, outfile, vformat, vquality, aquality, fformat):
     
         self._infile = infile
         self._outfile = outfile
         self._vformat = vformat
-        if self._vformat == "THEORA":   
+        if self._vformat == "THEORA":
             self._vquality = ocv_constants.THEORA_QUALITY_MAPPING[vquality]
-        else: self._vquality = 0
+        else:
+            self._vquality = 0
         self._aquality = ocv_constants.VORBIS_QUALITY_MAPPING[aquality]
-        
-        
+        self._fformat = fformat
+
         self._pipeline = gst.Pipeline()
         self.bus = self._pipeline.get_bus()
         self.bus.add_signal_watch()
@@ -48,14 +49,17 @@ class Transcoder:
         
         self._decodebin = gst.element_factory_make("decodebin")
         self._decodebin.connect("new-decoded-pad", self._on_new_pad)
-        
-        self._mux = gst.element_factory_make("oggmux")
-        
-        for key in ocv_constants.OGGMUX_OPTS:
-            self._mux.set_property(key, ocv_constants.OGGMUX_OPTS[key])
-        
-        
-        self._progreport = gst.element_factory_make("progressreport")        
+
+        if fformat == "OGG":
+            self._mux = gst.element_factory_make("oggmux")
+            for key in ocv_constants.OGGMUX_OPTS:
+                self._mux.set_property(key, ocv_constants.OGGMUX_OPTS[key])
+        else:
+            self._mux = gst.element_factory_make("matroskamux")
+            for key in ocv_constants.MATROSKAMUX_OPTS:
+                self._mux.set_property(key, ocv_constants.MATROSKAMUX_OPTS[key])
+
+        self._progreport = gst.element_factory_make("progressreport")
         
         self._filesink = gst.element_factory_make("filesink")
         self._filesink.set_property("location", outfile)
@@ -67,13 +71,11 @@ class Transcoder:
                            self._progreport, 
                            self._filesink)
 
-        # Link up what we've got so far                           
+        # Link up what we've got so far
         self._filesrc.link(self._decodebin)
         self._mux.link(self._progreport)
         self._progreport.link(self._filesink)
-        
-    
-        
+
     def play(self):
         self._pipeline.set_state(gst.STATE_PLAYING)
         
