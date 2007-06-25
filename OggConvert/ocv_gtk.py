@@ -56,7 +56,7 @@ class Main:
         self._go_button = self._wtree.get_widget("go_button")
         self._format_combobox = self._wtree.get_widget("format_combobox")
         self._format_label = self._wtree.get_widget("format_label")
-        self._file_format_combobox = self._wtree.get_widget("file_format_combobox")
+        self._container_combobox = self._wtree.get_widget("container_combobox")
 
 
         self._format_combobox.set_active(0)
@@ -64,8 +64,8 @@ class Main:
             self._format_combobox.show()
             self._format_label.show()
 
-        self._file_format_combobox.set_active(0)
-        self._file_format_combobox.show()
+        self._container_combobox.set_active(0)
+        self._container_combobox.show()
 
         self._set_up_filechooser()
               
@@ -115,8 +115,8 @@ class Main:
                 allgood = False
 
         # Get file format choosed.
-        file_format = ocv_constants.FILE_FORMATS[int(
-            self._file_format_combobox.get_active())]
+        container = ocv_constants.FILE_FORMATS[int(
+            self._container_combobox.get_active())]
 
         # Now if we're still good to go...        
         if allgood:
@@ -125,7 +125,7 @@ class Main:
             aquality = self._audio_quality_slider.get_value()
             tc = Transcoder(
                 self._input_file, self._outfile, format, vquality, aquality,
-                file_format)
+                container)
             pr = ProgressReport(tc, self._input_file, self._outfile)
             self._window.hide()
             pr.run()
@@ -145,9 +145,9 @@ class Main:
             mc.run()
             if mc.is_media:
                 self._outfile_name = os.path.splitext(os.path.basename(self._input_file))[0]
-                file_format = ocv_constants.FILE_FORMATS[int(
-                    self._file_format_combobox.get_active())]
-                if file_format == 'OGG':
+                container = ocv_constants.FILE_FORMATS[int(
+                    self._container_combobox.get_active())]
+                if container == 'OGG':
                     self._outfile_name += ".ogg"
                 else:
                     self._outfile_name += ".mkv"
