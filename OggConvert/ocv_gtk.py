@@ -26,6 +26,8 @@ import gtk
 import gtk.glade
 import os
 import os.path
+import locale
+from gettext import gettext as _
 from ocv_gst import Transcoder, MediaChecker
 from ocv_util import timeremaining, hourminsec, confirm_overwrite, \
                 dirac_warning, stall_warning, cancel_check, about_dialogue
@@ -58,7 +60,6 @@ class Main:
         self._format_label = self._wtree.get_widget("format_label")
         self._container_combobox = self._wtree.get_widget("container_combobox")
 
-
         self._format_combobox.set_active(0)
         if ocv_constants.HAVE_SCHRO:
             self._format_combobox.show()
@@ -86,8 +87,8 @@ class Main:
             dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
                                 gtk.MESSAGE_ERROR,
                                 gtk.BUTTONS_CLOSE,
-                                "Folder is not writable")
-            dialogue.format_secondary_text("Cannot save to this folder")
+                                _("Folder is not writable"))
+            dialogue.format_secondary_text(_("Cannot save to this folder"))
             dialogue.run()
             dialogue.destroy()            
             allgood = False
@@ -98,8 +99,8 @@ class Main:
                 dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
                                     gtk.MESSAGE_ERROR,
                                     gtk.BUTTONS_CLOSE,
-                                    "Using the same file for input and output")
-                dialogue.format_secondary_text("Choose a different name for the save file, or save to a different location.")
+                                    _("Using the same file for input and output"))
+                dialogue.format_secondary_text(_("Choose a different name for the save file, or save to a different location."))
                 dialogue.run()
                 dialogue.destroy()            
                 allgood = False      
@@ -159,8 +160,8 @@ class Main:
                 dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
                              gtk.MESSAGE_ERROR,
                              gtk.BUTTONS_CLOSE,
-                             "The file \"%s\" cannot be converted" %os.path.basename(self._input_file))
-                dialogue.format_secondary_text("The file format \"%s\" is not supported." %mc.mimetype)
+                             _("The file \"%s\" cannot be converted") %os.path.basename(self._input_file))
+                dialogue.format_secondary_text(_("The file format \"%s\" is not supported." %mc.mimetype))
                 dialogue.run()
                 dialogue.destroy()
                 filechooser.unselect_all()
@@ -179,17 +180,17 @@ class Main:
     
     def _set_up_filechooser(self):     
         video = gtk.FileFilter()
-        video.set_name("Video Files")
+        video.set_name(_("Video Files"))
         video.add_mime_type("video/*")
         audio = gtk.FileFilter()
-        audio.set_name("Audio Files")
+        audio.set_name(_("Audio Files"))
         audio.add_mime_type("audio/*")
         allmedia = gtk.FileFilter()
-        allmedia.set_name("All Media Files")
+        allmedia.set_name(_("All Media Files"))
         allmedia.add_mime_type("video/*")
         allmedia.add_mime_type("audio/*")
         allfiles = gtk.FileFilter()
-        allfiles.set_name("All Files")
+        allfiles.set_name(_("All Files"))
         allfiles.add_pattern("*")
         self._file_chooser_button.add_filter(allmedia) 
         self._file_chooser_button.add_filter(video)
@@ -229,7 +230,7 @@ class ProgressReport:
         self._pause_button = self._wtree.get_widget("pause_button")
         self._label = self._wtree.get_widget("convert_label")
         
-        self._label.set_markup("<i>Converting \"%s\"</i>" %self._infile_name)
+        self._label.set_markup(_("<i>Converting \"%s\"</i>") %self._infile_name)
      
         self._old_pos = 0
         self._show_stall_warning = True
@@ -274,10 +275,10 @@ class ProgressReport:
             timerem = timeremaining(self._timer, percent)
             self._progressbar.set_fraction(completed)
             self._progressbar.set_text(
-                    "%.1f%% completed, about %s left" %(percent, timerem))
+                    _("%.1f%% completed, about %s left") %(percent, timerem))
             return True
         else: 
-            self._progressbar.set_text('Paused (%.1f%% completed)' %(percent))
+            self._progressbar.set_text(_('Paused (%.1f%% completed)') %(percent))
             return False
         
     def _pulse_progressbar(self):
@@ -285,7 +286,7 @@ class ProgressReport:
             self._progressbar.pulse()
             return True
         else:
-            self._progressbar.set_text("Paused")
+            self._progressbar.set_text(_("Paused"))
             return False
         
     def _on_pause(self, button):
@@ -293,7 +294,7 @@ class ProgressReport:
         if self._playing:
             self._transcoder.pause()
             self._playing = False
-            self._pause_button.set_label("_Resume")
+            self._pause_button.set_label(_("_Resume"))
         else:
             self._transcoder.play()
             #self._playing = True
@@ -305,7 +306,7 @@ class ProgressReport:
                 gobject.timeout_add(1000, self._update_progressbar)
                 self._update_progressbar()
             self._playing = True
-            self._pause_button.set_label("_Pause")
+            self._pause_button.set_label(_("_Pause"))
             
                    
     def _on_cancel(self, *args):
@@ -320,12 +321,12 @@ class ProgressReport:
         self._transcoder.stop()
         self._playing = False
         gtk.main_quit()
-        self._progressbar.set_text("Encoding complete")
+        self._progressbar.set_text(_("Encoding complete"))
         self._progressbar.set_fraction(1.0)
         dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
                                     gtk.MESSAGE_INFO,
-                                    gtk.BUTTONS_CLOSE, "Encoding complete")
-        dialogue.format_secondary_text("File saved to \"%s\"." %(self._outfile))
+                                    gtk.BUTTONS_CLOSE, _("Encoding complete"))
+        dialogue.format_secondary_text(_("File saved to \"%s\".") %(self._outfile))
         dialogue.run()
         dialogue.destroy()             
         self._window.destroy()
@@ -335,8 +336,8 @@ class ProgressReport:
         # I really ought to put all the dialogues in one place...
         dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
                                     gtk.MESSAGE_ERROR,
-                                    gtk.BUTTONS_CLOSE, "Cannot convert file")
-        dialogue.format_secondary_text("GStreamer error: preroll failed")
+                                    gtk.BUTTONS_CLOSE, _("Cannot convert file"))
+        dialogue.format_secondary_text(_("GStreamer error: preroll failed"))
         dialogue.run()
         dialogue.destroy()
         

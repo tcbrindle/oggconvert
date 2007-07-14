@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.2.2 on Mon Jun 25 22:48:14 2007 by carlos@aragorn-->
 <glade-interface>
   <widget class="GtkWindow" id="app_window">
     <property name="title">OggConvert</property>
@@ -30,7 +29,6 @@
                       <widget class="GtkFileChooserButton" id="filechooserbutton">
                         <property name="width_request">320</property>
                         <property name="visible">True</property>
-                        <property name="preview_widget_active">False</property>
                         <signal name="file_activated" handler="on_filechooserbutton_file_activated"/>
                         <signal name="selection_changed" handler="on_filechooserbutton_selection_changed"/>
                       </widget>
@@ -63,89 +61,74 @@
                         <property name="visible">True</property>
                         <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                         <child>
-                          <widget class="GtkTable" id="table1">
+                          <widget class="GtkHScale" id="audio_quality_slider">
                             <property name="visible">True</property>
-                            <property name="n_rows">3</property>
-                            <property name="n_columns">2</property>
-                            <property name="column_spacing">12</property>
-                            <property name="row_spacing">6</property>
-                            <child>
-                              <widget class="GtkComboBox" id="format_combobox">
-                                <property name="no_show_all">True</property>
-                                <property name="tooltip" translatable="yes">Dirac: Better quality, slower encode, still experimental
-Theora: Faster encoding, better compatability, lower quality</property>
-                                <property name="items" translatable="yes">Theora
-Dirac</property>
-                              </widget>
-                              <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">2</property>
-                                <property name="y_padding">6</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <widget class="GtkLabel" id="format_label">
-                                <property name="no_show_all">True</property>
-                                <property name="label" translatable="yes">Video Format:</property>
-                              </widget>
-                              <packing>
-                                <property name="x_options">GTK_FILL</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <widget class="GtkLabel" id="label3">
-                                <property name="visible">True</property>
-                                <property name="label" translatable="yes">Video Quality:</property>
-                              </widget>
-                              <packing>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">2</property>
-                                <property name="x_options">GTK_FILL</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <widget class="GtkLabel" id="label4">
-                                <property name="visible">True</property>
-                                <property name="label" translatable="yes">Audio Quality:</property>
-                              </widget>
-                              <packing>
-                                <property name="top_attach">2</property>
-                                <property name="bottom_attach">3</property>
-                                <property name="x_options">GTK_FILL</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <widget class="GtkHScale" id="video_quality_slider">
-                                <property name="visible">True</property>
-                                <property name="adjustment">5 1 11 1 1 1</property>
-                                <property name="digits">0</property>
-                                <property name="value_pos">GTK_POS_RIGHT</property>
-                              </widget>
-                              <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">2</property>
-                                <property name="top_attach">1</property>
-                                <property name="bottom_attach">2</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <widget class="GtkHScale" id="audio_quality_slider">
-                                <property name="visible">True</property>
-                                <property name="adjustment">3 1 11 1 1 1</property>
-                                <property name="digits">0</property>
-                                <property name="value_pos">GTK_POS_RIGHT</property>
-                              </widget>
-                              <packing>
-                                <property name="left_attach">1</property>
-                                <property name="right_attach">2</property>
-                                <property name="top_attach">2</property>
-                                <property name="bottom_attach">3</property>
-                              </packing>
-                            </child>
+                            <property name="adjustment">3 1 11 1 1 1</property>
+                            <property name="digits">0</property>
+                            <property name="value_pos">GTK_POS_RIGHT</property>
                           </widget>
                           <packing>
-                            <property name="padding">5</property>
-                            <property name="position">1</property>
+                            <property name="left_attach">1</property>
+                            <property name="right_attach">2</property>
+                            <property name="top_attach">2</property>
+                            <property name="bottom_attach">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkHScale" id="video_quality_slider">
+                            <property name="visible">True</property>
+                            <property name="adjustment">5 1 11 1 1 1</property>
+                            <property name="digits">0</property>
+                            <property name="value_pos">GTK_POS_RIGHT</property>
+                          </widget>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="right_attach">2</property>
+                            <property name="top_attach">1</property>
+                            <property name="bottom_attach">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="label4">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Audio Quality:</property>
+                          </widget>
+                          <packing>
+                            <property name="top_attach">2</property>
+                            <property name="bottom_attach">3</property>
+                            <property name="x_options"></property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="label3">
+                            <property name="visible">True</property>
+                            <property name="label" translatable="yes">Video Quality:</property>
+                          </widget>
+                          <packing>
+                            <property name="top_attach">1</property>
+                            <property name="bottom_attach">2</property>
+                            <property name="x_options"></property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="format_label">
+                            <property name="no_show_all">True</property>
+                            <property name="label" translatable="yes">Video Format:</property>
+                          </widget>
+                          <packing>
+                            <property name="x_options"></property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkComboBox" id="format_combobox">
+                            <property name="no_show_all">True</property>
+                            <property name="items" translatable="yes">Theora
+Dirac</property>
+                          </widget>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="right_attach">2</property>
+                            <property name="y_padding">6</property>
                           </packing>
                         </child>
                         <child>
@@ -252,16 +235,24 @@ Matroska</property>
                             <property name="title" translatable="yes">Select A Folder</property>
                           </widget>
                           <packing>
-                            <property name="left_attach">1</property>
-                            <property name="right_attach">2</property>
                             <property name="top_attach">1</property>
                             <property name="bottom_attach">2</property>
+                            <property name="x_options">GTK_FILL</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <widget class="GtkLabel" id="label5">
+                            <property name="visible">True</property>
+                            <property name="xalign">0</property>
+                            <property name="label" translatable="yes">File Name:</property>
+                          </widget>
+                          <packing>
+                            <property name="x_options">GTK_FILL</property>
                           </packing>
                         </child>
                         <child>
                           <widget class="GtkEntry" id="outfile_entry">
                             <property name="visible">True</property>
-                            <property name="truncate_multiline">True</property>
                             <signal name="changed" handler="on_outfile_entry_changed"/>
                           </widget>
                           <packing>
@@ -278,7 +269,7 @@ Matroska</property>
                           <packing>
                             <property name="top_attach">1</property>
                             <property name="bottom_attach">2</property>
-                            <property name="x_options">GTK_FILL</property>
+                            <property name="x_options"></property>
                           </packing>
                         </child>
                         <child>
@@ -288,7 +279,7 @@ Matroska</property>
                             <property name="label" translatable="yes">File Name:</property>
                           </widget>
                           <packing>
-                            <property name="x_options">GTK_FILL</property>
+                            <property name="x_options"></property>
                           </packing>
                         </child>
                       </widget>
@@ -330,7 +321,7 @@ Matroska</property>
             <child>
               <widget class="GtkButton" id="button3">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-about</property>
+                <property name="label">gtk-about</property>
                 <property name="use_stock">True</property>
                 <property name="response_id">0</property>
                 <signal name="clicked" handler="on_about_clicked"/>
@@ -342,7 +333,7 @@ Matroska</property>
             <child>
               <widget class="GtkButton" id="button2">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-quit</property>
+                <property name="label">gtk-quit</property>
                 <property name="use_stock">True</property>
                 <property name="response_id">0</property>
                 <signal name="clicked" handler="on_quit_clicked"/>
@@ -354,7 +345,7 @@ Matroska</property>
             <child>
               <widget class="GtkButton" id="go_button">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-convert</property>
+                <property name="label">gtk-convert</property>
                 <property name="use_stock">True</property>
                 <property name="response_id">0</property>
                 <signal name="clicked" handler="on_convert_clicked"/>
@@ -375,8 +366,6 @@ Matroska</property>
     <property name="width_request">400</property>
     <property name="border_width">12</property>
     <property name="title" translatable="yes">OggConvert</property>
-    <property name="resizable">False</property>
-    <property name="transient_for">app_window</property>
     <signal name="delete_event" handler="on_progress_window_delete"/>
     <child>
       <widget class="GtkVBox" id="vbox2">
@@ -415,7 +404,7 @@ Matroska</property>
             <child>
               <widget class="GtkProgressBar" id="progressbar">
                 <property name="visible">True</property>
-                <property name="show_text">True</property>
+                <property name="pulse_step">0.10000000149</property>
                 <property name="text" translatable="yes"></property>
               </widget>
             </child>
@@ -445,7 +434,7 @@ Matroska</property>
             <child>
               <widget class="GtkButton" id="cancel_button">
                 <property name="visible">True</property>
-                <property name="label" translatable="yes">gtk-cancel</property>
+                <property name="label">gtk-cancel</property>
                 <property name="use_stock">True</property>
                 <property name="response_id">0</property>
                 <signal name="clicked" handler="on_cancel_button_clicked"/>

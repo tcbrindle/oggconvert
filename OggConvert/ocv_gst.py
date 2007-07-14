@@ -233,7 +233,7 @@ class MediaChecker:
     ## TODO: This class should emit a "discovered" signal, just like Discover
     ##       itself does. This would allow the main app to have its own callback
     ##       to display a "media not handled" error, and we wouldn't need all that
-    ##       horrible gobject blocking stuff.    
+    ##       horrible gobject blocking stuff.  
     
     def __init__(self, path):
     
