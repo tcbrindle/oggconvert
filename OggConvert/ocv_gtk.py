@@ -36,19 +36,22 @@ import ocv_constants
 
 class Main:
     def __init__(self):
-    
+
         gladepath = os.path.dirname(os.path.abspath(__file__))
         gladepath = os.path.join(gladepath, "oggcv.glade")
         self._wtree = gtk.glade.XML(gladepath, "app_window")
-        
-        signals = {"on_convert_clicked" : self._on_go
-                  ,"on_quit_clicked" : self._on_quit
-#                  ,"on_app_window_destroy" : self._on_quit
-                  ,"on_app_window_delete" : self._on_quit
-                  ,"on_filechooserbutton_selection_changed" : self._on_file_changed
-                  ,"on_about_clicked" : self._about
-                  }
-        
+        self._input_has_video = False
+
+        signals = {
+            "on_convert_clicked" : self._on_go,
+            "on_quit_clicked" : self._on_quit,
+#            "on_app_window_destroy" : self._on_quit,
+            "on_app_window_delete" : self._on_quit,
+            "on_filechooserbutton_selection_changed" : self._on_file_changed,
+            "on_container_format_changed": self._on_container_changed,
+            "on_about_clicked" : self._about,
+            }
+
         self._window = self._wtree.get_widget("app_window")
         self._file_chooser_button = self._wtree.get_widget("filechooserbutton")
         self._save_folder_button = self._wtree.get_widget("save_folder_button")
@@ -131,11 +134,11 @@ class Main:
             self._window.hide()
             pr.run()
             self._window.show()
-        
+
     def _on_quit(self, *args ):
         print "Bye then!"
         gtk.main_quit()
-      
+
     def _on_file_changed(self, filechooser):
         ## This function is a mess. Really needs cleaning up.
         self._input_file = filechooser.get_filename()
@@ -145,14 +148,8 @@ class Main:
             mc = MediaChecker(self._input_file)
             mc.run()
             if mc.is_media:
-                self._outfile_name = os.path.splitext(os.path.basename(self._input_file))[0]
-                container = ocv_constants.FILE_FORMATS[int(
-                    self._container_combobox.get_active())]
-                if container == 'OGG':
-                    self._outfile_name += ".ogg"
-                else:
-                    self._outfile_name += ".mkv"
-                self._outfile_entry.set_text(self._outfile_name)
+                self._input_has_video = mc.is_video
+                self._on_container_changed(self._container_combobox)
                 self._go_button.set_sensitive(True)
             else:
                 # What about auto codec installation?
@@ -165,16 +162,42 @@ class Main:
                 dialogue.run()
                 dialogue.destroy()
                 filechooser.unselect_all()
-                 
-                          
+
         folder = filechooser.get_current_folder()
         if os.access(folder,os.W_OK):
             self._outfile_folder = filechooser.get_current_folder()
         else:
             self._outfile_folder = os.path.expanduser('~')
         self._save_folder_button.set_current_folder(self._outfile_folder)
-                
-                
+
+    def _on_container_changed(self, combobox):
+        self._outfile_name = self._outfile_entry.get_text()
+        if self._outfile_name:
+            basename, ext = os.path.splitext(self._outfile_name)
+        elif self._input_file:
+            # Get basename from the source file
+            basename, ext = os.path.splitext(
+                os.path.basename(self._input_file))
+        else:
+            # Nothing to do, no file is yet selected.
+            return
+
+        container = ocv_constants.FILE_FORMATS[int(combobox.get_active())]
+        if container == 'OGG':
+            ext = 'ogg'
+        elif container == 'MATROSKA':
+            if self._input_has_video:
+                ext = 'mkv'
+            else:
+                ext = 'mka'
+        else:
+            # When a new container support is added this code needs to be
+            # updated.
+            raise AssertionError('Unknown container format')
+
+        self._outfile_name = '%s.%s' % (basename, ext)
+        self._outfile_entry.set_text(self._outfile_name)
+
     def _about(self, button):
         about_dialogue(self._window)
     

@@ -238,6 +238,7 @@ class MediaChecker:
     def __init__(self, path):
     
         self.is_media = False
+        self.is_video = False
         self.mimetype = None
     
         self.disc = discoverer.Discoverer(path)
@@ -251,6 +252,7 @@ class MediaChecker:
     def discovered(self, disc, is_media):
         if is_media:
             self.is_media = True
+            self.is_video = disc.is_video
             disc.print_info()
             self.main_loop.quit()
         else:
