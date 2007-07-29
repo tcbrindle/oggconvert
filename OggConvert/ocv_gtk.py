@@ -43,13 +43,14 @@ class Main:
         self._input_has_video = False
 
         signals = {
-            "on_convert_clicked" : self._on_go,
-            "on_quit_clicked" : self._on_quit,
-#            "on_app_window_destroy" : self._on_quit,
-            "on_app_window_delete" : self._on_quit,
-            "on_filechooserbutton_selection_changed" : self._on_file_changed,
-            "on_container_format_changed": self._on_container_changed,
             "on_about_clicked" : self._about,
+            "on_app_window_delete" : self._on_quit,
+#            "on_app_window_destroy" : self._on_quit,
+            "on_container_format_changed": self._on_container_changed,
+            "on_convert_clicked" : self._on_go,
+            "on_filechooserbutton_selection_changed" : self._on_file_changed,
+            "on_format_changed": self._on_format_changed,
+            "on_quit_clicked" : self._on_quit,
             }
 
         self._window = self._wtree.get_widget("app_window")
@@ -119,7 +120,7 @@ class Main:
                 allgood = False
 
         # Get file format choosed.
-        container = ocv_constants.FILE_FORMATS[int(
+        container = ocv_constants.CONTAINER_FORMATS[int(
             self._container_combobox.get_active())]
 
         # Now if we're still good to go...        
@@ -171,6 +172,32 @@ class Main:
         self._save_folder_button.set_current_folder(self._outfile_folder)
 
     def _on_container_changed(self, combobox):
+        container = ocv_constants.CONTAINER_FORMATS[int(combobox.get_active())]
+        if container == 'OGG':
+            new_ext = 'ogg'
+        elif container == 'MATROSKA':
+            if (ocv_constants.FORMATS[
+                int(self._format_combobox.get_active())] == 'SCHRO'):
+                # DIRAC format selected. It cannot be stored in Matroska
+                # container, warn the user and change the format to Theora.
+                dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
+                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _(
+                    'Dirac video format cannot be stored in Matroska'
+                    ' container, Theora video format will be used instead.'))
+                dialogue.run()
+                dialogue.destroy()
+                self._format_combobox.set_active(
+                    ocv_constants.FORMATS.index('THEORA'))
+
+            if self._input_has_video:
+                new_ext = 'mkv'
+            else:
+                new_ext = 'mka'
+        else:
+            # When a new container support is added this code needs to be
+            # updated.
+            raise AssertionError('Unknown container format')
+
         self._outfile_name = self._outfile_entry.get_text()
         if self._outfile_name:
             basename, ext = os.path.splitext(self._outfile_name)
@@ -182,25 +209,27 @@ class Main:
             # Nothing to do, no file is yet selected.
             return
 
-        container = ocv_constants.FILE_FORMATS[int(combobox.get_active())]
-        if container == 'OGG':
-            ext = 'ogg'
-        elif container == 'MATROSKA':
-            if self._input_has_video:
-                ext = 'mkv'
-            else:
-                ext = 'mka'
-        else:
-            # When a new container support is added this code needs to be
-            # updated.
-            raise AssertionError('Unknown container format')
-
-        self._outfile_name = '%s.%s' % (basename, ext)
+        self._outfile_name = '%s.%s' % (basename, new_ext)
         self._outfile_entry.set_text(self._outfile_name)
+
+    def _on_format_changed(self, combobox):
+        if (ocv_constants.FORMATS[int(combobox.get_active())] == 'SCHRO'):
+            # DIRAC format selected. It cannot be stored in Matroska
+            # container, warn the user and change container to Ogg.
+            if (ocv_constants.CONTAINER_FORMATS[
+                int(self._container_combobox.get_active())] == 'MATROSKA'):
+                dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
+                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _(
+                    'Dirac video format cannot be stored in Matroska'
+                    ' container, Ogg container will be used instead.'))
+                dialogue.run()
+                dialogue.destroy()
+                self._container_combobox.set_active(
+                    ocv_constants.CONTAINER_FORMATS.index('OGG'))
 
     def _about(self, button):
         about_dialogue(self._window)
-    
+
     def _set_up_filechooser(self):     
         video = gtk.FileFilter()
         video.set_name(_("Video Files"))
