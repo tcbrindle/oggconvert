@@ -31,7 +31,7 @@ msgstr "1 минута"
 
 #. file 'ocv_util.py', line 47
 msgid "%i minutes"
-msgstr "% минут(ы)"
+msgstr "%i минут(ы)"
 
 #. file 'ocv_util.py', line 50
 msgid "1 second"
@@ -39,11 +39,11 @@ msgstr "1 секунда"
 
 #. file 'ocv_util.py', line 52
 msgid "%i seconds"
-msgstr ""
+msgstr "%i скунд(ы)"
 
 #. file 'ocv_util.py', line 85
 msgid "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr ""
+msgstr "Файл уже существует в \"%s\". Сохранение затрёт его содержимое."
 
 #. file 'ocv_util.py', line 105
 msgid "The Dirac encoder is still experimental. Files you convert with this version may not be viewable with future versions of the decoder."
@@ -55,7 +55,7 @@ msgstr ""
 
 #. file 'ocv_util.py', line 135
 msgid "Are you sure you wish to cancel?"
-msgstr ""
+msgstr "Вы уверены? Отменить?"
 
 #. file 'ocv_util.py', line 157
 msgid "translator-credits"
@@ -63,7 +63,7 @@ msgstr "Alexander Kabakov <ak.anapa@gmail.com>"
 
 #. file 'ocv_gtk.py', line 142
 msgid "Cannot save to this folder"
-msgstr ""
+msgstr "Невозможно сохранить в эту папку"
 
 #. file 'ocv_gtk.py', line 154
 msgid "Choose a different name for the save file, or save to a different location."
@@ -87,11 +87,11 @@ msgstr "Все файлы"
 
 #. file 'ocv_gtk.py', line 332
 msgid "<i>Converting \"%s\"</i>"
-msgstr ""
+msgstr "<i>Преобразование \"%s\"</i>"
 
 #. file 'ocv_gtk.py', line 377
 msgid "%.1f%% completed, about %s left"
-msgstr ""
+msgstr "%.1f%% выполнено, примерно %s осталось"
 
 #. file 'ocv_gtk.py', line 380
 msgid "Paused (%.1f%% completed)"
@@ -103,7 +103,7 @@ msgstr "Остановлен"
 
 #. file 'ocv_gtk.py', line 396
 msgid "_Resume"
-msgstr ""
+msgstr "_Продолжить"
 
 #. file 'ocv_gtk.py', line 408
 #. file 'oggcv.glade', line ?
@@ -116,7 +116,7 @@ msgstr "Кодирование выполнено"
 
 #. file 'ocv_gtk.py', line 428
 msgid "File saved to \"%s\"."
-msgstr ""
+msgstr "Файл сохранён в \"%s\"."
 
 #. file 'ocv_gtk.py', line 439
 msgid "GStreamer error: preroll failed"
@@ -193,7 +193,9 @@ msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
+"<b><big>Преобразование файла\n"
+"</big></b>"
 
 #. file 'oggcv.glade', line ?
 msgid "Your media file is currently being converted to Ogg format. This may take a long time."
-msgstr ""
+msgstr "В данный момент файл преобразуется к формату Ogg. Это может занять значительное время."

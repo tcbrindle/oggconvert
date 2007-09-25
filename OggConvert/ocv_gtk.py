@@ -69,18 +69,12 @@ class Main:
         # Get the language to use
         self.lang = gettext.translation(app_name, self.local_path
             , languages=langs, fallback = True)
-        """Install the language, map _() (which we marked our
-        strings to translate with) to self.lang.gettext() which will
-        translate them."""
-        #print langs
-        #_ = self.lang.gettext
-        #print dir(self.lang)
-        #print self.lang.output_charset()
         
         # init glade UI translations
         gtk.glade.bindtextdomain(app_name, self.local_path)
         gtk.glade.textdomain(app_name)
 
+        #init UI
         gladepath = os.path.dirname(os.path.abspath(__file__))
         gladepath = os.path.join(gladepath, "oggcv.glade")
         self._wtree = gtk.glade.XML(gladepath, "app_window")
