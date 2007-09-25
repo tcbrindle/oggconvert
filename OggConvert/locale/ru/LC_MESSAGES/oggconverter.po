@@ -1,0 +1,199 @@
+#
+# oggconverter Language File
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: oggconverter 0.2\n"
+"POT-Creation-Date: 2007-09-25 16:56:50.812082\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: utf-8\n"
+"Generated-By: ./../tools/generate_pot.py\n"
+
+#. file 'ocv_util.py', line 34
+msgid "unknown time"
+msgstr ""
+
+#. file 'ocv_util.py', line 40
+msgid "1 hour"
+msgstr ""
+
+#. file 'ocv_util.py', line 42
+msgid "%i hours"
+msgstr ""
+
+#. file 'ocv_util.py', line 45
+msgid "1 minute"
+msgstr ""
+
+#. file 'ocv_util.py', line 47
+msgid "%i minutes"
+msgstr ""
+
+#. file 'ocv_util.py', line 50
+msgid "1 second"
+msgstr ""
+
+#. file 'ocv_util.py', line 52
+msgid "%i seconds"
+msgstr ""
+
+#. file 'ocv_util.py', line 85
+msgid "The file already exists in \"%s\". Replacing it will overwrite its contents."
+msgstr ""
+
+#. file 'ocv_util.py', line 105
+msgid "The Dirac encoder is still experimental. Files you convert with this version may not be viewable with future versions of the decoder."
+msgstr ""
+
+#. file 'ocv_util.py', line 123
+msgid "If encoding was nearly complete, then it probably finished successfully. At other times, it means there has was problem with the encoder. In either case, it is recommended you cancel the encoding process and check the output file."
+msgstr ""
+
+#. file 'ocv_util.py', line 135
+msgid "Are you sure you wish to cancel?"
+msgstr ""
+
+#. file 'ocv_util.py', line 157
+msgid "translator-credits"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 142
+msgid "Cannot save to this folder"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 154
+msgid "Choose a different name for the save file, or save to a different location."
+msgstr ""
+
+#. file 'ocv_gtk.py', line 282
+msgid "Video Files"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 285
+msgid "Audio Files"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 288
+msgid "All Media Files"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 292
+msgid "All Files"
+msgstr "Все файлы"
+
+#. file 'ocv_gtk.py', line 332
+msgid "<i>Converting \"%s\"</i>"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 377
+msgid "%.1f%% completed, about %s left"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 380
+msgid "Paused (%.1f%% completed)"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 388
+msgid "Paused"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 396
+msgid "_Resume"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 408
+#. file 'oggcv.glade', line ?
+msgid "_Pause"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 423
+msgid "Encoding complete"
+msgstr ""
+
+#. file 'ocv_gtk.py', line 428
+msgid "File saved to \"%s\"."
+msgstr ""
+
+#. file 'ocv_gtk.py', line 439
+msgid "GStreamer error: preroll failed"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "<b>Source</b>"
+msgstr "<b>Исходный файл</b>"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Theora\n"
+"Dirac"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "Video Format:"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "Video Quality:"
+msgstr "Качество видео:"
+
+#. file 'oggcv.glade', line ?
+msgid "Audio Quality:"
+msgstr "Качество звука:"
+
+#. file 'oggcv.glade', line ?
+msgid "Container Format:"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg:\n"
+"Matroska:"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "<b>Advanced conversion options</b>"
+msgstr "<b>Продвинутые настройки</b>"
+
+#. file 'oggcv.glade', line ?
+msgid "<b>Conversion</b>"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "File Name:"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "Save Folder:"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "Select A Folder"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "<b>Destination</b>"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "OggConvert"
+msgstr "OggConvert"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"<b><big>Converting File\n"
+"</big></b>"
+msgstr ""
+
+#. file 'oggcv.glade', line ?
+msgid "Your media file is currently being converted to Ogg format. This may take a long time."
+msgstr ""

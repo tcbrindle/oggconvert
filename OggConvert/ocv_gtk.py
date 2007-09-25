@@ -28,14 +28,58 @@ import os
 import os.path
 import locale
 from gettext import gettext as _
+import gettext
+import sys
 from ocv_gst import Transcoder, MediaChecker
 from ocv_util import timeremaining, hourminsec, confirm_overwrite, \
                 dirac_warning, stall_warning, cancel_check, about_dialogue
 import ocv_constants
-
+from ocv_info import app_name
 
 class Main:
     def __init__(self):
+        # init get text traslations
+        
+        #Get the local directory since we are not installing anything
+        self.local_path = os.path.realpath(os.path.dirname(sys.argv[0]))+'/locale'
+        
+        # Init the list of languages to support
+        langs = []
+        
+        #Check the default locale
+        lc, encoding = locale.getdefaultlocale()
+        if (lc):
+            #If we have a default, it's the first in the list
+            langs = [lc]
+            
+        # Now lets get all of the supported languages on the system
+        language = os.environ.get('LANGUAGE', None)
+        if (language):
+            """langage comes back something like en_CA:en_US:en_GB:en
+            on linuxy systems, on Win32 it's nothing, so we need to
+            split it up into a list"""
+            langs += language.split(":")
+         
+        """Now langs is a list of all of the languages that we are going
+        to try to use.  First we check the default, then what the system
+        told us, and finally the 'known' list"""
+        gettext.bindtextdomain(app_name, self.local_path)
+        gettext.textdomain(app_name)
+        
+        # Get the language to use
+        self.lang = gettext.translation(app_name, self.local_path
+            , languages=langs, fallback = True)
+        """Install the language, map _() (which we marked our
+        strings to translate with) to self.lang.gettext() which will
+        translate them."""
+        #print langs
+        #_ = self.lang.gettext
+        #print dir(self.lang)
+        #print self.lang.output_charset()
+        
+        # init glade UI translations
+        gtk.glade.bindtextdomain(app_name, self.local_path)
+        gtk.glade.textdomain(app_name)
 
         gladepath = os.path.dirname(os.path.abspath(__file__))
         gladepath = os.path.join(gladepath, "oggcv.glade")
@@ -137,7 +181,7 @@ class Main:
             self._window.show()
 
     def _on_quit(self, *args ):
-        print "Bye then!"
+        print _("Bye then!")
         gtk.main_quit()
 
     def _on_file_changed(self, filechooser):
