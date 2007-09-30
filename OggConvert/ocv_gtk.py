@@ -180,6 +180,7 @@ class Main:
 
     def _on_file_changed(self, filechooser):
         ## This function is a mess. Really needs cleaning up.
+	
         self._input_file = filechooser.get_filename()
         if self._input_file == None:
             self._go_button.set_sensitive(False)
@@ -211,6 +212,8 @@ class Main:
 
     def _on_container_changed(self, combobox):
         container = ocv_constants.CONTAINER_FORMATS[int(combobox.get_active())]
+        
+        # place to new_ext new file extension
         if container == 'OGG':
             new_ext = 'ogg'
         elif container == 'MATROSKA':
@@ -236,10 +239,13 @@ class Main:
             # updated.
             raise AssertionError('Unknown container format')
 
-        self._outfile_name = self._outfile_entry.get_text()
-        if self._outfile_name:
-            basename, ext = os.path.splitext(self._outfile_name)
-        elif self._input_file:
+        # ak 2007-09-30: Comented for fix bug 
+        # https://bugs.launchpad.net/oggconvert/+bug/146183
+        #
+        #self._outfile_name = self._outfile_entry.get_text()
+        #if self._outfile_name:
+        #    basename, ext = os.path.splitext(self._outfile_name)
+        if self._input_file:
             # Get basename from the source file
             basename, ext = os.path.splitext(
                 os.path.basename(self._input_file))
