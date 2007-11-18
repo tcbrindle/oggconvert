@@ -1,3 +1,5 @@
+#!/usr/bin/python
+#
 #
 # OggConvert -- Converts media files to Free formats
 # (c) 2007 Tristan Brindle <tcbrindle at gmail dot com>
@@ -20,6 +22,7 @@
 
 import gtk
 import os.path
+from gettext import gettext as _
 import ocv_info
 
 def timeremaining(elapsed, percent):
@@ -28,25 +31,25 @@ def timeremaining(elapsed, percent):
        percent: percentage of the operation completed so far"""
        
     if percent == 0:
-        return "unknown time"
+        return _("unknown time")
     else:
         secs_rem = int((100-percent) * elapsed/float(percent))
         time_rem = hourminsec(secs_rem)
         #I'm sure there are much smarter ways to do this...
         if time_rem[0] == 1:
-            h_string = "1 hour"
+            h_string = _("1 hour")
         else:
-            h_string = "%i hours" %time_rem[0]
+            h_string = _("%i hours") %time_rem[0]
             
         if time_rem[1] == 1:
-            m_string = "1 minute"
+            m_string = _("1 minute")
         else:
-            m_string = "%i minutes" %time_rem[1]
+            m_string = _("%i minutes") %time_rem[1]
         
         if time_rem[2] == 2:
-            s_string = "1 second"
+            s_string = _("1 second")
         else:
-            s_string = "%i seconds" %time_rem[2]
+            s_string = _("%i seconds") %time_rem[2]
         
         if secs_rem > 3600:
             return "%s %s" %(h_string, m_string)
@@ -76,12 +79,12 @@ def confirm_overwrite(path, window=None):
     """
     dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_WARNING,
      gtk.BUTTONS_NONE,
-      "A file named \"%s\" already exists. Do you want to replace it?" %os.path.basename(path))
+      _("A file named \"%s\" already exists. Do you want to replace it?") %os.path.basename(path))
     
     dirname = os.path.basename(os.path.dirname(path)) # Urgh!
-    dialogue.format_secondary_text("The file already exists in \"%s\". Replacing it will overwrite its contents." %dirname)
+    dialogue.format_secondary_text(_("The file already exists in \"%s\". Replacing it will overwrite its contents.") %dirname)
     
-    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, "_Replace", gtk.RESPONSE_OK)
+    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, _("_Replace"), gtk.RESPONSE_OK)
     response = dialogue.run()
     dialogue.destroy()
     if response ==gtk.RESPONSE_OK: return True
@@ -95,13 +98,13 @@ def dirac_warning(window=None):
     """
     
     dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_WARNING,
-                 gtk.BUTTONS_NONE, "Dirac encoding still experimental")
+                 gtk.BUTTONS_NONE, _("Dirac encoding still experimental"))
                  
-    dialogue.format_secondary_text("The Dirac encoder is still experimental. \
+    dialogue.format_secondary_text(_("The Dirac encoder is still experimental. \
 Files you convert with this version may not be viewable with future versions \
-of the decoder.")
+of the decoder."))
 
-    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, "Contin_ue", gtk.RESPONSE_OK)
+    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, _("Contin_ue"), gtk.RESPONSE_OK)
     response = dialogue.run()
     dialogue.destroy()
     if response==gtk.RESPONSE_OK: return True
@@ -114,10 +117,10 @@ def stall_warning(window=None):
     """
     
     dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_WARNING,
-                gtk.BUTTONS_CLOSE, "Encoding seems to have stalled")
+                gtk.BUTTONS_CLOSE, _("Encoding seems to have stalled"))
     
     # Three sentences. Too much?
-    dialogue.format_secondary_text("If encoding was nearly complete, then it probably finished successfully. At other times, it means there has was problem with the encoder. In either case, it is recommended you cancel the encoding process and check the output file.")
+    dialogue.format_secondary_text(_("If encoding was nearly complete, then it probably finished successfully. At other times, it means there has was problem with the encoder. In either case, it is recommended you cancel the encoding process and check the output file."))
     dialogue.run()
     dialogue.destroy()
     
@@ -127,11 +130,11 @@ def cancel_check(window=None):
     Returns True if to stop, False otherwise
     """
     dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_QUESTION,
-                gtk.BUTTONS_NONE, "Encoding is not complete")
+                gtk.BUTTONS_NONE, _("Encoding is not complete"))
     
-    dialogue.format_secondary_text("Are you sure you wish to cancel?")
+    dialogue.format_secondary_text(_("Are you sure you wish to cancel?"))
     
-    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, "Contin_ue", gtk.RESPONSE_OK)
+    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, _("Contin_ue"), gtk.RESPONSE_OK)
     
     response = dialogue.run()
     dialogue.destroy()
@@ -140,7 +143,7 @@ def cancel_check(window=None):
     
 def about_dialogue(window=None):
     """
-    Pops up a standard GTK About dialogue. Grabs all the info from ocv_info
+    Pops up a standard GTK About dialogue. Grabs all the info from ocv_info.
     """
     dialogue = gtk.AboutDialog()
     dialogue.set_transient_for(window)
@@ -151,6 +154,7 @@ def about_dialogue(window=None):
     dialogue.set_copyright(ocv_info.copyright)
     dialogue.set_website(ocv_info.website)
     dialogue.set_license(ocv_info.licence) # Learn to spell, GTK!
+    dialogue.set_translator_credits(_("translator-credits"))
     
     dialogue.run()
     dialogue.destroy()
