@@ -1,5 +1,3 @@
-#!/usr/bin/python
-#
 #
 # OggConvert -- Converts media files to Free formats
 # (c) 2007 Tristan Brindle <tcbrindle at gmail dot com>
@@ -32,7 +30,7 @@ USE_AUDIORATE = None
 # on this computer. This is recommended. If you really want to though, you can
 # set this to True or False as you like. Be aware that setting it to True when
 # schroenc doesn't exist will cause problems if you try to encode to Dirac
-HAVE_SCHRO = False
+HAVE_SCHRO = None
 
 FORMATS = ["THEORA", "SCHRO"]
 

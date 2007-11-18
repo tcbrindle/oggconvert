@@ -20,13 +20,14 @@
 #
 
 import gobject
+gobject.threads_init()
+
 import pygtk
 pygtk.require("2.0")
 import gtk
 
 import OggConvert.ocv_gtk as OC
 
-gobject.threads_init()
 main = OC.Main()
 
 gtk.main()

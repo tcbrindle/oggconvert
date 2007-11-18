@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: UTF-8 -*-
 #
 #
@@ -20,7 +19,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-version = "0.2.0"
+version = "0.2.1"
 
 authors = ["Tristan Brindle <tcbrindle@gmail.com>"]
 

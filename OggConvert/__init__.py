@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: UTF-8 -*-
 #
 # OggConvert -- Converts media files to Free formats
