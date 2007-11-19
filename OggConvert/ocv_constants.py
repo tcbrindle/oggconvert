@@ -1,5 +1,3 @@
-#!/usr/bin/python
-#
 #
 # OggConvert -- Converts media files to Free formats
 # (c) 2007 Tristan Brindle <tcbrindle at gmail dot com>

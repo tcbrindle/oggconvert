@@ -1,4 +1,3 @@
-#!/usr/bin/python
 # -*- coding: UTF-8 -*-
 #
 #
@@ -24,7 +23,11 @@ app_name = "OggConvert"
 
 version = "0.3.0.bzr"
 
-authors = ["Tristan Brindle <tcbrindle@gmail.com>"]
+authors = ["Tristan Brindle <tcbrindle@gmail.com>"
+          ,"Alex Kabakov <ak.anapa@gmail.com>"
+          ,"Carlos Perelló Marín <carlos.perello@canonical.com>"]
+
+artists = ["A. Bram Neijt <bneijt@gmail.com>"]
 
 copyright = "© 2007 Tristan Brindle"
 

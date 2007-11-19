@@ -1,5 +1,3 @@
-#!/usr/bin/python
-#
 #
 # OggConvert -- Converts media files to Free formats
 # (c) 2007 Tristan Brindle <tcbrindle at gmail dot com>
@@ -31,9 +29,10 @@ from gettext import gettext as _
 import gettext
 import sys
 from ocv_in_progress import ProgressReport
-from ocv_gst import Transcoder, MediaChecker
+from ocv_transcoder import Transcoder 
+from ocv_media_checker import MediaChecker
 from ocv_util import timeremaining, hourminsec, confirm_overwrite, \
-                dirac_warning, stall_warning, cancel_check, about_dialogue
+                dirac_warning, about_dialogue
 import ocv_constants
 from ocv_info import app_name
 
@@ -86,7 +85,6 @@ class Main:
         gladepath = os.path.dirname(os.path.abspath(__file__))
         gladepath = os.path.join(gladepath, "oggcv.glade")
         self._wtree = gtk.glade.XML(gladepath, "app_window")
-        self._input_has_video = False
 
         signals = {
             "on_about_clicked" : self._about,
@@ -104,11 +102,14 @@ class Main:
         self._save_folder_button = self._wtree.get_widget("save_folder_button")
         self._outfile_entry = self._wtree.get_widget("outfile_entry") 
         self._video_quality_slider = self._wtree.get_widget("video_quality_slider")
+        self._video_quality_label = self._wtree.get_widget("video_quality_label")
         self._audio_quality_slider = self._wtree.get_widget("audio_quality_slider")
+        self._audio_quality_label = self._wtree.get_widget("audio_quality_label")
         self._go_button = self._wtree.get_widget("go_button")
         self._format_combobox = self._wtree.get_widget("format_combobox")
         self._format_label = self._wtree.get_widget("format_label")
         self._container_combobox = self._wtree.get_widget("container_combobox")
+        self._container_expander = self._wtree.get_widget("container_expander")
 
         self._format_combobox.set_active(0)
         if ocv_constants.HAVE_SCHRO:
@@ -123,6 +124,8 @@ class Main:
         self._wtree.signal_autoconnect(signals)
         
         self._window.set_title("OggConvert")
+        
+        gtk.window_set_default_icon_from_file("OggConvert/oggconvert.svg")
         
         self._window.show_all()
     
@@ -186,54 +189,55 @@ class Main:
         gtk.main_quit()
 
     def _on_file_changed(self, filechooser):
-        ## This function is a mess. Really needs cleaning up.
         self._input_file = filechooser.get_filename()
-        if self._input_file == None:
-            self._go_button.set_sensitive(False)
-        else:
-            mc = MediaChecker(self._input_file)
-            mc.run()
-            if mc.is_media:
-                self._input_has_video = mc.is_video
-                self._on_container_changed(self._container_combobox)
-                self._go_button.set_sensitive(True)
-            else:
-                # What about auto codec installation?
-                self._go_button.set_sensitive(False)  
-                dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
-                             gtk.MESSAGE_ERROR,
-                             gtk.BUTTONS_CLOSE,
-                             _("The file \"%s\" cannot be converted") %os.path.basename(self._input_file))
-                dialogue.format_secondary_text(_("The file format \"%s\" is not supported." %mc.mimetype))
-                dialogue.run()
-                dialogue.destroy()
-                filechooser.unselect_all()
-
+        self._set_sensitivities("NO_MEDIA")
+        
+        if not self._input_file == None:
+            gobject.idle_add(self._check_media,self._input_file)
+            
         folder = filechooser.get_current_folder()
         if os.access(folder,os.W_OK):
             self._outfile_folder = filechooser.get_current_folder()
         else:
             self._outfile_folder = os.path.expanduser('~')
         self._save_folder_button.set_current_folder(self._outfile_folder)
+        self._outfile_entry.set_text("")
 
-    def _on_container_changed(self, combobox):
-        container = ocv_constants.CONTAINER_FORMATS[int(combobox.get_active())]
-        if container == 'OGG':
-            new_ext = 'ogg'
-        elif container == 'MATROSKA':
-            if (ocv_constants.FORMATS[
-                int(self._format_combobox.get_active())] == 'SCHRO'):
-                # DIRAC format selected. It cannot be stored in Matroska
-                # container, warn the user and change the format to Theora.
-                dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
-                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _(
-                    'Dirac video format cannot be stored in Matroska'
-                    ' container, Theora video format will be used instead.'))
-                dialogue.run()
-                dialogue.destroy()
-                self._format_combobox.set_active(
-                    ocv_constants.FORMATS.index('THEORA'))
-
+    def _check_media(self, filename):
+        self.mc = MediaChecker(filename)
+        self.mc.connect("finished", self._on_media_discovered)
+        self.mc.run()
+        
+    def _on_media_discovered(self, *args):
+        print "Got something!"
+        if self.mc.is_media:
+            self._input_has_video = self.mc.has_video
+            self._set_extension()
+            
+            if (self.mc.has_audio):
+                self._set_sensitivities("AUDIO")
+            if (self.mc.has_video):
+                self._set_sensitivities("VIDEO")
+            
+        else:
+            # What about auto codec installation? 
+            dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
+                         gtk.MESSAGE_ERROR,
+                         gtk.BUTTONS_CLOSE,
+                         _("The file \"%s\" cannot be converted") %os.path.basename(self._input_file))
+            dialogue.format_secondary_text(_("The file format \"%s\" is not supported." %self.mc.mimetype))
+            dialogue.run()
+            dialogue.destroy()
+            self._file_chooser_button.unselect_all()       
+        
+    def _set_extension(self):
+        container = ocv_constants.CONTAINER_FORMATS[int(self._container_combobox.get_active())] 
+        if container=='OGG':
+            if self._input_has_video:
+                new_ext = 'ogv'
+            else:
+                new_ext = 'ogg'
+        elif container=='MATROSKA':
             if self._input_has_video:
                 new_ext = 'mkv'
             else:
@@ -242,7 +246,7 @@ class Main:
             # When a new container support is added this code needs to be
             # updated.
             raise AssertionError('Unknown container format')
-
+                    
         self._outfile_name = self._outfile_entry.get_text()
         if self._outfile_name:
             basename, ext = os.path.splitext(self._outfile_name)
@@ -257,10 +261,26 @@ class Main:
         self._outfile_name = '%s.%s' % (basename, new_ext)
         self._outfile_entry.set_text(self._outfile_name)
 
+    def _on_container_changed(self, combobox):
+        container = ocv_constants.CONTAINER_FORMATS[int(combobox.get_active())]
+        if ((container == 'MATROSKA') & (ocv_constants.FORMATS[int(self._format_combobox.get_active())] == 'SCHRO')):
+                # DIRAC format selected. It cannot be stored in Matroska
+                # container, warn the user and change the format to Theora.
+                dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
+                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _(
+                    'Dirac video format cannot be stored in Matroska'
+                    ' container, Theora video format will be used instead.'))
+                dialogue.run()
+                dialogue.destroy()
+                self._format_combobox.set_active(
+                    ocv_constants.FORMATS.index('THEORA'))
+        self._set_extension()
+
+
     def _on_format_changed(self, combobox):
         if (ocv_constants.FORMATS[int(combobox.get_active())] == 'SCHRO'):
-            # DIRAC format selected. It cannot be stored in Matroska
-            # container, warn the user and change container to Ogg.
+             #DIRAC format selected. It cannot be stored in Matroska
+             #container, warn the user and change container to Ogg.
             if (ocv_constants.CONTAINER_FORMATS[
                 int(self._container_combobox.get_active())] == 'MATROSKA'):
                 dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
@@ -297,6 +317,31 @@ class Main:
         self._file_chooser_button.set_current_folder(
                         os.path.expanduser("~"))
 
+    def _set_sensitivities(self,status):
+        if (status == "NO_MEDIA"):
+            self._go_button.set_sensitive(False)
+            self._audio_quality_slider.set_sensitive(False)
+            self._audio_quality_label.set_sensitive(False)
+            self._video_quality_slider.set_sensitive(False)
+            self._video_quality_label.set_sensitive(False)
+            self._format_combobox.set_sensitive(False)
+            self._format_label.set_sensitive(False)
+            self._container_expander.set_sensitive(False)
+        elif (status == "AUDIO"):
+            self._go_button.set_sensitive(True)
+            self._audio_quality_slider.set_sensitive(True)
+            self._audio_quality_label.set_sensitive(True)
+            self._container_expander.set_sensitive(True)       
+        elif (status == "VIDEO"):
+            self._go_button.set_sensitive(True)
+            self._video_quality_slider.set_sensitive(True)
+            self._video_quality_label.set_sensitive(True)
+            self._format_combobox.set_sensitive(True)
+            self._format_label.set_sensitive(True)
+            self._container_expander.set_sensitive(True)
+        else:
+            print "Undefined status ",status," called"
+        
         
 if __name__ == "__main__":
     gobject.threads_init()

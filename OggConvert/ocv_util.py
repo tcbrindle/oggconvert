@@ -1,5 +1,3 @@
-#!/usr/bin/python
-#
 #
 # OggConvert -- Converts media files to Free formats
 # (c) 2007 Tristan Brindle <tcbrindle at gmail dot com>
@@ -24,6 +22,10 @@ import gtk
 import os.path
 from gettext import gettext as _
 import ocv_info
+import webbrowser
+
+
+
 
 def timeremaining(elapsed, percent):
     """Returns a string with the remaining time for an operation.        
@@ -31,34 +33,38 @@ def timeremaining(elapsed, percent):
        percent: percentage of the operation completed so far"""
        
     if percent == 0:
-        return _("unknown time")
+        return _("unknown time ")
     else:
         secs_rem = int((100-percent) * elapsed/float(percent))
         time_rem = hourminsec(secs_rem)
-        #I'm sure there are much smarter ways to do this...
-        if time_rem[0] == 1:
-            h_string = _("1 hour")
+        output = ""
+        
+        # Add hours
+        if time_rem[0]==0:
+            pass
+        elif time_rem[0] == 1:
+            output = output + _("1 hour") + " "
         else:
-            h_string = _("%i hours") %time_rem[0]
+            output += _("%i hours") %time_rem[0]
             
-        if time_rem[1] == 1:
-            m_string = _("1 minute")
+        # Add minutes
+        if time_rem[1] == 0:
+            pass
+        elif time_rem[1] == 1:
+            output = output + _("1 minute") + " " 
         else:
-            m_string = _("%i minutes") %time_rem[1]
+            output = output + _("%i minutes") %time_rem[1] + " "
         
-        if time_rem[2] == 2:
-            s_string = _("1 second")
-        else:
-            s_string = _("%i seconds") %time_rem[2]
+        # Only add seconds if there are less than three minutes to go
+        if secs_rem <179:
+            if time_rem[2] == 0:
+                pass
+            elif time_rem[2] == 1:
+                output = output + _("1 second") + " " 
+            else:
+                output = output + _("%i seconds") %time_rem[2] + " "
         
-        if secs_rem > 3600:
-            return "%s %s" %(h_string, m_string)
-        elif secs_rem > 180:
-            return "%s" %(m_string)
-        elif secs_rem > 59:
-            return "%s %s" %(m_string, s_string)
-        else:
-            return "%s" %(s_string)
+        return output
             
 
 def hourminsec(time):
@@ -150,6 +156,7 @@ def about_dialogue(window=None):
     
     dialogue.set_name("OggConvert")
     dialogue.set_authors(ocv_info.authors)
+    dialogue.set_artists(ocv_info.artists)
     dialogue.set_version(ocv_info.version)
     dialogue.set_copyright(ocv_info.copyright)
     dialogue.set_website(ocv_info.website)
@@ -158,4 +165,10 @@ def about_dialogue(window=None):
     
     dialogue.run()
     dialogue.destroy()
-    
+
+def show_url(dialog, link, userdata):
+    webbrowser.open(link)
+
+# I know this is a bit of strange place to do this, but...
+gtk.about_dialog_set_url_hook(show_url, None)
+   
