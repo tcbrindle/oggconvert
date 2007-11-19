@@ -45,7 +45,7 @@ def timeremaining(elapsed, percent):
         elif time_rem[0] == 1:
             output = output + _("1 hour") + " "
         else:
-            output += _("%i hours") %time_rem[0]
+            output += _("%i hours") %time_rem[0] + " "
             
         # Add minutes
         if time_rem[1] == 0:
@@ -116,19 +116,6 @@ of the decoder."))
     if response==gtk.RESPONSE_OK: return True
     else: return False
     
-def stall_warning(window=None):
-    """
-    Displays a box warning the user that encoding has stalled, and they should
-    quit
-    """
-    
-    dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_WARNING,
-                gtk.BUTTONS_CLOSE, _("Encoding seems to have stalled"))
-    
-    # Three sentences. Too much?
-    dialogue.format_secondary_text(_("If encoding was nearly complete, then it probably finished successfully. At other times, it means there has was problem with the encoder. In either case, it is recommended you cancel the encoding process and check the output file."))
-    dialogue.run()
-    dialogue.destroy()
     
 def cancel_check(window=None):
     """

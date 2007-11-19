@@ -18,6 +18,7 @@
 #
 
 import os
+from time import clock
 import gobject
 import gtk
 
@@ -36,17 +37,18 @@ class ProgressReport:
         self._outfile_name = os.path.basename(outfile)
         self._transcoder = transcoder
     
-        # This is a bit hacky -- we should just be able to connect to the 
-        # Transcoder class itself instead
-        self._transcoder.bus.connect("message::eos",self._on_eos)
+        # Connect to the transcoder's signals
+        self._transcoder.connect("eos",self._on_eos)
+        self._transcoder.connect("playing",self._on_playing)
+        self._transcoder.connect("paused",self._on_paused)
     
         gladepath = os.path.dirname(os.path.abspath(__file__))
         gladepath = os.path.join(gladepath, "oggcv.glade")
         self._wtree = gtk.glade.XML(gladepath, "progress_window")
         
-        signals = {"on_pause_button_clicked" : self._on_pause,
-                   "on_cancel_button_clicked" : self._on_cancel,
-                   "on_progress_window_delete" : self._on_cancel}
+        signals = {"on_pause_button_clicked" : self._on_pause_clicked,
+                   "on_cancel_button_clicked" : self._on_cancel_clicked,
+                   "on_progress_window_delete" : self._on_cancel_clicked}
                    
         self._wtree.signal_autoconnect(signals)
         
@@ -58,9 +60,6 @@ class ProgressReport:
         
         self._label.set_markup(_("<i>Converting \"%s\"</i>") %self._infile_name)
      
-        self._old_pos = 0
-        self._show_stall_warning = True
-     
      
     def run(self):
         self._transcoder.pause()
@@ -70,35 +69,32 @@ class ProgressReport:
         self._duration = self._transcoder.get_duration()
         self._window.show_all()
         self._transcoder.play()
-        self._playing = True
-        self._timer = 0.0
-        if self._duration == None:
-            gobject.timeout_add(100, self._pulse_progressbar)
-        else: 
-            self._duration = float(self._duration) # Otherwise we do integer div
-            gobject.timeout_add(1000, self._update_progressbar)
+        self._timer = Timer()
         gtk.main()
         
-    
-    
+    def _on_paused(self, unused):
+        self._timer.stop()
+        self._playing = False
+        self._pause_button.set_label(_("_Resume"))
+        
+    def _on_playing(self, unused):
+        self._playing = True
+        if self._duration==None:
+            self._progressbar.set_text("")
+            gobject.timeout_add(100, self._pulse_progressbar)
+        else:
+            self._update_progressbar()
+            gobject.timeout_add(1000, self._update_progressbar)
+        self._pause_button.set_label(_("_Pause"))
+        self._timer.start()
+            
     def _update_progressbar(self):
         pos = self._transcoder.get_position()
-        
-        # Check the new position against the old to see whether the encoder
-        # has stalled. This often occurs when the EOS message doesn't get fired
-        # for some reason.
-        if pos <= self._old_pos:
-            if (self._show_stall_warning and self._playing):
-                stall_warning(self._window)
-                self._show_stall_warning = False #Only display stall warning once
-                
-        self._old_pos = pos
-        completed = pos/self._duration
+        completed = float(pos)/self._duration
         percent = 100*completed
     
         if self._playing:
-            self._timer += 1
-            timerem = timeremaining(self._timer, percent)
+            timerem = timeremaining(self._timer.get_elapsed(), percent)
             self._progressbar.set_fraction(completed)
             self._progressbar.set_text(
                     _("%.1f%% completed, about %sleft") %(percent, timerem))
@@ -115,27 +111,14 @@ class ProgressReport:
             self._progressbar.set_text(_("Paused"))
             return False
         
-    def _on_pause(self, button):
-        
+    def _on_pause_clicked(self, button):        
         if self._playing:
-            self._transcoder.pause()
-            self._playing = False
-            self._pause_button.set_label(_("_Resume"))
+            self._transcoder.pause()           
         else:
             self._transcoder.play()
-            #self._playing = True
-            if self._duration==None:
-                gobject.timeout_add(100, self._pulse_progressbar)
-                self._progressbar.set_text("")
-                self._pulse_progressbar()
-            else:
-                gobject.timeout_add(1000, self._update_progressbar)
-                self._update_progressbar()
-            self._playing = True
-            self._pause_button.set_label(_("_Pause"))
             
                    
-    def _on_cancel(self, *args):
+    def _on_cancel_clicked(self, *args):
         if cancel_check(self._window):
             self._playing = False
             self._transcoder.stop()
@@ -166,4 +149,26 @@ class ProgressReport:
         dialogue.format_secondary_text(_("GStreamer error: preroll failed"))
         dialogue.run()
         dialogue.destroy()
+ 
+class Timer:
+    def __init__(self):
+        self._elapsed  = 0.0
+        self._starttime = 0.0
+        self._started = False
         
+    def start(self):
+        self._starttime = clock()
+        self._started = True
+        
+    def stop(self):
+        self._elapsed += (clock() - self._starttime)
+        self._started = False
+     
+    def get_elapsed(self):
+        if self._started:
+            return (self._elapsed + clock() - self._starttime)
+        else:
+            return self._elapsed
+            
+    def reset(self):
+        self._elapsed = 0.0

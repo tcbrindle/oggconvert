@@ -207,9 +207,9 @@ class Main:
         self.mc = MediaChecker(filename)
         self.mc.connect("finished", self._on_media_discovered)
         self.mc.run()
+        return False # only get called once
         
     def _on_media_discovered(self, *args):
-        print "Got something!"
         if self.mc.is_media:
             self._input_has_video = self.mc.has_video
             self._set_extension()
@@ -229,6 +229,8 @@ class Main:
             dialogue.run()
             dialogue.destroy()
             self._file_chooser_button.unselect_all()       
+        del self.mc
+        
         
     def _set_extension(self):
         container = ocv_constants.CONTAINER_FORMATS[int(self._container_combobox.get_active())] 
@@ -264,16 +266,16 @@ class Main:
     def _on_container_changed(self, combobox):
         container = ocv_constants.CONTAINER_FORMATS[int(combobox.get_active())]
         if ((container == 'MATROSKA') & (ocv_constants.FORMATS[int(self._format_combobox.get_active())] == 'SCHRO')):
-                # DIRAC format selected. It cannot be stored in Matroska
-                # container, warn the user and change the format to Theora.
-                dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
-                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _(
-                    'Dirac video format cannot be stored in Matroska'
-                    ' container, Theora video format will be used instead.'))
-                dialogue.run()
-                dialogue.destroy()
-                self._format_combobox.set_active(
-                    ocv_constants.FORMATS.index('THEORA'))
+            # DIRAC format selected. It cannot be stored in Matroska
+            # container, warn the user and change the format to Theora.
+            dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
+                gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _(
+                'Dirac video format cannot be stored in Matroska'
+                ' container, Theora video format will be used instead.'))
+            dialogue.run()
+            dialogue.destroy()
+            self._format_combobox.set_active(
+                ocv_constants.FORMATS.index('THEORA'))
         self._set_extension()
 
 

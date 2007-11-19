@@ -17,7 +17,7 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-
+from ocv_info import version
 
 # Leave this set to None to let the programme decide whether to use audiorate
 # based on which version of GStreamer you have.
@@ -67,4 +67,4 @@ CONTAINER_FORMATS = ["OGG", "MATROSKA"]
 
 OGGMUX_OPTS = {}
 
-MATROSKAMUX_OPTS = {}
+MATROSKAMUX_OPTS = { "writing-app" : "OggConvert " + version}
