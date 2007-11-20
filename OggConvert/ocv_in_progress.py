@@ -25,7 +25,7 @@ import gtk
 from gettext import gettext as _
 
 from ocv_util import timeremaining, hourminsec, confirm_overwrite, \
-                        stall_warning, cancel_check
+                        cancel_check
 
 
 class ProgressReport:
@@ -126,7 +126,7 @@ class ProgressReport:
             gtk.main_quit()   
                     
                     
-    def _on_eos(self, bus, message):
+    def _on_eos(self, unused):
         self._transcoder.stop()
         self._playing = False
         gtk.main_quit()

@@ -31,8 +31,7 @@ import sys
 from ocv_in_progress import ProgressReport
 from ocv_transcoder import Transcoder 
 from ocv_media_checker import MediaChecker
-from ocv_util import timeremaining, hourminsec, confirm_overwrite, \
-                dirac_warning, about_dialogue
+from ocv_util import confirm_overwrite, dirac_warning, about_dialogue
 import ocv_constants
 from ocv_info import app_name
 
@@ -131,7 +130,7 @@ class Main:
     
                   
     def _on_go(self, button):
-        self._outfile_folder = self._save_folder_button.get_current_folder()
+        self._outfile_folder = self._save_folder_button.get_filename()
         self._outfile_name = self._outfile_entry.get_text()
         self._outfile = os.path.join(self._outfile_folder, self._outfile_name)
 
@@ -147,7 +146,7 @@ class Main:
             return
         
         # Now check whether the file already exists
-        if os.path.exists(self._outfile):        
+        if os.path.exists(self._outfile) and (self._input_file != None):        
             if os.path.samefile(self._outfile, self._input_file):
                 dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
                                     gtk.MESSAGE_ERROR,
@@ -177,9 +176,9 @@ class Main:
         vquality = self._video_quality_slider.get_value()
         aquality = self._audio_quality_slider.get_value()
         tc = Transcoder(
-            self._input_file, self._outfile, format, vquality, aquality,
+            self._input_uri, self._outfile, format, vquality, aquality,
             container)
-        pr = ProgressReport(tc, self._input_file, self._outfile)
+        pr = ProgressReport(tc, self._input_uri, self._outfile)
         self._window.hide()
         pr.run()
         self._window.show()
@@ -189,14 +188,18 @@ class Main:
         gtk.main_quit()
 
     def _on_file_changed(self, filechooser):
+        # self._input_file is only defined if the source is local
+        self._input_uri = filechooser.get_uri()
         self._input_file = filechooser.get_filename()
+        print self._input_uri
+        print self._input_file
         self._set_sensitivities("NO_MEDIA")
         
-        if not self._input_file == None:
-            gobject.idle_add(self._check_media,self._input_file)
+        if not self._input_uri == None:
+            gobject.idle_add(self._check_media,self._input_uri)
             
         folder = filechooser.get_current_folder()
-        if os.access(folder,os.W_OK):
+        if (folder != None) and (os.access(folder,os.W_OK)):
             self._outfile_folder = filechooser.get_current_folder()
         else:
             self._outfile_folder = os.path.expanduser('~')
@@ -252,10 +255,11 @@ class Main:
         self._outfile_name = self._outfile_entry.get_text()
         if self._outfile_name:
             basename, ext = os.path.splitext(self._outfile_name)
-        elif self._input_file:
+        elif self._input_uri:
             # Get basename from the source file
+            # Luckily, os.path.splitext works with uris as it does with files
             basename, ext = os.path.splitext(
-                os.path.basename(self._input_file))
+                os.path.basename(self._input_uri))
         else:
             # Nothing to do, no file is yet selected.
             return
@@ -318,6 +322,9 @@ class Main:
         
         self._file_chooser_button.set_current_folder(
                         os.path.expanduser("~"))
+        
+        self._file_chooser_button.set_local_only(False)
+                        
 
     def _set_sensitivities(self,status):
         if (status == "NO_MEDIA"):

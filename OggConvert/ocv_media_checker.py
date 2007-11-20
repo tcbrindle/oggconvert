@@ -21,9 +21,9 @@ class MediaChecker(gobject.GObject):
    
         # Set up Gst elements
         self.pipeline = gst.Pipeline("pipeline")
-        self.src = gst.element_factory_make("filesrc","src")
-        self.src.set_property("location",path)
-        
+        self.src = gst.element_make_from_uri(gst.URI_SRC, path, "src")
+#        self.src.set_property("location",path)
+       
         self.decodebin = gst.element_factory_make("decodebin","dbin")
         
         self.pipeline.add(self.src, self.decodebin)
@@ -43,6 +43,9 @@ class MediaChecker(gobject.GObject):
         self.decodebin.connect("no-more-pads",self._on_no_more_pads)
         self.bus.connect("message::eos",self._on_eos)
         self.bus.connect("message::error",self._on_error)
+    
+    def __del__(self):
+        self.bus.remove_signal_watch()
     
     def _on_have_type(self, typefind, notused, caps):
         self.mimetype = caps.to_string()
@@ -86,7 +89,6 @@ class MediaChecker(gobject.GObject):
         print "All done!"
         gobject.source_remove(self.timeoutid)
         self.pipeline.set_state(gst.STATE_NULL)
-        self.bus.remove_signal_watch()
         if not self.done:
             self.emit('finished')
             self.done = True       
