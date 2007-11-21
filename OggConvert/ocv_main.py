@@ -28,21 +28,16 @@ import locale
 from gettext import gettext as _
 import gettext
 import sys
-from ocv_in_progress import ProgressReport
+from ocv_in_progress import ProgressWindow
 from ocv_transcoder import Transcoder 
 from ocv_media_checker import MediaChecker
 from ocv_util import confirm_overwrite, dirac_warning, about_dialogue
 import ocv_constants
-from ocv_info import app_name
+from ocv_info import app_name, gladepath, localepath, pixmappath
 
 class Main:
     def __init__(self):
-        # init get text traslations
-        
-        #Get the local directory since we are not installing anything
-        self.local_path = os.path.realpath(os.path.dirname(sys.argv[0]))+'/locale'
-        print self.local_path
-        
+            
         # Init the list of languages to support
         langs = []
         
@@ -63,26 +58,20 @@ class Main:
         """Now langs is a list of all of the languages that we are going
         to try to use.  First we check the default, then what the system
         told us, and finally the 'known' list"""
-        gettext.bindtextdomain(app_name, self.local_path)
+        gettext.bindtextdomain(app_name,localepath)
         gettext.textdomain(app_name)
         
         # Get the language to use
-        self.lang = gettext.translation(app_name, self.local_path
+        self.lang = gettext.translation(app_name, localepath
             , languages=langs, fallback = True)
         """Install the language, map _() (which we marked our
         strings to translate with) to self.lang.gettext() which will
         translate them."""
-        #print langs
-        #_ = self.lang.gettext
-        #print dir(self.lang)
-        #print self.lang.output_charset()
         
         # init glade UI translations
-        gtk.glade.bindtextdomain(app_name, self.local_path)
+        gtk.glade.bindtextdomain(app_name, localepath)
         gtk.glade.textdomain(app_name)
 
-        gladepath = os.path.dirname(os.path.abspath(__file__))
-        gladepath = os.path.join(gladepath, "oggcv.glade")
         self._wtree = gtk.glade.XML(gladepath, "app_window")
 
         signals = {
@@ -124,7 +113,7 @@ class Main:
         
         self._window.set_title("OggConvert")
         
-        gtk.window_set_default_icon_from_file("OggConvert/oggconvert.svg")
+        gtk.window_set_default_icon_from_file(os.path.join(pixmappath,"oggconvert.svg"))
         
         self._window.show_all()
     
@@ -178,7 +167,7 @@ class Main:
         tc = Transcoder(
             self._input_uri, self._outfile, format, vquality, aquality,
             container)
-        pr = ProgressReport(tc, self._input_uri, self._outfile)
+        pr = ProgressWindow(tc, self._input_uri, self._outfile)
         self._window.hide()
         pr.run()
         self._window.show()
@@ -191,8 +180,6 @@ class Main:
         # self._input_file is only defined if the source is local
         self._input_uri = filechooser.get_uri()
         self._input_file = filechooser.get_filename()
-        print self._input_uri
-        print self._input_file
         self._set_sensitivities("NO_MEDIA")
         
         if not self._input_uri == None:
@@ -273,9 +260,8 @@ class Main:
             # DIRAC format selected. It cannot be stored in Matroska
             # container, warn the user and change the format to Theora.
             dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
-                gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _(
-                'Dirac video format cannot be stored in Matroska'
-                ' container, Theora video format will be used instead.'))
+                gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, 
+                _("Dirac video cannot be stored in Matroska files. Using Theora instead.") )
             dialogue.run()
             dialogue.destroy()
             self._format_combobox.set_active(
@@ -290,9 +276,8 @@ class Main:
             if (ocv_constants.CONTAINER_FORMATS[
                 int(self._container_combobox.get_active())] == 'MATROSKA'):
                 dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
-                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, _(
-                    'Dirac video format cannot be stored in Matroska'
-                    ' container, Ogg container will be used instead.'))
+                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, 
+                    _("Dirac video cannot be stored in Matroska files. Using Ogg instead.") )
                 dialogue.run()
                 dialogue.destroy()
                 self._container_combobox.set_active(

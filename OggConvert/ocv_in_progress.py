@@ -28,7 +28,7 @@ from ocv_util import timeremaining, hourminsec, confirm_overwrite, \
                         cancel_check
 
 
-class ProgressReport:
+class ProgressWindow:
     def __init__(self, transcoder, infile, outfile):
     
         self._infile = infile

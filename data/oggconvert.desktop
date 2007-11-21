@@ -3,6 +3,7 @@ Name=OggConvert
 Comment=Convert media files to Free formats
 Type=Application
 Exec=oggconvert
+Icon=oggconvert
 Categories=AudioVideo;
 Terminal=false
 StartupNotify=false

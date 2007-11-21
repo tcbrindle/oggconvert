@@ -20,20 +20,40 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
+import os
+from os import path
+import re
 from distutils.core import setup
 from OggConvert import ocv_info
 
+data_files=[('share/applications/', ['data/oggconvert.desktop']),
+            ('share/pixmaps/',['data/oggconvert.svg']) ]
 
+
+# Freshly generate .mo from .po, add to data_files:
+# This copied directly from KungFu, thanks Jason!
+if path.isdir('mo/'):
+	os.system ('rm -r mo/')
+for name in os.listdir('po'):
+	m = re.match(r'(.+)\.po$', name)
+	if m != None:
+		lang = m.group(1)
+		out_dir = 'mo/%s/LC_MESSAGES' % lang
+		out_name = path.join(out_dir, 'oggconvert.mo')
+		install_dir = 'share/locale/%s/LC_MESSAGES/' % lang		
+		os.makedirs(out_dir)
+  		os.system('msgfmt -o %s po/%s' % (out_name, name))
+		data_files.append((install_dir, [out_name])) 
 
 setup(name='oggconvert',
       version=ocv_info.version,
       author='Tristan Brindle',
-      author_email='tcbrindle at gmail dot com',
+      author_email='t.c.brindle at gmail dot com',
       description='A simple Gnome application to convert media to Free formats',
-      url = 'http://launchpad.net/oggconvert',
+      url = 'http://oggconvert.tristanb.net',
       license='GNU LGPL',
       packages=['OggConvert'],
       package_data={'OggConvert' : ['*.glade']},
       scripts=['oggconvert'],
-      data_files=[('share/applications/', ['oggconvert.desktop'])]
+      data_files=data_files
      )

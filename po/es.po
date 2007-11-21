@@ -1,0 +1,240 @@
+# Spanish translation for oggconvert
+# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# This file is distributed under the same license as the oggconvert package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: oggconvert\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2007-09-25 15:36+0000\n"
+"PO-Revision-Date: 2007-10-18 23:32+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2007-11-19 17:32+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#. file 'OggConvert/ocv_gtk.py', line 139
+msgid "Cannot save to this folder"
+msgstr "No puede guardar en esa carpeta"
+
+#. file 'OggConvert/ocv_gtk.py', line 151
+msgid ""
+"Choose a different name for the save file, or save to a different location."
+msgstr ""
+"Elija un nombre diferente para el archivo a guardar o guardelo en un lugar "
+"diferente."
+
+#. file 'OggConvert/ocv_gtk.py', line 184
+msgid "Bye then!"
+msgstr "¡Hasta luego!"
+
+#. file 'OggConvert/ocv_gtk.py', line 279
+msgid "Video Files"
+msgstr "Archivos de video"
+
+#. file 'OggConvert/ocv_gtk.py', line 282
+msgid "Audio Files"
+msgstr "Archivos de audio"
+
+#. file 'OggConvert/ocv_gtk.py', line 285
+msgid "All Media Files"
+msgstr "Todos los archivos multimedia"
+
+#. file 'OggConvert/ocv_gtk.py', line 289
+msgid "All Files"
+msgstr "Todos los archivos"
+
+#. file 'OggConvert/ocv_gtk.py', line 329
+msgid "<i>Converting \"%s\"</i>"
+msgstr "<i>Convirtiendo \"%s\"</i>"
+
+#. file 'OggConvert/ocv_gtk.py', line 374
+msgid "%.1f%% completed, about %s left"
+msgstr "%.1f%% completado, sobre %s restante"
+
+#. file 'OggConvert/ocv_gtk.py', line 377
+msgid "Paused (%.1f%% completed)"
+msgstr "Pausado (%.1f%% completado)"
+
+#. file 'OggConvert/ocv_gtk.py', line 385
+msgid "Paused"
+msgstr "En pausa"
+
+#. file 'OggConvert/ocv_gtk.py', line 393
+msgid "_Resume"
+msgstr "_Reanudar"
+
+#. file 'OggConvert/ocv_gtk.py', line 405
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "_Pause"
+msgstr "_Pausar"
+
+#. file 'OggConvert/ocv_gtk.py', line 420
+msgid "Encoding complete"
+msgstr "Codificación completa"
+
+#. file 'OggConvert/ocv_gtk.py', line 425
+msgid "File saved to \"%s\"."
+msgstr "Archivo guardado en \"%s\"."
+
+#. file 'OggConvert/ocv_gtk.py', line 436
+msgid "GStreamer error: preroll failed"
+msgstr "Error en GStreamer: falló la carga del buffer inicial"
+
+#. file 'OggConvert/ocv_util.py', line 34
+msgid "unknown time"
+msgstr "tiempo desconocido"
+
+#. file 'OggConvert/ocv_util.py', line 40
+msgid "1 hour"
+msgstr "1 hora"
+
+#. file 'OggConvert/ocv_util.py', line 42
+msgid "%i hours"
+msgstr "%i horas"
+
+#. file 'OggConvert/ocv_util.py', line 45
+msgid "1 minute"
+msgstr "1 minuto"
+
+#. file 'OggConvert/ocv_util.py', line 47
+msgid "%i minutes"
+msgstr "%i minutos"
+
+#. file 'OggConvert/ocv_util.py', line 50
+msgid "1 second"
+msgstr "1 segundo"
+
+#. file 'OggConvert/ocv_util.py', line 52
+msgid "%i seconds"
+msgstr "%i segundos"
+
+#. file 'OggConvert/ocv_util.py', line 85
+msgid ""
+"The file already exists in \"%s\". Replacing it will overwrite its contents."
+msgstr ""
+"El archivo ya existe en \"%s\". Reemplazarlo sobreescribirá su contenido."
+
+#. file 'OggConvert/ocv_util.py', line 105
+msgid ""
+"The Dirac encoder is still experimental. Files you convert with this version "
+"may not be viewable with future versions of the decoder."
+msgstr ""
+"El codificador Dirac todavía es experimental. Los archivos que conviertas "
+"con esta versión pueden no ser visibles por versiones futuras del "
+"decodificador."
+
+#. file 'OggConvert/ocv_util.py', line 123
+msgid ""
+"If encoding was nearly complete, then it probably finished successfully. At "
+"other times, it means there has was problem with the encoder. In either "
+"case, it is recommended you cancel the encoding process and check the output "
+"file."
+msgstr ""
+"Si la codificación estaba casi completa, entonces probablemente finalizó de "
+"manera exitosa. En otras ocasiones, significa que hubo un problema con el "
+"codificador. En cualquier caso, es recomendable que cancele el proceso de "
+"codificación y verifique el archivo de salida."
+
+#. file 'OggConvert/ocv_util.py', line 135
+msgid "Are you sure you wish to cancel?"
+msgstr "¿Está seguro que desea cancelar?"
+
+#. file 'OggConvert/ocv_util.py', line 157
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Leonardo Gastón De Luca https://launchpad.net/~leodeluca\n"
+"  Manuel Kaufmann https://launchpad.net/~humitos"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "<b>Source</b>"
+msgstr "<b>Fuente</b>"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid ""
+"Theora\n"
+"Dirac"
+msgstr ""
+"Theora\n"
+"Dirac"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "Video Format:"
+msgstr "Formato de video:"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "Video Quality:"
+msgstr "Calidad de vídeo:"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "Audio Quality:"
+msgstr "Calidad de audio:"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid ""
+"Ogg:\n"
+"Matroska:"
+msgstr ""
+"Ogg:\n"
+"Matroska:"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg\n"
+"Matroska"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "File Format:"
+msgstr "Formato del archivo:"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "Advanced"
+msgstr "Avanzado"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "<b>Conversion</b>"
+msgstr "<b>Conversión</b>"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "File Name:"
+msgstr "Nombre del archivo"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "Save Folder:"
+msgstr "Guardar en:"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "Select A Folder"
+msgstr "Seleccione una Carpeta"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "<b>Destination</b>"
+msgstr "<b>Destino</b>"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid "OggConvert"
+msgstr "OggConvert"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid ""
+"<b><big>Converting File\n"
+"</big></b>"
+msgstr ""
+"<b><big>Convirtiendo archivo\n"
+"</big></b>"
+
+#. file 'OggConvert/oggcv.glade', line ?
+msgid ""
+"Your media file is currently being converted to Ogg format. This may take a "
+"long time."
+msgstr ""
+"Su archivo multimedia está siendo convertido a formato Ogg. Esto puede tomar "
+"mucho tiempo."

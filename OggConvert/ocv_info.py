@@ -19,9 +19,12 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
-app_name = "OggConvert"
+import os.path
+import sys
 
-version = "0.3.0.bzr"
+app_name = "oggconvert"
+
+version = "0.3.0.rc"
 
 authors = ["Tristan Brindle <tcbrindle@gmail.com>"
           ,"Alex Kabakov <ak.anapa@gmail.com>"
@@ -47,3 +50,23 @@ licence = """ This program is free software; you can redistribute it and/or
  License along with this program; if not, write to the Free Software
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 """
+
+basepath = os.path.abspath(sys.argv[0])
+
+gladepath = os.path.dirname(os.path.abspath(__file__))
+gladepath = os.path.join(gladepath, "oggcv.glade")
+
+# This is a hack to work out whether we've been installed or are just running
+# from an untarred directory.
+# People who are squeamish should probably look away now
+
+prefix = os.path.dirname(os.path.dirname(basepath))
+
+localepath = os.path.join(prefix,"share","locale")
+if not os.path.isdir(localepath):
+    localepath = "mo"
+
+pixmappath = os.path.join(prefix,"share","pixmaps")
+if not os.path.isdir(pixmappath):
+    pixmappath = "data"    
+

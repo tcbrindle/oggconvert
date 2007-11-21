@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.0 on Sun Nov 18 23:15:53 2007 -->
+<!--Generated with glade3 3.4.0 on Tue Nov 20 23:16:57 2007 -->
 <glade-interface>
   <widget class="GtkWindow" id="app_window">
     <property name="title">OggConvert</property>

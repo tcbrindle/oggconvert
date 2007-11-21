@@ -1,0 +1,7 @@
+include AUTHORS COPYING TODO README ChangeLog
+include data/*
+include po/*
+include OggConvert/oggcv.glade
+recursive-include OggConvert *.py
+global-exclude *~
+

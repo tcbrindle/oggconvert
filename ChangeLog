@@ -1,0 +1,25 @@
+
+0.2.0:
+------
+
+* Support for Dirac. Wooo!
+ 
+* OggConvert now actually quits when you close it with the window manager
+  (although nobody actually complained about that in the last version)
+  
+* OggConvert no longer crashes horribly with pitfdll (although it still can't
+  use it for encoding)
+  
+* We now check whether the encoder has stalled, and warn the user. This helps 
+  with the common case of the end-of-stream message not being fired correctly, 
+  and the process being stuck on 99.5% or so.
+  
+* A lovely new "about" dialogue!
+
+* Many other small bugfixes
+ 
+
+0.1.0:
+------
+
+* First release. Get testing!

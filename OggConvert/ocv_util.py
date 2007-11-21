@@ -125,9 +125,9 @@ def cancel_check(window=None):
     dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_QUESTION,
                 gtk.BUTTONS_NONE, _("Encoding is not complete"))
     
-    dialogue.format_secondary_text(_("Are you sure you wish to cancel?"))
+    dialogue.format_secondary_text(_("Are you sure you wish to stop?"))
     
-    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, _("Contin_ue"), gtk.RESPONSE_OK)
+    dialogue.add_buttons(gtk.STOCK_STOP, gtk.RESPONSE_CANCEL, _("_Continue"), gtk.RESPONSE_OK)
     
     response = dialogue.run()
     dialogue.destroy()
