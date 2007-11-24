@@ -24,7 +24,7 @@ import sys
 
 app_name = "oggconvert"
 
-version = "0.3.0.rc"
+version = "0.3.0"
 
 authors = ["Tristan Brindle <tcbrindle@gmail.com>"
           ,"Alex Kabakov <ak.anapa@gmail.com>"

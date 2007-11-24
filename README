@@ -1,8 +1,8 @@
 
-OggConvert 0.2.0
+OggConvert 0.3.0
 ----------------
 
-This is the second release of OggConvert, a simple Gnome utility to convert
+This is the third major release of OggConvert, a simple Gnome utility to convert
 media files into the patent-free Theora, Dirac and Vorbis formats.
 
 Dirac encoding requires GStreamer 0.10.11 and the Schroedinger encoder. Be aware
@@ -16,26 +16,29 @@ GNU LGPL.
 What's new in this version:
 ---------------------------
 
-* Support for Dirac. Wooo!
+* Support for encoding to the Matroska container format. Thanks to Carlos 
+  Perelló Marín for this.
  
-* OggConvert now actually quits when you close it with the window manager
-  (although nobody actually complained about that in the last version)
+* Internationalisation support, thanks to the work of Alex Kabakov.
   
-* OggConvert no longer crashes horribly with pitfdll (although it still can't
-  use it for encoding)
+* A lovely icon from A. Bram Neijt.
   
-* We now check whether the encoder has stalled, and warn the user. This helps 
-  with the common case of the end-of-stream message not being fired correctly, 
-  and the process being stuck on 99.5% or so.
+* Support for Gnome-VFS, allowing the transcoding of remote files over (for
+  example) SSH or HTTP connections.
   
-* OggConvert can now handle GStreamer not being able to report the current 
-  position or duration of the stream (this occasionally happens with files
-  using the ffmpeg demuxers)
+* A completely rewritten (and much faster) media checking routine.
 
-* A lovely new "about" dialogue!
+* Ogg videos are now given the extension ".ogv", in line with the latest 
+  Xiph.org guidelines.
 
-* Many, many other small bugfixes
+* Various internal changes, hopefully for the better.
 
+* New translations: Brazilian Portuguese, Bulgarian, Dutch, French, German,
+  Italian, Korean, Polish, Russian, Spanish, Swedish. Many thanks to all the
+  translators. To add your language, please go to 
+  http://translations.launchpad.net/oggconvert.
+  
+* Other miscellaneous bug fixes.
 
 
 Known issues with this release:
@@ -44,16 +47,11 @@ Known issues with this release:
 * The video quality setting doesn't do anything for Dirac encoding, due to the
   encoder not (yet) having this option available.
 
-* With GStreamer 0.10.10 (the version used in Ubuntu Edgy), transcoding from
-  certain containers (Matroka and ASF in particular) will result in very choppy
-  audio. This is worked around in GStreamer 0.10.11 (included in Ubuntu Feisty)
+* Gnome-VFS support hasn't been thoroughly tested yet. There may be bugs here
+  and there.
   
-* OggConvert uses the GStreamer decodebin, so it *should* be able to convert any
-  file which is playable in Totem. However, there is currently a problem with
-  files which use the pitfdll/W32codecs package, whereby the pipeline doesn't
-  preroll. I'm still investigating why this happens, but at least OggConvert
-  doesn't crash any more ;)
+* Transcoding from FLV (Flash video) is known to be problematic due to issues 
+  with the GStreamer FFMpeg plugins. This is likely to be solved in the next
+  release of the GStreamer "bad" plugins. See OggConvert bug #155023 for details.
   
-* OggConvert should Just Work(tm) with the Fluendo codec packages. However, I 
-  don't own a copy of these plugins, so I haven't tested it.
   

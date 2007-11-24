@@ -7,213 +7,168 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-09-25 15:36+0000\n"
+"POT-Creation-Date: 2007-11-20 23:33+0000\n"
 "PO-Revision-Date: 2007-10-14 23:44+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2007-11-19 17:32+0000\n"
+"X-Launchpad-Export-Date: 2007-11-24 20:40+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#. file 'OggConvert/ocv_gtk.py', line 139
+#. file 'ocv_main.py', line 144
 msgid "Cannot save to this folder"
 msgstr "Не може да се съхрани в тази папка"
 
-#. file 'OggConvert/ocv_gtk.py', line 151
+#. file 'ocv_main.py', line 156
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr "Изберете друго име за файла,или различно място."
 
-#. file 'OggConvert/ocv_gtk.py', line 184
+#. file 'ocv_main.py', line 188
 msgid "Bye then!"
 msgstr ""
 
-#. file 'OggConvert/ocv_gtk.py', line 279
+#. file 'ocv_main.py', line 303
 msgid "Video Files"
 msgstr "Видео Файлове"
 
-#. file 'OggConvert/ocv_gtk.py', line 282
+#. file 'ocv_main.py', line 306
 msgid "Audio Files"
 msgstr "Аудио Файлове"
 
-#. file 'OggConvert/ocv_gtk.py', line 285
+#. file 'ocv_main.py', line 309
 msgid "All Media Files"
 msgstr "Всички Медийни Файлове"
 
-#. file 'OggConvert/ocv_gtk.py', line 289
+#. file 'ocv_main.py', line 313
 msgid "All Files"
 msgstr ""
 
-#. file 'OggConvert/ocv_gtk.py', line 329
-msgid "<i>Converting \"%s\"</i>"
-msgstr "<i>Конвертиране \"%s\"</i>"
-
-#. file 'OggConvert/ocv_gtk.py', line 374
-msgid "%.1f%% completed, about %s left"
-msgstr "%.1f%% завършени, около %s остават"
-
-#. file 'OggConvert/ocv_gtk.py', line 377
-msgid "Paused (%.1f%% completed)"
-msgstr "Паузирано (%.1f%% завършени)"
-
-#. file 'OggConvert/ocv_gtk.py', line 385
-msgid "Paused"
+#. file 'ocv_util.py', line 36
+msgid "unknown time "
 msgstr ""
 
-#. file 'OggConvert/ocv_gtk.py', line 393
-msgid "_Resume"
-msgstr ""
-
-#. file 'OggConvert/ocv_gtk.py', line 405
-#. file 'OggConvert/oggcv.glade', line ?
-msgid "_Pause"
-msgstr "_Пауза"
-
-#. file 'OggConvert/ocv_gtk.py', line 420
-msgid "Encoding complete"
-msgstr "Енкодинга е завършен"
-
-#. file 'OggConvert/ocv_gtk.py', line 425
-msgid "File saved to \"%s\"."
-msgstr "Файлът е запазен в \"%s\"."
-
-#. file 'OggConvert/ocv_gtk.py', line 436
-msgid "GStreamer error: preroll failed"
-msgstr ""
-
-#. file 'OggConvert/ocv_util.py', line 34
-msgid "unknown time"
-msgstr "неопределено време"
-
-#. file 'OggConvert/ocv_util.py', line 40
+#. file 'ocv_util.py', line 46
 msgid "1 hour"
 msgstr "1 час"
 
-#. file 'OggConvert/ocv_util.py', line 42
+#. file 'ocv_util.py', line 48
 msgid "%i hours"
 msgstr "%i часа"
 
-#. file 'OggConvert/ocv_util.py', line 45
+#. file 'ocv_util.py', line 54
 msgid "1 minute"
 msgstr ""
 
-#. file 'OggConvert/ocv_util.py', line 47
+#. file 'ocv_util.py', line 56
 msgid "%i minutes"
 msgstr "%i минути"
 
-#. file 'OggConvert/ocv_util.py', line 50
+#. file 'ocv_util.py', line 63
 msgid "1 second"
 msgstr "1 секунда"
 
-#. file 'OggConvert/ocv_util.py', line 52
+#. file 'ocv_util.py', line 65
 msgid "%i seconds"
 msgstr "%i секунди"
 
-#. file 'OggConvert/ocv_util.py', line 85
+#. file 'ocv_util.py', line 91
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "Файлът вече съществува в \"%s\".Замяната му ще презапише съдържанието."
 
-#. file 'OggConvert/ocv_util.py', line 105
+#. file 'ocv_util.py', line 111
 msgid ""
 "The Dirac encoder is still experimental. Files you convert with this version "
 "may not be viewable with future versions of the decoder."
 msgstr ""
 
-#. file 'OggConvert/ocv_util.py', line 123
-msgid ""
-"If encoding was nearly complete, then it probably finished successfully. At "
-"other times, it means there has was problem with the encoder. In either "
-"case, it is recommended you cancel the encoding process and check the output "
-"file."
+#. file 'ocv_util.py', line 128
+msgid "Are you sure you wish to stop?"
 msgstr ""
 
-#. file 'OggConvert/ocv_util.py', line 135
-msgid "Are you sure you wish to cancel?"
-msgstr "Сигурен ли сте,че искате да откажете?"
-
-#. file 'OggConvert/ocv_util.py', line 157
+#. file 'ocv_util.py', line 151
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Ivaylo Ivanov https://launchpad.net/~icefox"
 
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
 msgstr "<b>Източник</b>"
 
-#. file 'OggConvert/oggcv.glade', line ?
-msgid ""
-"Theora\n"
-"Dirac"
-msgstr ""
-"Theora\n"
-"Dirac"
-
-#. file 'OggConvert/oggcv.glade', line ?
-msgid "Video Format:"
-msgstr "Видео Формат:"
-
-#. file 'OggConvert/oggcv.glade', line ?
-msgid "Video Quality:"
-msgstr "Качество на Видеото"
-
-#. file 'OggConvert/oggcv.glade', line ?
-msgid "Audio Quality:"
-msgstr "Аудио Формат:"
-
-#. file 'OggConvert/oggcv.glade', line ?
-msgid ""
-"Ogg:\n"
-"Matroska:"
-msgstr ""
-"Ogg:\n"
-"Matroska:"
-
-#. file 'OggConvert/oggcv.glade', line ?
-msgid ""
-"Ogg\n"
-"Matroska"
-msgstr ""
-"Ogg\n"
-"Matroska"
-
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
 msgid "File Format:"
 msgstr "Файл Формат:"
 
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg:\n"
+"Matroska:"
+msgstr ""
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg\n"
+"Matroska"
+
+#. file 'oggcv.glade', line ?
 msgid "Advanced"
 msgstr ""
 
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
+msgid "Audio Quality:"
+msgstr "Аудио Формат:"
+
+#. file 'oggcv.glade', line ?
+msgid "Video Quality:"
+msgstr "Качество на Видеото"
+
+#. file 'oggcv.glade', line ?
+msgid "Video Format:"
+msgstr "Видео Формат:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Theora\n"
+"Dirac"
+msgstr ""
+"Theora\n"
+"Dirac"
+
+#. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
 msgstr "<b>Обръщане</b>"
 
-#. file 'OggConvert/oggcv.glade', line ?
-msgid "File Name:"
-msgstr "Име на файла:"
-
-#. file 'OggConvert/oggcv.glade', line ?
-msgid "Save Folder:"
-msgstr "Папка за съхранение:"
-
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
 msgid "Select A Folder"
 msgstr "Изберете Папка"
 
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
+msgid "Save Folder:"
+msgstr "Папка за съхранение:"
+
+#. file 'oggcv.glade', line ?
+msgid "File Name:"
+msgstr "Име на файла:"
+
+#. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
 msgstr "<b>Направление</b>"
 
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
 msgid "OggConvert"
 msgstr "OggConvert"
 
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
 msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
@@ -221,10 +176,47 @@ msgstr ""
 "<b><big>Конвертиране на файл\n"
 "</big></b>"
 
-#. file 'OggConvert/oggcv.glade', line ?
+#. file 'oggcv.glade', line ?
 msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
 msgstr ""
 "Вашия медиен формат в момента се преобразува в Ogg формат.Това може да "
 "отнеме доста време."
+
+#. file 'oggcv.glade', line ?
+#. file 'ocv_in_progress.py', line 88
+msgid "_Pause"
+msgstr "_Пауза"
+
+#. file 'ocv_in_progress.py', line 61
+msgid "<i>Converting \"%s\"</i>"
+msgstr "<i>Конвертиране \"%s\"</i>"
+
+#. file 'ocv_in_progress.py', line 78
+msgid "_Resume"
+msgstr ""
+
+#. file 'ocv_in_progress.py', line 100
+msgid "%.1f%% completed, about %sleft"
+msgstr ""
+
+#. file 'ocv_in_progress.py', line 103
+msgid "Paused (%.1f%% completed)"
+msgstr "Паузирано (%.1f%% завършени)"
+
+#. file 'ocv_in_progress.py', line 111
+msgid "Paused"
+msgstr ""
+
+#. file 'ocv_in_progress.py', line 133
+msgid "Encoding complete"
+msgstr "Енкодинга е завършен"
+
+#. file 'ocv_in_progress.py', line 138
+msgid "File saved to \"%s\"."
+msgstr "Файлът е запазен в \"%s\"."
+
+#. file 'ocv_in_progress.py', line 149
+msgid "GStreamer error: preroll failed"
+msgstr ""

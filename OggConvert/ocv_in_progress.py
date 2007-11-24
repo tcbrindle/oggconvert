@@ -92,11 +92,13 @@ class ProgressWindow:
         pos = self._transcoder.get_position()
         completed = float(pos)/self._duration
         percent = 100*completed
+        elapsed = self._timer.get_elapsed()
     
         if self._playing:
-            timerem = timeremaining(self._timer.get_elapsed(), percent)
+            timerem = timeremaining(elapsed, percent)
             self._progressbar.set_fraction(completed)
-            self._progressbar.set_text(
+            if elapsed>3.0: # Don't display any text for the first three seconds
+                self._progressbar.set_text(
                     _("%.1f%% completed, about %sleft") %(percent, timerem))
             return True
         else: 

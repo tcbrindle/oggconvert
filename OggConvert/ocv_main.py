@@ -114,6 +114,9 @@ class Main:
         self._window.set_title("OggConvert")
         
         gtk.window_set_default_icon_from_file(os.path.join(pixmappath,"oggconvert.svg"))
+        # Add a geometry hint because I think it looks better (with the res. and
+        # font size I use... feel free to disagree!
+        self._window.set_geometry_hints(self._window, min_width=360)
         
         self._window.show_all()
     

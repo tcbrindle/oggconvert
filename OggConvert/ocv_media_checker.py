@@ -86,7 +86,6 @@ class MediaChecker(gobject.GObject):
         print error[1]
           
     def _finished(self):
-        print "All done!"
         gobject.source_remove(self.timeoutid)
         self.pipeline.set_state(gst.STATE_NULL)
         if not self.done:

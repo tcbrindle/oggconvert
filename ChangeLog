@@ -1,4 +1,45 @@
 
+0.3.0:
+------
+
+* Added support for muxing to the Matroska, thanks to Carlos Perelló Marín.
+
+* Added translation support, thanks to Alex Kabakov.
+
+* Added A. Bram Neijt's OggConvert icon.
+
+* Added support for using Gnome-VFS sources (actually, the encoder can now use 
+  any URI scheme that GStreamer understands, which is more than just Gnome-VFS,
+  but there's no GUI support fro this yet).
+  
+* Rewritten, faster, better, callback-based, non-blocking media checking routine.
+
+* Communication between the encoder and the GUI is now done the "proper" way. 
+
+* New translations: bg, de, es, fr, it, ko, nl, pl, pr_BR, ru, sv. Thanks to
+  all the translators.
+  
+* Bugs fixed in this version: #117849 (Include an icon for OggConvert)
+                              #120889 (Add Matroska support)
+                              #129069 (Current icon is ugly) (!)
+                              #133022 (Selected directory doesn't reflect output)
+                              #160054 (Ogg video files should use .ogv extension)
+
+
+0.2.1:
+------
+
+* Minor release to make life easier for packagers
+
+* Removed incorrect #! invocations from source files
+
+* Included a basic manpage. Thanks to Luca Falivigna for this.
+
+* oggconvert.desktop now conforms to freedesktop.org standards
+
+* Oh, okay, one proper bugfix: #119586 (Convert dialog is not resizable)
+
+
 0.2.0:
 ------
 
