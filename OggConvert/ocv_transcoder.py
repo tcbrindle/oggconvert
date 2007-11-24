@@ -147,7 +147,6 @@ class Transcoder(gobject.GObject):
             print "Unknown pad type detected, %s" %pad_type
       
     def _on_end_of_stream(self, bus, message):
-        print "Recieved EOS, firing"
         self.emit('eos')
         
     def _on_state_changed(self, bus, message):

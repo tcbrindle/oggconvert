@@ -114,12 +114,12 @@ class Main:
         self._window.set_title("OggConvert")
         
         gtk.window_set_default_icon_from_file(os.path.join(pixmappath,"oggconvert.svg"))
-        # Add a geometry hint because I think it looks better (with the res. and
-        # font size I use... feel free to disagree!
-        self._window.set_geometry_hints(self._window, min_width=360)
-        
+        # I want to set the window to a minimum of 360px, but allow it to be
+        # wider if a translated version requires it (most do); whilst this
+        # command does it, it also stops the window auto-resizing when the 
+        # "Advanced" spin is opened. Anyone know how to get round this?
+        #self._window.set_geometry_hints(None, min_width=360)
         self._window.show_all()
-    
                   
     def _on_go(self, button):
         self._outfile_folder = self._save_folder_button.get_filename()
