@@ -17,17 +17,21 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #
 
+import locale
+from gettext import gettext as _
+import gettext
+import sys
+import os
+import os.path
+import urllib
+
 import gobject
 import pygtk
 pygtk.require("2.0")
 import gtk
 import gtk.glade
-import os
-import os.path
-import locale
-from gettext import gettext as _
-import gettext
-import sys
+
+import ocv_init
 from ocv_in_progress import ProgressWindow
 from ocv_transcoder import Transcoder 
 from ocv_media_checker import MediaChecker
@@ -159,7 +163,7 @@ class Main:
             if not dirac_warning(self._window):
                 return
 
-        # Get file format choosed.
+        # Get file format choosen.
         container = ocv_constants.CONTAINER_FORMATS[int(
             self._container_combobox.get_active())]
 
@@ -186,6 +190,9 @@ class Main:
         self._set_sensitivities("NO_MEDIA")
         
         if not self._input_uri == None:
+            # gtk.FileChooser.get_uri returns an escaped string, which is not
+            # what we want, so this hack uses urllib to change it back.
+            self._input_uri = urllib.url2pathname(self._input_uri)
             gobject.idle_add(self._check_media,self._input_uri)
             
         folder = filechooser.get_current_folder()
@@ -293,12 +300,15 @@ class Main:
         video = gtk.FileFilter()
         video.set_name(_("Video Files"))
         video.add_mime_type("video/*")
+        # Special case for Flash video
+        video.add_mime_type("application/x-flash-video")
         audio = gtk.FileFilter()
         audio.set_name(_("Audio Files"))
         audio.add_mime_type("audio/*")
         allmedia = gtk.FileFilter()
         allmedia.set_name(_("All Media Files"))
         allmedia.add_mime_type("video/*")
+        allmedia.add_mime_type("application/x-flash-video")
         allmedia.add_mime_type("audio/*")
         allfiles = gtk.FileFilter()
         allfiles.set_name(_("All Files"))

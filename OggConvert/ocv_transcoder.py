@@ -41,7 +41,10 @@ class Transcoder(gobject.GObject):
         self._vformat = vformat
         if self._vformat == "THEORA":
             self._vquality = ocv_constants.THEORA_QUALITY_MAPPING[vquality]
+        elif self._vformat == "SCHRO":
+            self._vquality = ocv_constants.SCHRO_QUALITY_MAPPING[vquality]
         else:
+            # We should never get here
             self._vquality = 0
         self._aquality = ocv_constants.VORBIS_QUALITY_MAPPING[aquality]
         self._fformat = fformat
@@ -128,21 +131,17 @@ class Transcoder(gobject.GObject):
         caps = pad.get_caps()
         pad_type = caps.to_string()[0:5]
         if pad_type == "video":
-            encoder = VideoEncoder(self._vformat)
-            self._pipeline.add(encoder.bin,)
-            # Schroenc doesn't have a quality setting right now
-            if not self._vformat == "SCHRO":
-                encoder.encoder.set_property("quality", self._vquality)
-            encoder.bin.set_state(gst.STATE_PAUSED)
-            pad.link(encoder.bin.get_pad("sink"))
-            encoder.bin.link(self._mux)
+            encoder = VideoEncoder(self._vformat, self._vquality)
+            self._pipeline.add(encoder)
+            encoder.set_state(gst.STATE_PAUSED)
+            pad.link(encoder.get_pad("sink"))
+            encoder.link(self._mux)
         elif pad_type == "audio":
-            encoder = AudioEncoder()
-            self._pipeline.add(encoder.bin)
-            encoder.encoder.set_property("quality", self._aquality)
-            encoder.bin.set_state(gst.STATE_PAUSED)
-            pad.link(encoder.bin.get_pad("sink"))
-            encoder.bin.link(self._mux)
+            encoder = AudioEncoder(self._aquality)
+            self._pipeline.add(encoder)
+            encoder.set_state(gst.STATE_PAUSED)
+            pad.link(encoder.get_pad("sink"))
+            encoder.link(self._mux)
         else:
             print "Unknown pad type detected, %s" %pad_type
       
@@ -161,10 +160,9 @@ class Transcoder(gobject.GObject):
             
         
         
-class VideoEncoder:
-    def __init__(self, format):
-        
-        self.bin = gst.Bin()
+class VideoEncoder(gst.Bin):
+    def __init__(self, format, quality):
+        gst.Bin.__init__(self)
         self._queue1 = gst.element_factory_make("queue")
         self._queue1.set_property("max-size-buffers",500)
         self._queue2 = gst.element_factory_make("queue")
@@ -176,13 +174,17 @@ class VideoEncoder:
             self.encoder = gst.element_factory_make("schroenc")
             for prop in ocv_constants.SCHRO_OPTS:
                 self.encoder.set_property(prop, ocv_constants.SCHRO_OPTS[prop])
+            try:
+                self.encoder.set_property("noise-threshold", quality)
+            except TypeError:
+                print "This version of schroenc doesn't have the quality property"
         else:
             self.encoder = gst.element_factory_make("theoraenc")
             for prop in ocv_constants.THEORA_OPTS:
                 self.encoder.set_property(prop, ocv_constants.THEORA_OPTS[prop])            
+            self.encoder.set_property("quality", quality)
         
-        
-        self.bin.add(self._queue1, 
+        self.add(self._queue1, 
                      self._ffmpegcsp,
                      self._videorate,
                      self.encoder,
@@ -195,16 +197,15 @@ class VideoEncoder:
                               self._queue2)
         
         # Create GhostPads
-        self.bin.add_pad(gst.GhostPad('sink', self._queue1.get_pad('sink')))
-        self.bin.add_pad(gst.GhostPad('src', self._queue2.get_pad('src')))
+        self.add_pad(gst.GhostPad('sink', self._queue1.get_pad('sink')))
+        self.add_pad(gst.GhostPad('src', self._queue2.get_pad('src')))
         
         
         
         
-class AudioEncoder:
-    def __init__(self):
-        
-        self.bin = gst.Bin()
+class AudioEncoder(gst.Bin):
+    def __init__(self, quality):
+        gst.Bin.__init__(self)
         self._queue1 = gst.element_factory_make("queue")
         self._queue1.set_property("max-size-buffers",500)
         self._queue2 = gst.element_factory_make("queue")
@@ -236,8 +237,9 @@ class AudioEncoder:
         for prop in ocv_constants.VORBIS_OPTS:
             self.encoder.set_property(prop, ocv_constants.VORBIS_OPTS[prop])
         
+        self.encoder.set_property("quality", quality)
         
-        self.bin.add(self._queue1, 
+        self.add(self._queue1, 
                      self._audioconvert,
                      self._audiorate,
                      self.encoder,
@@ -250,8 +252,8 @@ class AudioEncoder:
                               self._queue2)
         
         # Create GhostPads
-        self.bin.add_pad(gst.GhostPad('sink', self._queue1.get_pad('sink')))
-        self.bin.add_pad(gst.GhostPad('src', self._queue2.get_pad('src')))
+        self.add_pad(gst.GhostPad('sink', self._queue1.get_pad('sink')))
+        self.add_pad(gst.GhostPad('src', self._queue2.get_pad('src')))
         
 
 

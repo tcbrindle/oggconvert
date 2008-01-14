@@ -47,7 +47,18 @@ THEORA_QUALITY_MAPPING = {1 : 0
                         , 10: 63}
 
 THEORA_OPTS = {"sharpness" : 1}
-
+ 
+SCHRO_QUALITY_MAPPING = {1 : 0
+                        , 2 : 5
+                        , 3 : 10
+                        , 4 : 15
+                        , 5 : 20
+                        , 6 : 25 
+                        , 7 : 30
+                        , 8 : 35
+                        , 9 : 40
+                        , 10: 45}
+ 
 SCHRO_OPTS = {}
 
 VORBIS_QUALITY_MAPPING = {1 : 0.1

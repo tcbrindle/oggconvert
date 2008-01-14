@@ -90,7 +90,10 @@ class ProgressWindow:
             
     def _update_progressbar(self):
         pos = self._transcoder.get_position()
-        completed = float(pos)/self._duration
+        if pos:
+            completed = float(pos)/self._duration
+        else:
+            completed = 1
         percent = 100*completed
         elapsed = self._timer.get_elapsed()
     
