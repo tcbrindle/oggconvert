@@ -1,16 +1,16 @@
-# Polish translation for oggconvert
-# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# Simplified Chinese translation for oggconvert
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
 # This file is distributed under the same license as the oggconvert package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2007-11-01 15:30+0000\n"
+"PO-Revision-Date: 2008-01-09 07:15+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Polish <pl@li.org>\n"
+"Language-Team: Simplified Chinese <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,204 +19,201 @@ msgstr ""
 
 #. file 'ocv_main.py', line 144
 msgid "Cannot save to this folder"
-msgstr "Nie można zapisać w tym folderze"
+msgstr "不能保存到此文件夹"
 
 #. file 'ocv_main.py', line 156
 msgid ""
 "Choose a different name for the save file, or save to a different location."
-msgstr ""
-"Wybierz inną nazwę dla zapisywanego pliku lub zapisz plik w innej lokacji."
+msgstr "选择不同的名称或位置保存文件。"
 
 #. file 'ocv_main.py', line 188
 msgid "Bye then!"
-msgstr ""
+msgstr "再见！"
 
 #. file 'ocv_main.py', line 303
 msgid "Video Files"
-msgstr "Pliki wideo"
+msgstr "视频文件"
 
 #. file 'ocv_main.py', line 306
 msgid "Audio Files"
-msgstr "Pliki audio"
+msgstr "音频文件"
 
 #. file 'ocv_main.py', line 309
 msgid "All Media Files"
-msgstr "Wszystkie pliki multimedialne"
+msgstr "所有多媒体文件"
 
 #. file 'ocv_main.py', line 313
 msgid "All Files"
-msgstr "Wszystkie pliki"
+msgstr "所有文件"
 
 #. file 'ocv_util.py', line 36
 msgid "unknown time "
-msgstr ""
+msgstr "未知时间 "
 
 #. file 'ocv_util.py', line 46
 msgid "1 hour"
-msgstr "1 godzina"
+msgstr "1 时"
 
 #. file 'ocv_util.py', line 48
 msgid "%i hours"
-msgstr "%i godzin"
+msgstr "%i 小时"
 
 #. file 'ocv_util.py', line 54
 msgid "1 minute"
-msgstr "1 minuta"
+msgstr "1 分"
 
 #. file 'ocv_util.py', line 56
 msgid "%i minutes"
-msgstr "%i minut"
+msgstr "%i 分"
 
 #. file 'ocv_util.py', line 63
 msgid "1 second"
-msgstr "1 sekunda"
+msgstr "1 秒"
 
 #. file 'ocv_util.py', line 65
 msgid "%i seconds"
-msgstr "%i sekund"
+msgstr "%i 秒"
 
 #. file 'ocv_util.py', line 91
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr ""
+msgstr "文件夹\"%s\"已存在这个文件。替换将会覆盖原来的文件。"
 
 #. file 'ocv_util.py', line 111
-#, fuzzy
 msgid ""
 "The Dirac encoder is still experimental. Files you convert with this version "
 "may not be viewable with future versions of the decoder."
-msgstr ""
-"Kodek Dirac jest wersją rozwojową. Pliki konwertowane z tą wersją mogą nie "
-"być obsługiwane przez nowsze wersje kodeka."
+msgstr "Dirac还是实验性的解码器。使用此解码器转换的文件不能保证将来可用。"
 
 #. file 'ocv_util.py', line 128
 msgid "Are you sure you wish to stop?"
-msgstr ""
+msgstr "你确实希望停止？"
 
 #. file 'ocv_util.py', line 151
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Brech https://launchpad.net/~brecho"
+"  Joo https://launchpad.net/~joo.tsao"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
-msgstr "<b>Źródło</b>"
+msgstr "<b>来源</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "File Format:"
-msgstr "Format pliku:"
+msgstr "文件格式："
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Ogg:\n"
 "Matroska:"
 msgstr ""
+"Ogg：\n"
+"Matroska："
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Ogg\n"
 "Matroska"
 msgstr ""
+"Ogg\n"
+"Matroska"
 
 #. file 'oggcv.glade', line ?
 msgid "Advanced"
-msgstr "Zaawansowane"
+msgstr "高级设置"
 
 #. file 'oggcv.glade', line ?
 msgid "Audio Quality:"
-msgstr "Jakość dźwięku:"
+msgstr "音频质量："
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
-msgstr "Jakość obrazu:"
+msgstr "视频质量："
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
-msgstr "Format wideo:"
+msgstr "视频格式："
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Theora\n"
 "Dirac"
 msgstr ""
+"Theora\n"
+"Dirac"
 
 #. file 'oggcv.glade', line ?
-#, fuzzy
 msgid "<b>Conversion</b>"
-msgstr "<b>Konwersja</b>"
+msgstr "<b>转换</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Wybierz folder"
+msgstr "选择文件夹"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
-msgstr "Folder zapisu:"
+msgstr "保存文件夹:"
 
 #. file 'oggcv.glade', line ?
 msgid "File Name:"
-msgstr "Nazwa pliku:"
+msgstr "文件名："
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
-msgstr "<b>Miejsce docelowe</b>"
+msgstr "<b>目的</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "OggConvert"
-msgstr "OggConverter"
+msgstr "OggConvert"
 
 #. file 'oggcv.glade', line ?
-#, fuzzy
 msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
-"<b><big>Konwertowany plik\n"
+"<b><big>正在转换文件\n"
 "</big></b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
-msgstr ""
-"Twój plik multimedialny jest obecnie konwertowany do formatu Ogg. Może to "
-"chwilę potrwać."
+msgstr "你的多媒体文件正在转换成Ogg格式。这个过程需要一些时间。"
 
 #. file 'oggcv.glade', line ?
 #. file 'ocv_in_progress.py', line 88
 msgid "_Pause"
-msgstr ""
+msgstr "暂停(_P)"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr ""
+msgstr "<i>正在转换 \"%s\"</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
-msgstr "_Wznów"
+msgstr "继续(_R)"
 
 #. file 'ocv_in_progress.py', line 100
 msgid "%.1f%% completed, about %sleft"
-msgstr ""
+msgstr "%.1f%% 已完成， 大约%s剩余"
 
 #. file 'ocv_in_progress.py', line 103
 msgid "Paused (%.1f%% completed)"
-msgstr "Wstrzymano (%.1f%% ukończone)"
+msgstr "暂停 （%.1f%% 已完成）"
 
 #. file 'ocv_in_progress.py', line 111
-#, fuzzy
 msgid "Paused"
-msgstr "Wstrzymano"
+msgstr "已暂停"
 
 #. file 'ocv_in_progress.py', line 133
 msgid "Encoding complete"
-msgstr "Kodowanie zakończone"
+msgstr "编码完成"
 
 #. file 'ocv_in_progress.py', line 138
 msgid "File saved to \"%s\"."
-msgstr "Plik zapisano w \"%s\"."
+msgstr "保存文件到\"%s\"。"
 
 #. file 'ocv_in_progress.py', line 149
 msgid "GStreamer error: preroll failed"
-msgstr ""
+msgstr "GStreamer 错误：preroll failed"

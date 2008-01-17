@@ -8,42 +8,41 @@ msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2007-11-21 13:11+0000\n"
+"PO-Revision-Date: 2007-12-04 08:35+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2007-11-24 20:40+0000\n"
+"X-Launchpad-Export-Date: 2008-01-17 21:40+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. file 'ocv_main.py', line 144
 msgid "Cannot save to this folder"
-msgstr "non posso salvare in questa cartella"
+msgstr "Impossibile salvare in questa cartella"
 
 #. file 'ocv_main.py', line 156
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr ""
-"scegli un nome diverso per il file da salvare, o salva in una cartella "
-"diversa"
+"Scegliere un nome diverso per il file da salvare, oppure salvare in una "
+"posizione diversa."
 
 #. file 'ocv_main.py', line 188
-#, fuzzy
 msgid "Bye then!"
-msgstr "allora ciao!"
+msgstr "Ciao!"
 
 #. file 'ocv_main.py', line 303
 msgid "Video Files"
-msgstr "File _video"
+msgstr "File video"
 
 #. file 'ocv_main.py', line 306
 msgid "Audio Files"
-msgstr "File _audio"
+msgstr "File audio"
 
 #. file 'ocv_main.py', line 309
 msgid "All Media Files"
-msgstr "tutti i file multimediali"
+msgstr "Tutti i file multimediali"
 
 #. file 'ocv_main.py', line 313
 msgid "All Files"
@@ -51,7 +50,7 @@ msgstr "Tutti i file"
 
 #. file 'ocv_util.py', line 36
 msgid "unknown time "
-msgstr ""
+msgstr "Durata sconosciuta "
 
 #. file 'ocv_util.py', line 46
 msgid "1 hour"
@@ -63,7 +62,7 @@ msgstr "%i ore"
 
 #. file 'ocv_util.py', line 54
 msgid "1 minute"
-msgstr "1 Minuto"
+msgstr "1 minuto"
 
 #. file 'ocv_util.py', line 56
 msgid "%i minutes"
@@ -71,7 +70,7 @@ msgstr "%i minuti"
 
 #. file 'ocv_util.py', line 63
 msgid "1 second"
-msgstr "1 Secondo"
+msgstr "1 secondo"
 
 #. file 'ocv_util.py', line 65
 msgid "%i seconds"
@@ -81,30 +80,30 @@ msgstr "%i secondi"
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
-"The file esiste già in \"%s\". Sostituendolo sovrapporrà il contenuto"
+"Il file esiste già in \"%s\". Se viene sostituito il suo contenuto verrà "
+"sovrascritto."
 
 #. file 'ocv_util.py', line 111
-#, fuzzy
 msgid ""
 "The Dirac encoder is still experimental. Files you convert with this version "
 "may not be viewable with future versions of the decoder."
 msgstr ""
-"Il codificatore Dirac è ancora sperimentale. I file che convertirete con "
-"questa versione potrebbero non essere leggibili con le versioni future del "
+"Il codificatore Dirac è ancora sperimentale. I file convertiti con questa "
+"versione potrebbero non essere leggibili con le versioni future del "
 "decodificatore."
 
 #. file 'ocv_util.py', line 128
-#, fuzzy
 msgid "Are you sure you wish to stop?"
-msgstr "Sei sicuro di voler terminare?"
+msgstr "Si è certi di voler terminare?"
 
 #. file 'ocv_util.py', line 151
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Antonio Cono https://launchpad.net/~tblu\n"
-"  Leo Cosma https://launchpad.net/~leo-cosma\n"
+"  Leo Cosma https://launchpad.net/~leocosma\n"
 "  Nicola Piovesan https://launchpad.net/~piovesannicola\n"
+"  Sergio Zanchetta https://launchpad.net/~primes2h\n"
 "  Tristan Brindle https://launchpad.net/~tristan-brindle"
 
 #. file 'oggcv.glade', line ?
@@ -137,11 +136,11 @@ msgstr "Avanzate"
 
 #. file 'oggcv.glade', line ?
 msgid "Audio Quality:"
-msgstr "Qualità Audio:"
+msgstr "Qualità audio:"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
-msgstr "Qualità Video:"
+msgstr "Qualità video:"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
@@ -156,17 +155,17 @@ msgstr ""
 "Dirac"
 
 #. file 'oggcv.glade', line ?
-#, fuzzy
 msgid "<b>Conversion</b>"
 msgstr "<b>Conversione</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Scegli una cartella"
+msgstr "Selezionare una cartella"
 
 #. file 'oggcv.glade', line ?
+#, fuzzy
 msgid "Save Folder:"
-msgstr "Salva cartella:"
+msgstr "Cartella di salvataggio:"
 
 #. file 'oggcv.glade', line ?
 msgid "File Name:"
@@ -185,7 +184,7 @@ msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
-"<b><big>Convertendo File\n"
+"<b><big>Conversione file\n"
 "</big></b>"
 
 #. file 'oggcv.glade', line ?
@@ -193,8 +192,8 @@ msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
 msgstr ""
-"Il tuo file multimediale sta per essere convertito nel formato Ogg. Potrebbe "
-"richiedere del tempo."
+"È in corso la conversione del file multimediale nel formato Ogg. Questo "
+"potrebbe richiedere del tempo."
 
 #. file 'oggcv.glade', line ?
 #. file 'ocv_in_progress.py', line 88
@@ -202,35 +201,33 @@ msgid "_Pause"
 msgstr "_Pausa"
 
 #. file 'ocv_in_progress.py', line 61
-#, fuzzy
 msgid "<i>Converting \"%s\"</i>"
 msgstr "<i>Conversione di \"%s\" in corso</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
-msgstr "riprendi"
+msgstr "_Riprendi"
 
 #. file 'ocv_in_progress.py', line 100
 msgid "%.1f%% completed, about %sleft"
-msgstr ""
+msgstr "%.1f%% completato, rimasti %scirca"
 
 #. file 'ocv_in_progress.py', line 103
 msgid "Paused (%.1f%% completed)"
-msgstr "in pausa (%.1f%% completato)"
+msgstr "In pausa (%.1f%% completato)"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused"
-msgstr "Pausa"
+msgstr "In pausa"
 
 #. file 'ocv_in_progress.py', line 133
 msgid "Encoding complete"
-msgstr "codifica completata"
+msgstr "Codifica completata"
 
 #. file 'ocv_in_progress.py', line 138
 msgid "File saved to \"%s\"."
 msgstr "File salvato in \"%s\"."
 
 #. file 'ocv_in_progress.py', line 149
-#, fuzzy
 msgid "GStreamer error: preroll failed"
-msgstr "Errore GStreamer: preroll failed"
+msgstr "Errore GStreamer: preroll fallito"

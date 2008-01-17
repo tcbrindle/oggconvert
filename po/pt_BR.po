@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2007-10-19 20:24+0000\n"
+"PO-Revision-Date: 2007-12-19 20:17+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2007-11-24 20:40+0000\n"
+"X-Launchpad-Export-Date: 2008-01-17 21:40+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. file 'ocv_main.py', line 144
 msgid "Cannot save to this folder"
-msgstr "Não pode salvar nesta pasta"
+msgstr "Não é possível salvar nesta pasta"
 
 #. file 'ocv_main.py', line 156
 msgid ""
@@ -34,16 +34,15 @@ msgstr "Tchau então!"
 
 #. file 'ocv_main.py', line 303
 msgid "Video Files"
-msgstr "Arquivos de vídeo"
+msgstr "Arquivos de Vídeo"
 
 #. file 'ocv_main.py', line 306
 msgid "Audio Files"
-msgstr "Arquivos de Audio"
+msgstr "Arquivos de Áudio"
 
 #. file 'ocv_main.py', line 309
-#, fuzzy
 msgid "All Media Files"
-msgstr "Todos os arquivos de media"
+msgstr "Todos os Arquivos de Mídia"
 
 #. file 'ocv_main.py', line 313
 msgid "All Files"
@@ -51,7 +50,7 @@ msgstr "Todos os Arquivos"
 
 #. file 'ocv_util.py', line 36
 msgid "unknown time "
-msgstr ""
+msgstr "tempo desconhecido "
 
 #. file 'ocv_util.py', line 46
 msgid "1 hour"
@@ -80,22 +79,25 @@ msgstr "%i segundos"
 #. file 'ocv_util.py', line 91
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr "O arquivo já existe em \"%s\". Deseja substitui-lo?"
+msgstr "O arquivo já existe em \"%s\". Deseja substituí-lo?"
 
 #. file 'ocv_util.py', line 111
 msgid ""
 "The Dirac encoder is still experimental. Files you convert with this version "
 "may not be viewable with future versions of the decoder."
 msgstr ""
+"O codificador Dirac ainda é experimental. Os arquivos convertidos com esta "
+"versão talvez não possam ser exibidos com versões futuras do decodificador."
 
 #. file 'ocv_util.py', line 128
 msgid "Are you sure you wish to stop?"
-msgstr ""
+msgstr "Tem certeza de que deseja interromper?"
 
 #. file 'ocv_util.py', line 151
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Gabriel Ramos https://launchpad.net/~gabrielramos\n"
 "  Ricardo https://launchpad.net/~ricardofantin\n"
 "  alexandrenescau https://launchpad.net/~alexandrenescau"
 
@@ -184,7 +186,7 @@ msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
 msgstr ""
-"O seu arquivo de mídia esta sendo convertido para o formato Ogg. Isto pode "
+"O seu arquivo de mídia está sendo convertido para o formato Ogg. Isto pode "
 "levar bastante tempo."
 
 #. file 'oggcv.glade', line ?
@@ -197,17 +199,18 @@ msgid "<i>Converting \"%s\"</i>"
 msgstr "<i>Convertendo \"%s\"</i>"
 
 #. file 'ocv_in_progress.py', line 78
+#, fuzzy
 msgid "_Resume"
-msgstr "Continuar"
+msgstr "_Continuar"
 
 #. file 'ocv_in_progress.py', line 100
 msgid "%.1f%% completed, about %sleft"
-msgstr ""
+msgstr "%.1f%% concluídos, cerca de %s restantes"
 
 #. file 'ocv_in_progress.py', line 103
 #, fuzzy
 msgid "Paused (%.1f%% completed)"
-msgstr "Parado (%.1f%% completo)"
+msgstr "Pausado (%.1f%% concluídos)"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused"
@@ -215,7 +218,7 @@ msgstr "Parado"
 
 #. file 'ocv_in_progress.py', line 133
 msgid "Encoding complete"
-msgstr "Encoding completo"
+msgstr "Conversão concluída"
 
 #. file 'ocv_in_progress.py', line 138
 msgid "File saved to \"%s\"."

@@ -1,4 +1,30 @@
 
+0.3.1:
+------
+
+* Added Schro quality setting (thanks to David Schleef). Closes #180228
+
+* Use urllib to unescape the URIs that gtk.FileChooser gives us. Closes 
+  #182607
+
+* As new versions of gst-plugins-base and gst-ffmpeg (take your pic) 
+  offer reasonable support for the FLV container, add 
+  "application/x-flash-video" as a special case under Video and All Files 
+  in the file selector. Closes #155023
+
+* Remove a minor type error that sometimes occured when a file had completed.
+
+* Don't actually init anything in __init__.py, because apparently that 
+  breaks stuff (!). Added a new file ocv_init.py instead. Closes #175770
+
+* Check for Matroska support at startup to remove an unintended dependency
+  on gstreamer-plugins-good.
+
+* Removed another incorrect '#!' that snuck back in because I'm an idiot
+
+* Added new translations: cs, fi, ms, oc, pt, uk, zh_CN, plus other translations
+  updated. Many thanks to all the translators.
+
 0.3.0:
 ------
 

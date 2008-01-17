@@ -108,8 +108,10 @@ class Main:
             self._format_combobox.show()
             self._format_label.show()
 
-        self._container_combobox.set_active(0)
-        self._container_combobox.show()
+        if ocv_constants.HAVE_MATROSKA:
+            self._container_expander.show()
+            self._container_combobox.set_active(0)
+            self._container_combobox.show()
 
         self._set_up_filechooser()
               

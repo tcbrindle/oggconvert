@@ -121,7 +121,6 @@ class ProgressWindow:
             self._transcoder.pause()           
         else:
             self._transcoder.play()
-            
                    
     def _on_cancel_clicked(self, *args):
         if cancel_check(self._window):

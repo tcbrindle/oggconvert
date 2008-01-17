@@ -24,11 +24,12 @@ import sys
 
 app_name = "oggconvert"
 
-version = "0.3.0"
+version = "0.3.1"
 
 authors = ["Tristan Brindle <tcbrindle@gmail.com>"
           ,"Alex Kabakov <ak.anapa@gmail.com>"
-          ,"Carlos Perelló Marín <carlos.perello@canonical.com>"]
+          ,"Carlos Perelló Marín <carlos.perello@canonical.com>"
+          ,"David Scheef <ds@schleef.org>"]
 
 artists = ["A. Bram Neijt <bneijt@gmail.com>"]
 

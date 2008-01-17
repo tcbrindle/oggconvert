@@ -25,16 +25,22 @@ import ocv_constants
 
 gstver = gst.version()
 
-if ocv_constants.USE_AUDIORATE == None:
+if ocv_constants.USE_AUDIORATE is None:
     if gstver[2] > 10:
         ocv_constants.USE_AUDIORATE = True
     else:
         ocv_constants.USE_AUDIORATE = False
 
 
-if ocv_constants.HAVE_SCHRO == None:
+if ocv_constants.HAVE_SCHRO is None:
     ocv_constants.HAVE_SCHRO = False
     if gstver[2] > 10:
-        if not gst.element_factory_find("schroenc")==None:
+        if gst.element_factory_find("schroenc") is not None:
             print "Schrödinger encoder found, using"
             ocv_constants.HAVE_SCHRO = True
+            
+if ocv_constants.HAVE_MATROSKA is None:
+    if gst.element_factory_find("matroskamux") is None:
+        ocv_constants.HAVE_MATROSKA = False
+    else:
+        ocv_constants.HAVE_MATROSKA = True

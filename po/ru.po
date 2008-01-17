@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2007-10-02 09:32+0000\n"
+"PO-Revision-Date: 2007-11-26 21:33+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2007-11-24 20:40+0000\n"
+"X-Launchpad-Export-Date: 2008-01-17 21:40+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. file 'ocv_main.py', line 144
@@ -24,7 +24,7 @@ msgstr "Невозможно сохранить в эту папку"
 #. file 'ocv_main.py', line 156
 msgid ""
 "Choose a different name for the save file, or save to a different location."
-msgstr "Выбирите другое имя для фала или сохрание в другую папку."
+msgstr "Выбирите другое имя для файла или сохраните в другую папку."
 
 #. file 'ocv_main.py', line 188
 msgid "Bye then!"
@@ -48,7 +48,7 @@ msgstr "Все файлы"
 
 #. file 'ocv_util.py', line 36
 msgid "unknown time "
-msgstr ""
+msgstr "время неизвестно "
 
 #. file 'ocv_util.py', line 46
 msgid "1 hour"
@@ -77,10 +77,9 @@ msgstr "%i секунд"
 #. file 'ocv_util.py', line 91
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr "Файл уже существует в \"%s\". Замена перезапишет его содержимое."
+msgstr "Файл уже существует в \"%s\". Он будет перезаписан."
 
 #. file 'ocv_util.py', line 111
-#, fuzzy
 msgid ""
 "The Dirac encoder is still experimental. Files you convert with this version "
 "may not be viewable with future versions of the decoder."
@@ -90,7 +89,7 @@ msgstr ""
 
 #. file 'ocv_util.py', line 128
 msgid "Are you sure you wish to stop?"
-msgstr ""
+msgstr "Вы уверены, что хотите прервать процесс?"
 
 #. file 'ocv_util.py', line 151
 msgid "translator-credits"
@@ -100,7 +99,7 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
-msgstr "<b>Исходный</b>"
+msgstr "<b>Исходный файл</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "File Format:"
@@ -124,7 +123,7 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "Advanced"
-msgstr "Дополнительно"
+msgstr "Расширенные настройки"
 
 #. file 'oggcv.glade', line ?
 msgid "Audio Quality:"
@@ -152,7 +151,7 @@ msgstr "<b>Настройки преобразования</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Выбрать папку"
+msgstr "Выберите папку"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
@@ -193,7 +192,7 @@ msgstr "При_остановить"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr "<i>Конвертировать \"%s\"</i>"
+msgstr "<i>Преобразование \"%s\"</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
@@ -201,7 +200,7 @@ msgstr "_Продолжить"
 
 #. file 'ocv_in_progress.py', line 100
 msgid "%.1f%% completed, about %sleft"
-msgstr ""
+msgstr "%.1f%% выполнено, около %sосталось"
 
 #. file 'ocv_in_progress.py', line 103
 msgid "Paused (%.1f%% completed)"
@@ -209,7 +208,7 @@ msgstr "Приостановлено (%.1f%% выполнено)"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused"
-msgstr "Остановлено"
+msgstr "Приостановлено"
 
 #. file 'ocv_in_progress.py', line 133
 msgid "Encoding complete"
@@ -221,4 +220,4 @@ msgstr "Файл сохранён в \"%s\"."
 
 #. file 'ocv_in_progress.py', line 149
 msgid "GStreamer error: preroll failed"
-msgstr ""
+msgstr "Ошибка GStreamer: preroll failed"

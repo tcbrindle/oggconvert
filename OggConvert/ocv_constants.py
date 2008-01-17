@@ -32,6 +32,12 @@ USE_AUDIORATE = None
 # schroenc doesn't exist will cause problems if you try to encode to Dirac
 HAVE_SCHRO = None
 
+# Leave this set to None to have OggConvert detect whether you've got the
+# Matroska muxer installed. The answer is almost certainly yes, but we check
+# anyway so as not to depend on gst-plugins-good. Set this to False if you want
+# to disable choosing an alternative container format
+HAVE_MATROSKA = None
+
 FORMATS = ["THEORA", "SCHRO"]
 
 
