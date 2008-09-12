@@ -41,33 +41,36 @@ HAVE_MATROSKA = None
 FORMATS = ["THEORA", "SCHRO"]
 
 
-THEORA_QUALITY_MAPPING = {1 : 0
-                        , 2 : 7
-                        , 3 : 14
-                        , 4 : 21
-                        , 5 : 28
-                        , 6 : 35 
-                        , 7 : 42
-                        , 8 : 49
+THEORA_QUALITY_MAPPING = { 0 : 0
+                        , 1 : 6
+                        , 2 : 12
+                        , 3 : 18
+                        , 4 : 25
+                        , 5 : 31
+                        , 6 : 37 
+                        , 7 : 44
+                        , 8 : 50
                         , 9 : 56
                         , 10: 63}
 
 THEORA_OPTS = {"sharpness" : 1}
  
-SCHRO_QUALITY_MAPPING = {1 : 0
-                        , 2 : 5
-                        , 3 : 10
-                        , 4 : 15
-                        , 5 : 20
-                        , 6 : 25 
-                        , 7 : 30
-                        , 8 : 35
-                        , 9 : 40
-                        , 10: 45}
+SCHRO_QUALITY_MAPPING = { 0 : 0
+                        , 1 : 5
+                        , 2 : 10
+                        , 3 : 15
+                        , 4 : 20
+                        , 5 : 25 
+                        , 6 : 30
+                        , 7 : 35
+                        , 8 : 40
+                        , 9 : 45
+                        , 10: 50}
  
-SCHRO_OPTS = {}
+SCHRO_OPTS = { "perceptual_weighting" : 1 }
 
-VORBIS_QUALITY_MAPPING = {1 : 0.1
+VORBIS_QUALITY_MAPPING = { 0 : 0.0
+                        , 1 : 0.1
                         , 2 : 0.2
                         , 3 : 0.3
                         , 4 : 0.4

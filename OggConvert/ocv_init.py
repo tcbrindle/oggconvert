@@ -35,9 +35,13 @@ if ocv_constants.USE_AUDIORATE is None:
 if ocv_constants.HAVE_SCHRO is None:
     ocv_constants.HAVE_SCHRO = False
     if gstver[2] > 10:
-        if gst.element_factory_find("schroenc") is not None:
-            print "Schrödinger encoder found, using"
-            ocv_constants.HAVE_SCHRO = True
+        schrofac = gst.element_factory_find("schroenc")
+        if schrofac is not None:
+            if schrofac.check_version(1,0,0):
+                print "Schrödinger encoder found, using"
+                ocv_constants.HAVE_SCHRO = True
+            else:
+                print "Old Schrödinger version found, please upgrade"
             
 if ocv_constants.HAVE_MATROSKA is None:
     if gst.element_factory_find("matroskamux") is None:

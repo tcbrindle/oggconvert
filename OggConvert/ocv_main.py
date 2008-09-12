@@ -157,15 +157,9 @@ class Main:
             else: 
                 if not confirm_overwrite(self._outfile, self._window):
                     return
-              
-        
-        # If Dirac is selected, flash up a warning to show it's experimental
-        format = ocv_constants.FORMATS[int(self._format_combobox.get_active())]
-        if format == "SCHRO":
-            if not dirac_warning(self._window):
-                return
 
-        # Get file format choosen.
+        # Get video and file formats choosen.
+        format = ocv_constants.FORMATS[int(self._format_combobox.get_active())]
         container = ocv_constants.CONTAINER_FORMATS[int(
             self._container_combobox.get_active())]
 

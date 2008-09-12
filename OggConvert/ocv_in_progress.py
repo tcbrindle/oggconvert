@@ -18,7 +18,7 @@
 #
 
 import os
-from time import clock
+from time import time
 import gobject
 import gtk
 
@@ -90,6 +90,7 @@ class ProgressWindow:
             
     def _update_progressbar(self):
         pos = self._transcoder.get_position()
+        self._duration = self._transcoder.get_duration()
         if pos:
             completed = float(pos)/self._duration
         else:
@@ -99,8 +100,8 @@ class ProgressWindow:
     
         if self._playing:
             timerem = timeremaining(elapsed, percent)
-            self._progressbar.set_fraction(completed)
             if elapsed>3.0: # Don't display any text for the first three seconds
+                self._progressbar.set_fraction(completed)
                 self._progressbar.set_text(
                     _("%.1f%% completed, about %sleft") %(percent, timerem))
             return True
@@ -157,20 +158,20 @@ class ProgressWindow:
 class Timer:
     def __init__(self):
         self._elapsed  = 0.0
-        self._starttime = 0.0
+        self._starttime = time()
         self._started = False
         
     def start(self):
-        self._starttime = clock()
+        self._starttime = time()
         self._started = True
         
     def stop(self):
-        self._elapsed += (clock() - self._starttime)
+        self._elapsed += (time() - self._starttime)
         self._started = False
      
     def get_elapsed(self):
         if self._started:
-            return (self._elapsed + clock() - self._starttime)
+            return (self._elapsed + time() - self._starttime)
         else:
             return self._elapsed
             
