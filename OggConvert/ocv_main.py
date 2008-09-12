@@ -35,7 +35,7 @@ import ocv_init
 from ocv_in_progress import ProgressWindow
 from ocv_transcoder import Transcoder 
 from ocv_media_checker import MediaChecker
-from ocv_util import confirm_overwrite, dirac_warning, about_dialogue
+from ocv_util import confirm_overwrite, about_dialogue
 import ocv_constants
 from ocv_info import app_name, gladepath, localepath, pixmappath
 

@@ -96,25 +96,6 @@ def confirm_overwrite(path, window=None):
     if response ==gtk.RESPONSE_OK: return True
     else: return False
     
-def dirac_warning(window=None):
-    """
-    Displays a warning box asking the user to make sure they realise Dirac is
-    experimental.
-    Returns True if the user chooses to continue, False otherwise
-    """
-    
-    dialogue = gtk.MessageDialog(window, gtk.DIALOG_MODAL, gtk.MESSAGE_WARNING,
-                 gtk.BUTTONS_NONE, _("Dirac encoding still experimental"))
-                 
-    dialogue.format_secondary_text(_("The Dirac encoder is still experimental. \
-Files you convert with this version may not be viewable with future versions \
-of the decoder."))
-
-    dialogue.add_buttons(gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, _("Contin_ue"), gtk.RESPONSE_OK)
-    response = dialogue.run()
-    dialogue.destroy()
-    if response==gtk.RESPONSE_OK: return True
-    else: return False
     
     
 def cancel_check(window=None):

@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2007-11-26 09:19+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2008-03-30 14:19+0000\n"
+"Last-Translator: Data <ubuntuaddress@web.de>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-01-17 21:40+0000\n"
+"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. file 'ocv_main.py', line 144
@@ -25,12 +25,12 @@ msgstr "Kann nicht in diesen Ordner speichern"
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr ""
-"Bitte wähle einen anderen Namen oder einen anderen Speicherort für die Datei "
-"aus."
+"Bitte wählen Sie einen anderen Namen oder einen anderen Speicherort für die "
+"Datei aus."
 
 #. file 'ocv_main.py', line 188
 msgid "Bye then!"
-msgstr "Tschüss dann!"
+msgstr "Auf Wiedersehen!"
 
 #. file 'ocv_main.py', line 303
 msgid "Video Files"
@@ -94,15 +94,17 @@ msgstr ""
 
 #. file 'ocv_util.py', line 128
 msgid "Are you sure you wish to stop?"
-msgstr "Sind Sie sicher das Sie beenden wollen?"
+msgstr "Sind Sie sicher, dass Sie beenden wollen?"
 
 #. file 'ocv_util.py', line 151
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Blackout https://launchpad.net/~coolx67\n"
+"  Data https://launchpad.net/~ubuntuaddress\n"
 "  Friedrich Weber https://launchpad.net/~fredreichbier\n"
-"  Martin Schaaf https://launchpad.net/~mascha"
+"  Martin Schaaf https://launchpad.net/~mascha\n"
+"  thmsslg https://launchpad.net/~thmsslg"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
@@ -158,7 +160,7 @@ msgstr "<b>Umwandlung</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Wähle einen Ordner aus"
+msgstr "Ordner auswählen"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
@@ -189,17 +191,17 @@ msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
 msgstr ""
-"Die Datei wird derzeit in das Ogg-Format umgewandelt. Das kann eventuell "
+"Die Datei wird gerade in das Ogg-Format umgewandelt. Das kann eventuell "
 "lange dauern."
 
 #. file 'oggcv.glade', line ?
 #. file 'ocv_in_progress.py', line 88
 msgid "_Pause"
-msgstr "_Pausieren"
+msgstr "_Pause"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr "<i>Konvertiere \"%s\"</i>"
+msgstr "<i>\"%s\" wird konvertiert</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
@@ -211,11 +213,11 @@ msgstr "%.1f%% fertig, ungefähr %s übrig"
 
 #. file 'ocv_in_progress.py', line 103
 msgid "Paused (%.1f%% completed)"
-msgstr "Gestoppt (%.1f%% komplett)"
+msgstr "Angehalten (%.1f%% komplett)"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused"
-msgstr "Pausiert"
+msgstr "Angehalten"
 
 #. file 'ocv_in_progress.py', line 133
 msgid "Encoding complete"

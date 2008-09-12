@@ -1,16 +1,16 @@
-# Italian translation for oggconvert
-# Copyright (c) 2007 Rosetta Contributors and Canonical Ltd 2007
+# Slovak translation for oggconvert
+# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
 # This file is distributed under the same license as the oggconvert package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2007.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2008-05-21 09:53+0000\n"
-"Last-Translator: Sergio Zanchetta <primes2h@gmail.com>\n"
-"Language-Team: Italian <it@li.org>\n"
+"PO-Revision-Date: 2008-05-21 15:10+0000\n"
+"Last-Translator: Alexander Yuriev <Cooler@email.cz>\n"
+"Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,100 +19,95 @@ msgstr ""
 
 #. file 'ocv_main.py', line 144
 msgid "Cannot save to this folder"
-msgstr "Impossibile salvare in questa cartella"
+msgstr "Nie je možné ukladať do tohto priečinka"
 
 #. file 'ocv_main.py', line 156
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr ""
-"Scegliere un nome diverso per il file da salvare, oppure salvare in una "
-"posizione diversa."
+"Zvoľte iné meno pre ukladaný súbor, alebo zmeňte miesto pre uloženie."
 
 #. file 'ocv_main.py', line 188
 msgid "Bye then!"
-msgstr "Ciao!"
+msgstr "Dovidenia!"
 
 #. file 'ocv_main.py', line 303
 msgid "Video Files"
-msgstr "File video"
+msgstr "Súbory videa"
 
 #. file 'ocv_main.py', line 306
+#, fuzzy
 msgid "Audio Files"
-msgstr "File audio"
+msgstr "Audio súbory"
 
 #. file 'ocv_main.py', line 309
 msgid "All Media Files"
-msgstr "Tutti i file multimediali"
+msgstr "Multimediálne súbory"
 
 #. file 'ocv_main.py', line 313
 msgid "All Files"
-msgstr "Tutti i file"
+msgstr "Všetky súbory"
 
 #. file 'ocv_util.py', line 36
 msgid "unknown time "
-msgstr "durata sconosciuta "
+msgstr "Neznámy čas "
 
 #. file 'ocv_util.py', line 46
 msgid "1 hour"
-msgstr "1 ora"
+msgstr "1 hodina"
 
 #. file 'ocv_util.py', line 48
 msgid "%i hours"
-msgstr "%i ore"
+msgstr "%i hodiny"
 
 #. file 'ocv_util.py', line 54
 msgid "1 minute"
-msgstr "1 minuto"
+msgstr "1 minúta"
 
 #. file 'ocv_util.py', line 56
 msgid "%i minutes"
-msgstr "%i minuti"
+msgstr "%i minúty"
 
 #. file 'ocv_util.py', line 63
 msgid "1 second"
-msgstr "1 secondo"
+msgstr "1 sekunda"
 
 #. file 'ocv_util.py', line 65
 msgid "%i seconds"
-msgstr "%i secondi"
+msgstr "%i sekundy"
 
 #. file 'ocv_util.py', line 91
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr ""
-"Il file esiste già in \"%s\". Se viene sostituito il suo contenuto verrà "
-"sovrascritto."
+msgstr "Súbor už existuje v \"%s\". Nahradenie prepíše jeho obsah."
 
 #. file 'ocv_util.py', line 111
 msgid ""
 "The Dirac encoder is still experimental. Files you convert with this version "
 "may not be viewable with future versions of the decoder."
 msgstr ""
-"Il codificatore Dirac è ancora sperimentale. I file convertiti con questa "
-"versione potrebbero non essere leggibili con le versioni future del "
-"decodificatore."
+"encoder Dirac je stále experimentálny. Súbory prekonvertované touto verziou "
+"nemusia byť čitatelné pre budúce verzie dekódera."
 
 #. file 'ocv_util.py', line 128
 msgid "Are you sure you wish to stop?"
-msgstr "Si è certi di voler terminare?"
+msgstr "Naozaj si prajete skončiť?"
 
 #. file 'ocv_util.py', line 151
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Antonio Cono https://launchpad.net/~tblu\n"
-"  Leo Cosma https://launchpad.net/~leocosma\n"
-"  Nicola Piovesan https://launchpad.net/~piovesannicola\n"
-"  Sergio Zanchetta https://launchpad.net/~primes2h\n"
-"  Tristan Brindle https://launchpad.net/~tristan-brindle"
+"  Alexander Yuriev https://launchpad.net/~cooler-email\n"
+"  Jakub Kapuš https://launchpad.net/~kapo\n"
+"  Miroslav Mereďa https://launchpad.net/~miro-me"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
-msgstr "<b>Sorgente</b>"
+msgstr "<b>Zdroj</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "File Format:"
-msgstr "Formato file:"
+msgstr "Formát súboru"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -132,19 +127,19 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "Advanced"
-msgstr "Avanzate"
+msgstr "Pokročilé"
 
 #. file 'oggcv.glade', line ?
 msgid "Audio Quality:"
-msgstr "Qualità audio:"
+msgstr "Kvalita zvuku"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
-msgstr "Qualità video:"
+msgstr "Kvalita videa"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
-msgstr "Formato video:"
+msgstr "Video formát:"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -156,23 +151,23 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
-msgstr "<b>Conversione</b>"
+msgstr "<b>Konverzia</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Selezionare una cartella"
+msgstr "Vybrať priečinok"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
-msgstr "Salva nella cartella:"
+msgstr "Uložiť priečinok:"
 
 #. file 'oggcv.glade', line ?
 msgid "File Name:"
-msgstr "Nome file:"
+msgstr "Názov súboru:"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
-msgstr "<b>Destinazione</b>"
+msgstr "<b>Cieľ</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "OggConvert"
@@ -183,7 +178,7 @@ msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
-"<b><big>Conversione file\n"
+"<b><big>Konverzia súboru\n"
 "</big></b>"
 
 #. file 'oggcv.glade', line ?
@@ -191,42 +186,41 @@ msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
 msgstr ""
-"È in corso la conversione del file multimediale nel formato Ogg. Questo "
-"potrebbe richiedere del tempo."
+"Váš súbor je práve prevádzaný do formátu Ogg. Može to trvať dlhší čas."
 
 #. file 'oggcv.glade', line ?
 #. file 'ocv_in_progress.py', line 88
 msgid "_Pause"
-msgstr "_Pausa"
+msgstr "_Pauza"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr "<i>Conversione di «%s» in corso</i>"
+msgstr "<i>Konverzia\"%s\"</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
-msgstr "_Riprendi"
+msgstr "_Pokračovať"
 
 #. file 'ocv_in_progress.py', line 100
 msgid "%.1f%% completed, about %sleft"
-msgstr "%.1f%% completato, rimasti %s circa"
+msgstr "%.1f%% hotovo, okolo %zostáva"
 
 #. file 'ocv_in_progress.py', line 103
 msgid "Paused (%.1f%% completed)"
-msgstr "In pausa (%.1f%% completato)"
+msgstr "Pozastavené (%.1f%% dokončené)"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused"
-msgstr "In pausa"
+msgstr "Pozastavené"
 
 #. file 'ocv_in_progress.py', line 133
 msgid "Encoding complete"
-msgstr "Codifica completata"
+msgstr "Prevod dokončený"
 
 #. file 'ocv_in_progress.py', line 138
 msgid "File saved to \"%s\"."
-msgstr "File salvato in \"%s\"."
+msgstr "Súbor uložený do \"%s\""
 
 #. file 'ocv_in_progress.py', line 149
 msgid "GStreamer error: preroll failed"
-msgstr "Errore GStreamer: preroll fallito"
+msgstr "Chyba GStreameru: preroll zlyhal"

@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2008-01-09 07:15+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2008-08-27 13:58+0000\n"
+"Last-Translator: luojie-dune <Unknown>\n"
 "Language-Team: Simplified Chinese <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-01-17 21:40+0000\n"
+"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. file 'ocv_main.py', line 144
@@ -52,7 +52,7 @@ msgstr "未知时间 "
 
 #. file 'ocv_util.py', line 46
 msgid "1 hour"
-msgstr "1 时"
+msgstr "1 小时"
 
 #. file 'ocv_util.py', line 48
 msgid "%i hours"
@@ -77,13 +77,13 @@ msgstr "%i 秒"
 #. file 'ocv_util.py', line 91
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr "文件夹\"%s\"已存在这个文件。替换将会覆盖原来的文件。"
+msgstr "文件夹\"%s\" 中已有此文件。替换则会覆盖原来的内容。"
 
 #. file 'ocv_util.py', line 111
 msgid ""
 "The Dirac encoder is still experimental. Files you convert with this version "
 "may not be viewable with future versions of the decoder."
-msgstr "Dirac还是实验性的解码器。使用此解码器转换的文件不能保证将来可用。"
+msgstr "Dirac还是实验性的编码器。使用此编码器转换的文件不能保证将来可用。"
 
 #. file 'ocv_util.py', line 128
 msgid "Are you sure you wish to stop?"
@@ -93,7 +93,8 @@ msgstr "你确实希望停止？"
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Joo https://launchpad.net/~joo.tsao"
+"  Joo https://launchpad.net/~joo.tsao\n"
+"  luojie-dune https://launchpad.net/~luojie-dune"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"

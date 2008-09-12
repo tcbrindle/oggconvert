@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2007-12-13 14:25+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2008-04-05 09:44+0000\n"
+"Last-Translator: Lauri Niskanen <ape3000@gmail.com>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-01-17 21:40+0000\n"
+"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #. file 'ocv_main.py', line 144
@@ -51,7 +51,7 @@ msgstr "Kaikki tiedostot"
 
 #. file 'ocv_util.py', line 36
 msgid "unknown time "
-msgstr ""
+msgstr "tuntematon aika "
 
 #. file 'ocv_util.py', line 46
 msgid "1 hour"
@@ -81,6 +81,7 @@ msgstr "%i sekuntia"
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
+"Tiedosto on jo olemassa \"%s\":ssa. Korvaaminen ylikirjoittaa sen sisällön."
 
 #. file 'ocv_util.py', line 111
 msgid ""
@@ -96,7 +97,8 @@ msgstr "Haluatko varmasti keskeyttää?"
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Lartza https://launchpad.net/~lartza"
+"  Lartza https://launchpad.net/~lartza\n"
+"  Lauri Niskanen https://launchpad.net/~ape3000"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
@@ -111,12 +113,16 @@ msgid ""
 "Ogg:\n"
 "Matroska:"
 msgstr ""
+"Ogg:\n"
+"Matroska:"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Ogg\n"
 "Matroska"
 msgstr ""
+"Ogg\n"
+"Matroska"
 
 #. file 'oggcv.glade', line ?
 #, fuzzy
@@ -140,10 +146,12 @@ msgid ""
 "Theora\n"
 "Dirac"
 msgstr ""
+"Theora\n"
+"Dirac"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
-msgstr ""
+msgstr "<b>Muunnos</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
@@ -163,13 +171,15 @@ msgstr "<b>Kohde</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "OggConvert"
-msgstr ""
+msgstr "OggConvert"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
+"<b><big>Muunnetaan tiedosto\n"
+"</big></b>"
 
 #. file 'oggcv.glade', line ?
 #, fuzzy
@@ -195,7 +205,7 @@ msgstr "_Jatka"
 
 #. file 'ocv_in_progress.py', line 100
 msgid "%.1f%% completed, about %sleft"
-msgstr ""
+msgstr "%.1f%% valmiina, noin %själjellä"
 
 #. file 'ocv_in_progress.py', line 103
 msgid "Paused (%.1f%% completed)"
@@ -207,7 +217,7 @@ msgstr "Pysäytetty"
 
 #. file 'ocv_in_progress.py', line 133
 msgid "Encoding complete"
-msgstr ""
+msgstr "Pakkaus valmis"
 
 #. file 'ocv_in_progress.py', line 138
 #, fuzzy
