@@ -100,7 +100,9 @@ class ProgressWindow:
     
         if self._playing:
             timerem = timeremaining(elapsed, percent)
-            if elapsed>3.0: # Don't display any text for the first three seconds
+            if elapsed<3.0: # Don't display position for the first three seconds
+                self._progressbar.set_text(_("Starting up"))
+            else:
                 self._progressbar.set_fraction(completed)
                 self._progressbar.set_text(
                     _("%.1f%% completed, about %sleft") %(percent, timerem))

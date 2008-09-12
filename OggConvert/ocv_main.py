@@ -131,6 +131,8 @@ class Main:
         self._outfile_folder = self._save_folder_button.get_filename()
         self._outfile_name = self._outfile_entry.get_text()
         self._outfile = os.path.join(self._outfile_folder, self._outfile_name)
+        # Should use urlparse lib for this
+        output_uri = "file://" + urllib.unquote(self._outfile)
 
         # Check destination is writable
         if not os.access(self._outfile_folder, os.W_OK):
@@ -168,7 +170,7 @@ class Main:
         vquality = self._video_quality_slider.get_value()
         aquality = self._audio_quality_slider.get_value()
         tc = Transcoder(
-            self._input_uri, self._outfile, format, vquality, aquality,
+            self._input_uri, output_uri, format, vquality, aquality,
             container)
         pr = ProgressWindow(tc, self._input_uri, self._outfile)
         self._window.hide()
@@ -188,7 +190,7 @@ class Main:
         if not self._input_uri == None:
             # gtk.FileChooser.get_uri returns an escaped string, which is not
             # what we want, so this hack uses urllib to change it back.
-            self._input_uri = urllib.url2pathname(self._input_uri)
+            self._input_uri = urllib.unquote(self._input_uri)
             gobject.idle_add(self._check_media,self._input_uri)
             
         folder = filechooser.get_current_folder()

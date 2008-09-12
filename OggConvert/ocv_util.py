@@ -25,8 +25,6 @@ import ocv_info
 import webbrowser
 
 
-
-
 def timeremaining(elapsed, percent):
     """Returns a string with the remaining time for an operation.        
        elapsed: elapsed time for the operation so far (in seconds)
@@ -130,6 +128,11 @@ def about_dialogue(window=None):
     dialogue.set_website(ocv_info.website)
     dialogue.set_license(ocv_info.licence) # Learn to spell, GTK!
     dialogue.set_translator_credits(_("translator-credits"))
+
+    # Let's show off our lovely SVG logo
+    logo = gtk.gdk.pixbuf_new_from_file_at_size(
+            os.path.join(ocv_info.pixmappath,"oggconvert.svg"), 128, 128)
+    dialogue.set_logo(logo)
     
     dialogue.run()
     dialogue.destroy()

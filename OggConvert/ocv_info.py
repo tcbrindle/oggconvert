@@ -24,16 +24,19 @@ import sys
 
 app_name = "oggconvert"
 
-version = "0.3.1"
+version = "0.3.1.bzr"
 
-authors = ["Tristan Brindle <tcbrindle@gmail.com>"
+authors = ["Written by:"
+          ,"Tristan Brindle <t.c.brindle@gmail.com>"
+          ,""
+          ,"with generous contributions from:"
           ,"Alex Kabakov <ak.anapa@gmail.com>"
           ,"Carlos Perelló Marín <carlos.perello@canonical.com>"
           ,"David Scheef <ds@schleef.org>"]
 
 artists = ["A. Bram Neijt <bneijt@gmail.com>"]
 
-copyright = "© 2007 Tristan Brindle"
+copyright = "© 2007, 2008 Tristan Brindle"
 
 website = "http://oggconvert.tristanb.net/"
 

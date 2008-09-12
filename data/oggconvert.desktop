@@ -1,4 +1,6 @@
 [Desktop Entry]
+Version=1.0
+Encoding=UTF-8
 Name=OggConvert
 Comment=Convert media files to Free formats
 Type=Application
@@ -7,3 +9,4 @@ Icon=oggconvert
 Categories=AudioVideo;
 Terminal=false
 StartupNotify=false
+GenericName[en_GB]=

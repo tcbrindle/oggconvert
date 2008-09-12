@@ -32,12 +32,12 @@ class Transcoder(gobject.GObject):
         }
 
 
-    def __init__(self, infile, outfile, vformat, vquality, aquality, fformat):
+    def __init__(self, inuri, outuri, vformat, vquality, aquality, fformat):
     
         gobject.GObject.__init__(self)
     
-        self._infile = infile
-        self._outfile = outfile
+        self._infile = inuri
+        self._outfile = outuri
         self._vformat = vformat
         if self._vformat == "THEORA":
             self._vquality = ocv_constants.THEORA_QUALITY_MAPPING[vquality]
@@ -53,7 +53,7 @@ class Transcoder(gobject.GObject):
         
         #self._filesrc = gst.element_factory_make("filesrc")
         #self._filesrc.set_property("location", self._infile)
-        self._filesrc = gst.element_make_from_uri(gst.URI_SRC, infile)
+        self._filesrc = gst.element_make_from_uri(gst.URI_SRC, inuri)
         
         self._decodebin = gst.element_factory_make("decodebin")
         self._decodebin.connect("new-decoded-pad", self._on_new_pad)
@@ -69,8 +69,9 @@ class Transcoder(gobject.GObject):
 
         self._progreport = gst.element_factory_make("progressreport")
         
-        self._filesink = gst.element_factory_make("filesink")
-        self._filesink.set_property("location", outfile)
+        #self._filesink = gst.element_factory_make("filesink")
+        #self._filesink.set_property("location", outfile)
+        self._filesink = gst.element_make_from_uri(gst.URI_SINK, outuri)
         
         
         self._pipeline.add(self._filesrc, 
@@ -174,10 +175,7 @@ class VideoEncoder(gst.Bin):
             self.encoder = gst.element_factory_make("schroenc")
             for prop in ocv_constants.SCHRO_OPTS:
                 self.encoder.set_property(prop, ocv_constants.SCHRO_OPTS[prop])
-            try:
                 self.encoder.set_property("noise-threshold", quality)
-            except TypeError:
-                print "This version of schroenc doesn't have the quality property"
         else:
             self.encoder = gst.element_factory_make("theoraenc")
             for prop in ocv_constants.THEORA_OPTS:
