@@ -43,13 +43,13 @@ for name in os.listdir('po'):
 		install_dir = 'share/locale/%s/LC_MESSAGES/' % lang		
 		os.makedirs(out_dir)
   		os.system('msgfmt -o %s po/%s' % (out_name, name))
-		data_files.append((install_dir, [out_name])) 
-
+		data_files.append((install_dir, [out_name]))
+		
 setup(name='oggconvert',
       version=ocv_info.version,
       author='Tristan Brindle',
       author_email='t.c.brindle at gmail dot com',
-      description='A simple Gnome application to convert media to Free formats',
+      description='A simple application to convert media to Free formats',
       url = 'http://oggconvert.tristanb.net',
       license='GNU LGPL',
       packages=['OggConvert'],

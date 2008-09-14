@@ -1,13 +1,12 @@
 
-OggConvert 0.3.1
+OggConvert 0.3.2
 ----------------
 
 This is the latest release of OggConvert, a simple Gnome utility to convert
 media files into the patent-free Theora, Dirac and Vorbis formats.
 
-Dirac encoding requires GStreamer 0.10.11 and the Schroedinger encoder. Be aware
-that the encoder is still experimental, and that videos you encode today might
-not be watchable in future as the decoder develops.
+Dirac encoding requires version 1.0.0 or newer of the Schroedinger encoder for
+GStreamer.
 
 OggConvert is written in Python using PyGTK and PyGST. It is released under the 
 GNU LGPL.
@@ -16,22 +15,23 @@ GNU LGPL.
 What's new in this version:
 ---------------------------
 
-* Support for altering the quality of Dirac output if using a recent enough
-  version of the Schroedinger encoder (>0.9). Thanks to Schroedinger author
-  David Schleef for this.
-  
-* In light of better support for Flash video in new versions of GStreamer
-  plugins, make .flv files show up in the file selector.
-  
-* Fix an embarrassing bug in the last version which caused filenames to be 
-  escaped when they shouldn't have been.
+* (Hopefully) fix time remaining being way off on AMD64. Closes bug #250174.
 
-* Check for the presence of the Matroska muxer at startup, removing an
-  unintentional dependency on the GStreamer "good" plugins.
+* Fix (MPEG) files occasionally showing "120% Completed" and other such oddities.
 
-* New translations: Czech, Finnish, Malay, Occitan, Portugese, Simplified
-  Chinese, Ukranian. Many thanks to all the translators. To add your language, 
-  please go to http://translations.launchpad.net/oggconvert.
+* Dirac is no longer considered "experimental" now that the encoder has reached 
+  v1.0. Go ahead and try it out!
+  
+* Use "perceptual weighting" in the Dirac encoder by default. This should result
+  in much smaller output files (and slightly quicker encoding) at equivalent
+  quality settings.
+  
+* OggConvert's quality settings now match ffmpeg2theora's.
+
+* New translations: Catalan, Franco-Provençal, Hebrew, Hungarian, Lithuanian, 
+  Maltese, Norwegian Bokmal, Slovak, Serbian, Turkish and Traditional Chinese. 
+  Many thanks to all the translators. To add your language, please go to 
+  http://translations.launchpad.net/oggconvert.
 
 * Other minor bug fixes
 
@@ -39,10 +39,5 @@ What's new in this version:
 Known issues with this release:
 -------------------------------
 
-* Gnome-VFS support hasn't been thoroughly tested yet. There may be bugs here
-  and there.
-  
-* Transcoding from FLV (Flash video) is known to be problematic due to issues 
-  with the GStreamer FFMpeg plugins. This is likely to be solved in the next
-  release of the GStreamer "bad" plugins. See OggConvert bug #155023 for details.
+* None!
   

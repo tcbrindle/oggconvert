@@ -2,6 +2,33 @@
 0.3.1:
 ------
 
+* Use time() rather than clock() for working out elapsed encoding time, 
+  which should sort out time remaining being way off on AMD64. Hopefully 
+  closes bug #250174.
+  
+* Add a version check on the Schroedinger encoder at startup, we require 
+  1.0.0 or newer. This means we can...
+  
+* Remove the warning about Dirac encoding being experimental, since it's 
+  not any more.
+  
+* The quality sliders now go down to zero. As a side-effect, this  means 
+  that OggConvert's quality settings should correspond to those of 
+  ffmpeg2theora (for video, at least).
+  
+* Use "perceptual weighting" by default in the Dirac encoder, as 
+  recommended by the Schro author. This results in dramatically smaller 
+  output files at the same noise threshold (and slightly faster encoding 
+  times), at the expense of a slight loss of picture quality. I think 
+  it's worth it.
+
+* Added new translations: ca, frp, he, hu, lt, mt, nb, sk, sr, tr, zh_TW, plus
+  other translations updated. Many thanks to all the translators.
+
+
+0.3.1:
+------
+
 * Added Schro quality setting (thanks to David Schleef). Closes #180228
 
 * Use urllib to unescape the URIs that gtk.FileChooser gives us. Closes 

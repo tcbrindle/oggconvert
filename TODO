@@ -12,4 +12,4 @@ TODO list for OggConvert
   make this much easier
 
 * What about a PyQt front-end too? Or wxPython for Windows and MacOS? (Actually,
-  OggConvert++ works okay on Windows, GStreamer problems excepted.)
+  OggConvert works okay on Windows, GStreamer problems excepted.)

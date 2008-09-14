@@ -1,6 +1,7 @@
 include AUTHORS COPYING TODO README ChangeLog
 include data/*
 include po/*
+recursive-include mo *
 include OggConvert/oggcv.glade
 recursive-include OggConvert *.py
 global-exclude *~
