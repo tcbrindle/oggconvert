@@ -7,95 +7,88 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2007-12-01 18:30+0000\n"
-"Last-Translator: alHakim <nurhakimsamah@bluehyppo.com>\n"
+"POT-Creation-Date: 2008-09-12 23:34+0000\n"
+"PO-Revision-Date: 2010-02-24 14:59+0000\n"
+"Last-Translator: Joey <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 15:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#. file 'ocv_main.py', line 144
+#. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
 msgstr "Tidak dapat disimpan ke folder ini"
 
-#. file 'ocv_main.py', line 156
+#. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr "Sila pilih nama yang lain atau ke folder yang lain."
 
-#. file 'ocv_main.py', line 188
+#. file 'ocv_main.py', line 181
 msgid "Bye then!"
 msgstr "Selamat tinggal !"
 
-#. file 'ocv_main.py', line 303
+#. file 'ocv_main.py', line 299
 msgid "Video Files"
 msgstr "File Video"
 
-#. file 'ocv_main.py', line 306
+#. file 'ocv_main.py', line 304
 msgid "Audio Files"
 msgstr "File Audio"
 
-#. file 'ocv_main.py', line 309
+#. file 'ocv_main.py', line 307
 msgid "All Media Files"
 msgstr "Semua File Media"
 
-#. file 'ocv_main.py', line 313
+#. file 'ocv_main.py', line 312
 msgid "All Files"
 msgstr "Semua Fail"
 
-#. file 'ocv_util.py', line 36
+#. file 'ocv_util.py', line 34
 msgid "unknown time "
 msgstr "tidak tahu masa "
 
-#. file 'ocv_util.py', line 46
+#. file 'ocv_util.py', line 44
 msgid "1 hour"
 msgstr "sejam"
 
-#. file 'ocv_util.py', line 48
+#. file 'ocv_util.py', line 46
 msgid "%i hours"
 msgstr "%i jam"
 
-#. file 'ocv_util.py', line 54
+#. file 'ocv_util.py', line 52
 msgid "1 minute"
 msgstr "seminit"
 
-#. file 'ocv_util.py', line 56
+#. file 'ocv_util.py', line 54
 msgid "%i minutes"
 msgstr "%i minit"
 
-#. file 'ocv_util.py', line 63
+#. file 'ocv_util.py', line 61
 msgid "1 second"
 msgstr "sesaat"
 
-#. file 'ocv_util.py', line 65
+#. file 'ocv_util.py', line 63
 msgid "%i seconds"
 msgstr "%i saat"
 
-#. file 'ocv_util.py', line 91
+#. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "File sudah wujud. Menggantikannya akan menyebabkan file sedia ada hilang."
 
-#. file 'ocv_util.py', line 111
-msgid ""
-"The Dirac encoder is still experimental. Files you convert with this version "
-"may not be viewable with future versions of the decoder."
-msgstr ""
-"Dekoder Dirac masih dalam experimen. File yang anda tukar menggunakan versi "
-"ini mungkin tidak dapat ditayang dengan versi dekoder yang akan datang."
-
-#. file 'ocv_util.py', line 128
+#. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
 msgstr "Adakah anda pasti untuk berhenti ?"
 
-#. file 'ocv_util.py', line 151
+#. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Joey https://launchpad.net/~jakkalster\n"
 "  alHakim https://launchpad.net/~nurhakim"
 
 #. file 'oggcv.glade', line ?
@@ -103,64 +96,64 @@ msgid "<b>Source</b>"
 msgstr "<b>Sumber</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "File Format:"
-msgstr "Format File:"
-
-#. file 'oggcv.glade', line ?
 msgid ""
-"Ogg:\n"
-"Matroska:"
+"Theora\n"
+"Dirac"
 msgstr ""
-"Ogg:\n"
-"Matroska:"
-
-#. file 'oggcv.glade', line ?
-msgid ""
-"Ogg\n"
-"Matroska"
-msgstr ""
-"Ogg\n"
-"Matroska"
-
-#. file 'oggcv.glade', line ?
-msgid "Advanced"
-msgstr "Lanjutan"
-
-#. file 'oggcv.glade', line ?
-msgid "Audio Quality:"
-msgstr "Kualiti Audio:"
-
-#. file 'oggcv.glade', line ?
-msgid "Video Quality:"
-msgstr "Kualiti Video:"
+"Theora\n"
+"Dirac"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
 msgstr "Format Video:"
 
 #. file 'oggcv.glade', line ?
+msgid "Video Quality:"
+msgstr "Kualiti Video:"
+
+#. file 'oggcv.glade', line ?
+msgid "Audio Quality:"
+msgstr "Kualiti Audio:"
+
+#. file 'oggcv.glade', line ?
 msgid ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
 msgstr ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg\n"
+"Matroska"
+
+#. file 'oggcv.glade', line ?
+msgid "File Format:"
+msgstr "Format File:"
+
+#. file 'oggcv.glade', line ?
+msgid "Advanced"
+msgstr "Lanjutan"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
 msgstr "<b>Pertukaran</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "Select A Folder"
-msgstr "Pilih Folder"
+msgid "File Name:"
+msgstr "Nama File:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
 msgstr "Folder Simpan:"
 
 #. file 'oggcv.glade', line ?
-msgid "File Name:"
-msgstr "Nama File:"
+msgid "Select A Folder"
+msgstr "Pilih Folder"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
@@ -199,26 +192,30 @@ msgstr "<i>Sedang Tukar \"%s\"</i>"
 msgid "_Resume"
 msgstr "_Teruskan"
 
-#. file 'ocv_in_progress.py', line 100
+#. file 'ocv_in_progress.py', line 104
+msgid "Starting up"
+msgstr "Memulakan"
+
+#. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
 msgstr "%.1f%% siap, lebih kurang %stinggal"
 
-#. file 'ocv_in_progress.py', line 103
+#. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
 msgstr "Rehat (%.1f%% siap)"
 
-#. file 'ocv_in_progress.py', line 111
+#. file 'ocv_in_progress.py', line 119
 msgid "Paused"
 msgstr "Rehat"
 
-#. file 'ocv_in_progress.py', line 133
+#. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
 msgstr "Encoding siap"
 
-#. file 'ocv_in_progress.py', line 138
+#. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
 msgstr "File disimpan ke \"%s\"."
 
-#. file 'ocv_in_progress.py', line 149
+#. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
 msgstr "Ralat GStreamer: preroll gagal"

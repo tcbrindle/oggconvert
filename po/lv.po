@@ -1,16 +1,18 @@
-# Norwegian Bokmal translation for oggconvert
-# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# Latvian translation for oggconvert
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
 # This file is distributed under the same license as the oggconvert package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
 #
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-09-12 23:34+0000\n"
-"PO-Revision-Date: 2010-01-24 23:38+0000\n"
-"Last-Translator: Simen Heggestøyl <simen@simenh.com>\n"
-"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"PO-Revision-Date: 2009-12-24 05:30+0000\n"
+"Last-Translator: Launchpad Translations Administrators "
+"<rosetta@launchpad.net>\n"
+"Language-Team: Latviešu <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,82 +21,79 @@ msgstr ""
 
 #. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
-msgstr "Kan ikke lagre i denne mappen"
+msgstr "Šajā mapē nevar saglabāt"
 
 #. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
-msgstr "Velg et annet navn for denne filen, eller lagre et annet sted"
+msgstr "Izvēlieties citu saglabāšanas faila vārdu, vai saglabājiet citur."
 
 #. file 'ocv_main.py', line 181
 msgid "Bye then!"
-msgstr "Adjø!"
+msgstr "Nu tad atā!"
 
 #. file 'ocv_main.py', line 299
 msgid "Video Files"
-msgstr "Videofiler"
+msgstr "Video faili"
 
 #. file 'ocv_main.py', line 304
 msgid "Audio Files"
-msgstr "Lydfiler"
+msgstr "Audio faili"
 
 #. file 'ocv_main.py', line 307
 msgid "All Media Files"
-msgstr "Alle Mediafiler"
+msgstr "Visi mediju faili"
 
 #. file 'ocv_main.py', line 312
 msgid "All Files"
-msgstr "Alle Filer"
+msgstr "Visi faili"
 
 #. file 'ocv_util.py', line 34
 msgid "unknown time "
-msgstr "ukjent tid "
+msgstr "nezināms laiks "
 
 #. file 'ocv_util.py', line 44
 msgid "1 hour"
-msgstr "1 time"
+msgstr "1 stunda"
 
 #. file 'ocv_util.py', line 46
 msgid "%i hours"
-msgstr "%i timer"
+msgstr "%i stundas"
 
 #. file 'ocv_util.py', line 52
 msgid "1 minute"
-msgstr "1 minutt"
+msgstr "1 minūte"
 
 #. file 'ocv_util.py', line 54
 msgid "%i minutes"
-msgstr "%i minutter"
+msgstr "%i minūtes"
 
 #. file 'ocv_util.py', line 61
 msgid "1 second"
-msgstr "1 sekund"
+msgstr "1 sekunde"
 
 #. file 'ocv_util.py', line 63
 msgid "%i seconds"
-msgstr "%i sekunder"
+msgstr "%i sekundes"
 
 #. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr ""
-"Filen finnes allerede i \"%s\". Å erstatte den vil overskrive innholdet."
+msgstr "Fails jau eksistē mapē \"%s\". Aizvietošana pārrakstīs tā saturu."
 
 #. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
-msgstr "Er du sikker på at du vil stoppe?"
+msgstr "Esat pārliecināts, ka vēlaties apturēt?"
 
 #. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Marstein https://launchpad.net/~clmar\n"
-"  OttifantSir https://launchpad.net/~ottifantsirtarrant\n"
-"  kingu https://launchpad.net/~comradekingu"
+"  Tranzistors https://launchpad.net/~rudolfs-mazurs"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
-msgstr "<b>Kilde</b>"
+msgstr "<b>Avots</b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -106,15 +105,15 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
-msgstr "Videoformat:"
+msgstr "Video formāts:"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
-msgstr "Videokvalitet:"
+msgstr "Video kvalitāte:"
 
 #. file 'oggcv.glade', line ?
 msgid "Audio Quality:"
-msgstr "Lydkvalitet:"
+msgstr "Audio kvalitāte:"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -134,87 +133,89 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "File Format:"
-msgstr "Filformat:"
+msgstr "Faila formāts:"
 
 #. file 'oggcv.glade', line ?
 msgid "Advanced"
-msgstr "Avansert"
+msgstr "Papildus"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
-msgstr "Konvertering"
+msgstr "<b>Konvertēšana</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "File Name:"
-msgstr "Filnavn:"
+msgstr "Faila vārds:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
-msgstr "Lagre mappe:"
+msgstr "Saglabāt mapē:"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Velg en mappe"
+msgstr "Izvēlēties mapi"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
-msgstr "<b>Mål</b>"
+msgstr "<b>Galamērķis</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "OggConvert"
-msgstr "OggOmformer"
+msgstr "OggConvert"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
-"<b><big>Konverterer fil\n"
+"<b><big>Konvertē failu\n"
 "</big></b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
-msgstr "Din mediafil blir konvertert til Ogg-format. Dette kan ta lang tid."
+msgstr ""
+"Jūsu medija fails tiek konvertēts uz Ogg formātu. Tas var aizņemt kādu "
+"laiciņu."
 
 #. file 'oggcv.glade', line ?
 #. file 'ocv_in_progress.py', line 88
 msgid "_Pause"
-msgstr "_Pause"
+msgstr "_Pauze"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr "<i>Konverterer \"%s\"</i>"
+msgstr "<i>Konvertē \"%s\"</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
-msgstr "_Fortsett"
+msgstr "_Turpināt"
 
 #. file 'ocv_in_progress.py', line 104
 msgid "Starting up"
-msgstr "Starter"
+msgstr "Sākam"
 
 #. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
-msgstr "%.1f%% ferdig, rundt %sleft"
+msgstr "%.1f%% izpildīti, atlikušas apmēram %s"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
-msgstr "Satt på pause (%.1f%% completed)"
+msgstr "Pauzēts (%.1f%% izpildīti)"
 
 #. file 'ocv_in_progress.py', line 119
 msgid "Paused"
-msgstr "Pause"
+msgstr "Pauzēts"
 
 #. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
-msgstr "Omkoding ferdig"
+msgstr "Kodēšana izpildīta"
 
 #. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
-msgstr "Filen ble lagret i \"%s\"."
+msgstr "Fails saglabāts \"%s\"."
 
 #. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
-msgstr "GStreamer feil: forhåndsutrullingen feilet"
+msgstr "GStreamer kļūda: sagatavošana neizdevās"

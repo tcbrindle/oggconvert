@@ -7,129 +7,92 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2008-03-05 18:48+0000\n"
-"Last-Translator: taka <taka61@gmail.com>\n"
+"POT-Creation-Date: 2008-09-12 23:34+0000\n"
+"PO-Revision-Date: 2009-11-17 23:48+0000\n"
+"Last-Translator: Volkan Esgel <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 15:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#. file 'ocv_main.py', line 144
+#. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
-msgstr "Bu klasöre kaydedilemiyorç"
+msgstr "Bu dizine kaydedilemiyor"
 
-#. file 'ocv_main.py', line 156
+#. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr "Kaydetmek için dosya adını değiştirin yada farklı bir yere kaydedin."
 
-#. file 'ocv_main.py', line 188
+#. file 'ocv_main.py', line 181
 msgid "Bye then!"
 msgstr "Hoşçakalın!"
 
-#. file 'ocv_main.py', line 303
+#. file 'ocv_main.py', line 299
 msgid "Video Files"
 msgstr "Video Dosyaları"
 
-#. file 'ocv_main.py', line 306
+#. file 'ocv_main.py', line 304
 msgid "Audio Files"
 msgstr "Ses Dosyaları"
 
-#. file 'ocv_main.py', line 309
+#. file 'ocv_main.py', line 307
 msgid "All Media Files"
 msgstr "Tüm Medya Dosyaları"
 
-#. file 'ocv_main.py', line 313
+#. file 'ocv_main.py', line 312
 msgid "All Files"
 msgstr "Tüm Dosyalar"
 
-#. file 'ocv_util.py', line 36
+#. file 'ocv_util.py', line 34
 msgid "unknown time "
 msgstr "bilinmeyen zaman "
 
-#. file 'ocv_util.py', line 46
+#. file 'ocv_util.py', line 44
 msgid "1 hour"
 msgstr "%n saat"
 
-#. file 'ocv_util.py', line 48
+#. file 'ocv_util.py', line 46
 msgid "%i hours"
-msgstr ""
+msgstr "%i saat"
 
-#. file 'ocv_util.py', line 54
+#. file 'ocv_util.py', line 52
 msgid "1 minute"
 msgstr "1 dakika"
 
-#. file 'ocv_util.py', line 56
+#. file 'ocv_util.py', line 54
 msgid "%i minutes"
-msgstr ""
+msgstr "%i dakika"
+
+#. file 'ocv_util.py', line 61
+msgid "1 second"
+msgstr "%n saniye"
 
 #. file 'ocv_util.py', line 63
-msgid "1 second"
-msgstr "1 saniye"
-
-#. file 'ocv_util.py', line 65
 msgid "%i seconds"
 msgstr "%i saniye"
 
-#. file 'ocv_util.py', line 91
+#. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 
-#. file 'ocv_util.py', line 111
-msgid ""
-"The Dirac encoder is still experimental. Files you convert with this version "
-"may not be viewable with future versions of the decoder."
-msgstr ""
-
-#. file 'ocv_util.py', line 128
+#. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
 msgstr "Durdurmak istediğinize emin misiniz?"
 
-#. file 'ocv_util.py', line 151
+#. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
+"  Volkan Esgel https://launchpad.net/~vesgel\n"
 "  taka https://launchpad.net/~taka61"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
 msgstr "<b>Kaynak</b>"
-
-#. file 'oggcv.glade', line ?
-msgid "File Format:"
-msgstr "Dosya tipi:"
-
-#. file 'oggcv.glade', line ?
-msgid ""
-"Ogg:\n"
-"Matroska:"
-msgstr ""
-
-#. file 'oggcv.glade', line ?
-msgid ""
-"Ogg\n"
-"Matroska"
-msgstr ""
-
-#. file 'oggcv.glade', line ?
-msgid "Advanced"
-msgstr "Gelişmiş"
-
-#. file 'oggcv.glade', line ?
-msgid "Audio Quality:"
-msgstr "Ses Kalitesi:"
-
-#. file 'oggcv.glade', line ?
-msgid "Video Quality:"
-msgstr "Video Kalitesi:"
-
-#. file 'oggcv.glade', line ?
-msgid "Video Format:"
-msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -138,20 +101,56 @@ msgid ""
 msgstr ""
 
 #. file 'oggcv.glade', line ?
+msgid "Video Format:"
+msgstr "Video Biçimi:"
+
+#. file 'oggcv.glade', line ?
+msgid "Video Quality:"
+msgstr "Video Kalitesi:"
+
+#. file 'oggcv.glade', line ?
+msgid "Audio Quality:"
+msgstr "Ses Kalitesi:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg:\n"
+"Matroska:"
+msgstr ""
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid "File Format:"
+msgstr "Dosya tipi:"
+
+#. file 'oggcv.glade', line ?
+msgid "Advanced"
+msgstr "Gelişmiş"
+
+#. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
 msgstr ""
 
 #. file 'oggcv.glade', line ?
-msgid "Select A Folder"
-msgstr "Bir Klasör Seç"
+msgid "File Name:"
+msgstr "Dosya Adı:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
 msgstr "Kayıt Yapılacak Klasör"
 
 #. file 'oggcv.glade', line ?
-msgid "File Name:"
-msgstr "Dosya Adı:"
+msgid "Select A Folder"
+msgstr "Bir Klasör Seç"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
@@ -166,6 +165,8 @@ msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
+"<b><big>Dosya dönüştürülüyor\n"
+"</big></b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -180,32 +181,36 @@ msgstr "_Duraklat"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr ""
+msgstr "<i>'&s' dönüştürülüyor</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
 msgstr "_Devam Et"
 
-#. file 'ocv_in_progress.py', line 100
+#. file 'ocv_in_progress.py', line 104
+msgid "Starting up"
+msgstr ""
+
+#. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
 msgstr ""
 
-#. file 'ocv_in_progress.py', line 103
+#. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
 msgstr ""
 
-#. file 'ocv_in_progress.py', line 111
+#. file 'ocv_in_progress.py', line 119
 msgid "Paused"
 msgstr "Duraklatıldı"
 
-#. file 'ocv_in_progress.py', line 133
+#. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
 msgstr ""
 
-#. file 'ocv_in_progress.py', line 138
+#. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
 msgstr ""
 
-#. file 'ocv_in_progress.py', line 149
+#. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
 msgstr ""

@@ -1,4 +1,4 @@
-# Norwegian Bokmal translation for oggconvert
+# Romanian translation for oggconvert
 # Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
 # This file is distributed under the same license as the oggconvert package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-09-12 23:34+0000\n"
-"PO-Revision-Date: 2010-01-24 23:38+0000\n"
-"Last-Translator: Simen Heggestøyl <simen@simenh.com>\n"
-"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"PO-Revision-Date: 2009-11-24 22:28+0000\n"
+"Last-Translator: Adrian Colomitchi <Unknown>\n"
+"Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,82 +19,83 @@ msgstr ""
 
 #. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
-msgstr "Kan ikke lagre i denne mappen"
+msgstr "Nu pot salva în acest director"
 
 #. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
-msgstr "Velg et annet navn for denne filen, eller lagre et annet sted"
+msgstr ""
+"Alege un nume diferit pentru fișierul de salvat, sau salvează în altă "
+"locație."
 
 #. file 'ocv_main.py', line 181
 msgid "Bye then!"
-msgstr "Adjø!"
+msgstr "Salutare atunci!"
 
 #. file 'ocv_main.py', line 299
 msgid "Video Files"
-msgstr "Videofiler"
+msgstr "Fişiere video"
 
 #. file 'ocv_main.py', line 304
 msgid "Audio Files"
-msgstr "Lydfiler"
+msgstr "Fişiere audio"
 
 #. file 'ocv_main.py', line 307
 msgid "All Media Files"
-msgstr "Alle Mediafiler"
+msgstr "Toate fișierele multimedia"
 
 #. file 'ocv_main.py', line 312
 msgid "All Files"
-msgstr "Alle Filer"
+msgstr "Toate fișierele"
 
 #. file 'ocv_util.py', line 34
 msgid "unknown time "
-msgstr "ukjent tid "
+msgstr "timp necunoscut "
 
 #. file 'ocv_util.py', line 44
 msgid "1 hour"
-msgstr "1 time"
+msgstr "1 oră"
 
 #. file 'ocv_util.py', line 46
 msgid "%i hours"
-msgstr "%i timer"
+msgstr "%i ore"
 
 #. file 'ocv_util.py', line 52
 msgid "1 minute"
-msgstr "1 minutt"
+msgstr "1 minut"
 
 #. file 'ocv_util.py', line 54
 msgid "%i minutes"
-msgstr "%i minutter"
+msgstr "%i minute"
 
 #. file 'ocv_util.py', line 61
 msgid "1 second"
-msgstr "1 sekund"
+msgstr "1 secundă"
 
 #. file 'ocv_util.py', line 63
 msgid "%i seconds"
-msgstr "%i sekunder"
+msgstr "%i secunde"
 
 #. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
-"Filen finnes allerede i \"%s\". Å erstatte den vil overskrive innholdet."
+"Fișierul există deja în \"%s\". Înlocuirea lui va suprascrie conținutul "
+"acestuia."
 
 #. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
-msgstr "Er du sikker på at du vil stoppe?"
+msgstr "Ești sigur că dorești să oprești?"
 
 #. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Marstein https://launchpad.net/~clmar\n"
-"  OttifantSir https://launchpad.net/~ottifantsirtarrant\n"
-"  kingu https://launchpad.net/~comradekingu"
+"  Adrian Colomitchi https://launchpad.net/~acolomitchi"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
-msgstr "<b>Kilde</b>"
+msgstr "<b>Sursa</b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -106,15 +107,15 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
-msgstr "Videoformat:"
+msgstr "Format video:"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
-msgstr "Videokvalitet:"
+msgstr "Calitate video:"
 
 #. file 'oggcv.glade', line ?
 msgid "Audio Quality:"
-msgstr "Lydkvalitet:"
+msgstr "Calitate audio:"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -134,87 +135,89 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "File Format:"
-msgstr "Filformat:"
+msgstr "Format de fișier:"
 
 #. file 'oggcv.glade', line ?
 msgid "Advanced"
-msgstr "Avansert"
+msgstr "Avansat"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
-msgstr "Konvertering"
+msgstr "<b>Conversie</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "File Name:"
-msgstr "Filnavn:"
+msgstr "Nume fişier:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
-msgstr "Lagre mappe:"
+msgstr "Director de destinație:"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Velg en mappe"
+msgstr "Selectează un director"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
-msgstr "<b>Mål</b>"
+msgstr "<b>Destinație</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "OggConvert"
-msgstr "OggOmformer"
+msgstr "OggConvert"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
-"<b><big>Konverterer fil\n"
+"<b><big>Fișier în conversie\n"
 "</big></b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
-msgstr "Din mediafil blir konvertert til Ogg-format. Dette kan ta lang tid."
+msgstr ""
+"Fișierul dumneavoastră este convertit în format Ogg. S-ar putea să dureze un "
+"timp îndelungat."
 
 #. file 'oggcv.glade', line ?
 #. file 'ocv_in_progress.py', line 88
 msgid "_Pause"
-msgstr "_Pause"
+msgstr "_Pauză"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr "<i>Konverterer \"%s\"</i>"
+msgstr "<i>Conversie a \"%s\" în progres</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
-msgstr "_Fortsett"
+msgstr "_Reluare"
 
 #. file 'ocv_in_progress.py', line 104
 msgid "Starting up"
-msgstr "Starter"
+msgstr "Pornesc"
 
 #. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
-msgstr "%.1f%% ferdig, rundt %sleft"
+msgstr "%.1f%% complet, aproximativ %s rămas"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
-msgstr "Satt på pause (%.1f%% completed)"
+msgstr "În suspensie (%.1f%% complet)"
 
 #. file 'ocv_in_progress.py', line 119
 msgid "Paused"
-msgstr "Pause"
+msgstr "Suspendat"
 
 #. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
-msgstr "Omkoding ferdig"
+msgstr "Encodare completă"
 
 #. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
-msgstr "Filen ble lagret i \"%s\"."
+msgstr "Fișier salvat în \"%s\"."
 
 #. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
-msgstr "GStreamer feil: forhåndsutrullingen feilet"
+msgstr "Eroare GStream: pre-derulare eșuată"

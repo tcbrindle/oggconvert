@@ -7,161 +7,153 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2008-08-01 16:44+0000\n"
-"Last-Translator: zolookas <zolookas@delfi.lt>\n"
+"POT-Creation-Date: 2008-09-12 23:34+0000\n"
+"PO-Revision-Date: 2009-11-18 06:50+0000\n"
+"Last-Translator: Julius Vitkauskas <zadintuvas@gmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 15:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#. file 'ocv_main.py', line 144
+#. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
 msgstr "Negalima išsaugoti į šį aplanką"
 
-#. file 'ocv_main.py', line 156
+#. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr "Pasirinkite kitą failo pavadinimą arba išsaugokite kitoje vietoje."
 
-#. file 'ocv_main.py', line 188
+#. file 'ocv_main.py', line 181
 msgid "Bye then!"
 msgstr "Tada iki!"
 
-#. file 'ocv_main.py', line 303
+#. file 'ocv_main.py', line 299
 msgid "Video Files"
 msgstr "Video failai"
 
-#. file 'ocv_main.py', line 306
+#. file 'ocv_main.py', line 304
 msgid "Audio Files"
 msgstr "Garso failai"
 
-#. file 'ocv_main.py', line 309
+#. file 'ocv_main.py', line 307
 msgid "All Media Files"
 msgstr "Visi media failai"
 
-#. file 'ocv_main.py', line 313
+#. file 'ocv_main.py', line 312
 msgid "All Files"
 msgstr "Visi failai"
 
-#. file 'ocv_util.py', line 36
+#. file 'ocv_util.py', line 34
 msgid "unknown time "
 msgstr "nežinomas laikas "
 
-#. file 'ocv_util.py', line 46
+#. file 'ocv_util.py', line 44
 msgid "1 hour"
 msgstr "1 valanda"
 
-#. file 'ocv_util.py', line 48
+#. file 'ocv_util.py', line 46
 msgid "%i hours"
 msgstr "%i valandos"
 
-#. file 'ocv_util.py', line 54
+#. file 'ocv_util.py', line 52
 msgid "1 minute"
 msgstr "1 minutė"
 
-#. file 'ocv_util.py', line 56
+#. file 'ocv_util.py', line 54
 msgid "%i minutes"
 msgstr "%i minutės"
 
-#. file 'ocv_util.py', line 63
+#. file 'ocv_util.py', line 61
 msgid "1 second"
 msgstr "1 sekundė"
 
-#. file 'ocv_util.py', line 65
+#. file 'ocv_util.py', line 63
 msgid "%i seconds"
 msgstr "%i sekundės"
 
-#. file 'ocv_util.py', line 91
+#. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "Failas jau egzistuoja šioje vietoje (%s). Jį pakeitus bus perrašytas jo "
 "turinys."
 
-#. file 'ocv_util.py', line 111
-msgid ""
-"The Dirac encoder is still experimental. Files you convert with this version "
-"may not be viewable with future versions of the decoder."
-msgstr ""
-"Dirac kodavimo priemonė yra vis dar eksperimentinė. Konvertuotų failų gali "
-"nepavykti peržiūrėti ateityje naudojant naujas versijas."
-
-#. file 'ocv_util.py', line 128
+#. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
 msgstr "Ar tikrai norite sustabdyti procesą?"
 
-#. file 'ocv_util.py', line 151
+#. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  zolookas https://launchpad.net/~zolookas"
+"  Julius Vitkauskas https://launchpad.net/~julius-vitkauskas"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
 msgstr "<b>Šaltinis</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "File Format:"
-msgstr "Failo formatas:"
-
-#. file 'oggcv.glade', line ?
 msgid ""
-"Ogg:\n"
-"Matroska:"
+"Theora\n"
+"Dirac"
 msgstr ""
-"Ogg:\n"
-"Matroska:"
-
-#. file 'oggcv.glade', line ?
-msgid ""
-"Ogg\n"
-"Matroska"
-msgstr ""
-"Ogg\n"
-"Matroska"
-
-#. file 'oggcv.glade', line ?
-msgid "Advanced"
-msgstr "Išsamiau"
-
-#. file 'oggcv.glade', line ?
-msgid "Audio Quality:"
-msgstr "Garso kokybė:"
-
-#. file 'oggcv.glade', line ?
-msgid "Video Quality:"
-msgstr "Video kokybė:"
+"Theora\n"
+"Dirac"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
 msgstr "Video formatas:"
 
 #. file 'oggcv.glade', line ?
+msgid "Video Quality:"
+msgstr "Video kokybė:"
+
+#. file 'oggcv.glade', line ?
+msgid "Audio Quality:"
+msgstr "Garso kokybė:"
+
+#. file 'oggcv.glade', line ?
 msgid ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
 msgstr ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg\n"
+"Matroska"
+
+#. file 'oggcv.glade', line ?
+msgid "File Format:"
+msgstr "Failo formatas:"
+
+#. file 'oggcv.glade', line ?
+msgid "Advanced"
+msgstr "Išsamiau"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
 msgstr "<b>Konvertavimas</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "Select A Folder"
-msgstr "Pasirinkite aplanką"
+msgid "File Name:"
+msgstr "Failo pavadinimas:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
 msgstr "Išsaugojimo aplankas:"
 
 #. file 'oggcv.glade', line ?
-msgid "File Name:"
-msgstr "Failo pavadinimas:"
+msgid "Select A Folder"
+msgstr "Pasirinkite aplanką"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
@@ -200,26 +192,30 @@ msgstr "<i>Konvertuojama „%s“</i>"
 msgid "_Resume"
 msgstr "_Tęsti"
 
-#. file 'ocv_in_progress.py', line 100
+#. file 'ocv_in_progress.py', line 104
+msgid "Starting up"
+msgstr ""
+
+#. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
 msgstr "%.1f%% baigta, apie %s liko"
 
-#. file 'ocv_in_progress.py', line 103
+#. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
 msgstr "Pristabdyta (%.1f%% baigta)"
 
-#. file 'ocv_in_progress.py', line 111
+#. file 'ocv_in_progress.py', line 119
 msgid "Paused"
 msgstr "Pristabdyta"
 
-#. file 'ocv_in_progress.py', line 133
+#. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
 msgstr "Konvertavimas baigtas"
 
-#. file 'ocv_in_progress.py', line 138
+#. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
 msgstr "Failas išsaugotas į „%s“."
 
-#. file 'ocv_in_progress.py', line 149
+#. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
 msgstr "GStreamer klaida: preroll nepavyko"

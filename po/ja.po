@@ -1,16 +1,16 @@
-# Norwegian Bokmal translation for oggconvert
-# Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
+# Japanese translation for oggconvert
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
 # This file is distributed under the same license as the oggconvert package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-09-12 23:34+0000\n"
-"PO-Revision-Date: 2010-01-24 23:38+0000\n"
-"Last-Translator: Simen Heggestøyl <simen@simenh.com>\n"
-"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"PO-Revision-Date: 2010-04-16 13:59+0000\n"
+"Last-Translator: Hiroshi Tagawa <Unknown>\n"
+"Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,82 +19,80 @@ msgstr ""
 
 #. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
-msgstr "Kan ikke lagre i denne mappen"
+msgstr "このフォルダには保存できません。"
 
 #. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
-msgstr "Velg et annet navn for denne filen, eller lagre et annet sted"
+msgstr "ファイル名を変えるか、別の場所に保存してください。"
 
 #. file 'ocv_main.py', line 181
 msgid "Bye then!"
-msgstr "Adjø!"
+msgstr ""
 
 #. file 'ocv_main.py', line 299
 msgid "Video Files"
-msgstr "Videofiler"
+msgstr "動画ファイル"
 
 #. file 'ocv_main.py', line 304
 msgid "Audio Files"
-msgstr "Lydfiler"
+msgstr "音声ファイル"
 
 #. file 'ocv_main.py', line 307
 msgid "All Media Files"
-msgstr "Alle Mediafiler"
+msgstr "すべてのメディアファイル"
 
 #. file 'ocv_main.py', line 312
 msgid "All Files"
-msgstr "Alle Filer"
+msgstr "すべてのファイル"
 
 #. file 'ocv_util.py', line 34
 msgid "unknown time "
-msgstr "ukjent tid "
+msgstr ""
 
 #. file 'ocv_util.py', line 44
 msgid "1 hour"
-msgstr "1 time"
+msgstr "1 時間"
 
 #. file 'ocv_util.py', line 46
 msgid "%i hours"
-msgstr "%i timer"
+msgstr "%i 時間"
 
 #. file 'ocv_util.py', line 52
 msgid "1 minute"
-msgstr "1 minutt"
+msgstr "1 分"
 
 #. file 'ocv_util.py', line 54
 msgid "%i minutes"
-msgstr "%i minutter"
+msgstr "%i 分"
 
 #. file 'ocv_util.py', line 61
 msgid "1 second"
-msgstr "1 sekund"
+msgstr "1 秒"
 
 #. file 'ocv_util.py', line 63
 msgid "%i seconds"
-msgstr "%i sekunder"
+msgstr "%i 秒"
 
 #. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
-msgstr ""
-"Filen finnes allerede i \"%s\". Å erstatte den vil overskrive innholdet."
+msgstr "ファイルはすでに \"%s\" に存在しています。置き換えるとファイルの中身を上書きすることになります。"
 
 #. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
-msgstr "Er du sikker på at du vil stoppe?"
+msgstr "本当に中止してもいいですか？"
 
 #. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Marstein https://launchpad.net/~clmar\n"
-"  OttifantSir https://launchpad.net/~ottifantsirtarrant\n"
-"  kingu https://launchpad.net/~comradekingu"
+"  Hiroshi Tagawa https://launchpad.net/~kuponuga\n"
+"  tagawa https://launchpad.net/~a-launchpad-kyokodaniel-com"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
-msgstr "<b>Kilde</b>"
+msgstr "<b>ソース</b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -106,15 +104,15 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
-msgstr "Videoformat:"
+msgstr "ビデオフォーマット："
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
-msgstr "Videokvalitet:"
+msgstr "画質"
 
 #. file 'oggcv.glade', line ?
 msgid "Audio Quality:"
-msgstr "Lydkvalitet:"
+msgstr "音質"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -134,87 +132,87 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "File Format:"
-msgstr "Filformat:"
+msgstr "ファイルフォーマット："
 
 #. file 'oggcv.glade', line ?
 msgid "Advanced"
-msgstr "Avansert"
+msgstr "詳細設定"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
-msgstr "Konvertering"
+msgstr "<b>変換</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "File Name:"
-msgstr "Filnavn:"
+msgstr "ファイル名："
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
-msgstr "Lagre mappe:"
+msgstr "フォルダ："
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Velg en mappe"
+msgstr "フォルダを選択"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
-msgstr "<b>Mål</b>"
+msgstr "<b>変換先</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "OggConvert"
-msgstr "OggOmformer"
+msgstr "OggConvert"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
-"<b><big>Konverterer fil\n"
+"<b><big>ファイルを変換しています\n"
 "</big></b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
-msgstr "Din mediafil blir konvertert til Ogg-format. Dette kan ta lang tid."
+msgstr "メディアファイルを Ogg フォーマットに変換しています。これには時間がかかるかも知れません。"
 
 #. file 'oggcv.glade', line ?
 #. file 'ocv_in_progress.py', line 88
 msgid "_Pause"
-msgstr "_Pause"
+msgstr "一時停止(_P)"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr "<i>Konverterer \"%s\"</i>"
+msgstr "<i>\"%s\" を変換しています</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
-msgstr "_Fortsett"
+msgstr "再開(_R)"
 
 #. file 'ocv_in_progress.py', line 104
 msgid "Starting up"
-msgstr "Starter"
+msgstr "開始しています"
 
 #. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
-msgstr "%.1f%% ferdig, rundt %sleft"
+msgstr "%.1f%% 完了、残り約 %s"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
-msgstr "Satt på pause (%.1f%% completed)"
+msgstr "一時停止中 (%.1f%% 完了)"
 
 #. file 'ocv_in_progress.py', line 119
 msgid "Paused"
-msgstr "Pause"
+msgstr "一時停止"
 
 #. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
-msgstr "Omkoding ferdig"
+msgstr "エンコード完了"
 
 #. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
-msgstr "Filen ble lagret i \"%s\"."
+msgstr "ファイルは \"%s\" に保存されました。"
 
 #. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
-msgstr "GStreamer feil: forhåndsutrullingen feilet"
+msgstr ""

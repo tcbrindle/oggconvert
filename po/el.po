@@ -1,4 +1,4 @@
-# Norwegian Bokmal translation for oggconvert
+# Greek translation for oggconvert
 # Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
 # This file is distributed under the same license as the oggconvert package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2008-09-12 23:34+0000\n"
-"PO-Revision-Date: 2010-01-24 23:38+0000\n"
-"Last-Translator: Simen Heggestøyl <simen@simenh.com>\n"
-"Language-Team: Norwegian Bokmal <nb@li.org>\n"
+"PO-Revision-Date: 2009-11-25 00:26+0000\n"
+"Last-Translator: Kainourgiakis Giorgos <kaingeo@yahoo.gr>\n"
+"Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,82 +19,83 @@ msgstr ""
 
 #. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
-msgstr "Kan ikke lagre i denne mappen"
+msgstr "Αδυναμία αποθήκευσης σε αυτόν τον φάκελο"
 
 #. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
-msgstr "Velg et annet navn for denne filen, eller lagre et annet sted"
+msgstr ""
+"Επιλέξτε ένα διαφορετικό όνομα για το αρχείο ή αποθηκεύστε το σε διαφορετική "
+"τοποθεσία."
 
 #. file 'ocv_main.py', line 181
 msgid "Bye then!"
-msgstr "Adjø!"
+msgstr "Αντίο τότε!"
 
 #. file 'ocv_main.py', line 299
 msgid "Video Files"
-msgstr "Videofiler"
+msgstr "Αρχεία βίντεο"
 
 #. file 'ocv_main.py', line 304
 msgid "Audio Files"
-msgstr "Lydfiler"
+msgstr "Αρχεία ήχου"
 
 #. file 'ocv_main.py', line 307
 msgid "All Media Files"
-msgstr "Alle Mediafiler"
+msgstr "Όλα τα αρχεία πολυμέσων"
 
 #. file 'ocv_main.py', line 312
 msgid "All Files"
-msgstr "Alle Filer"
+msgstr "Όλα τα αρχεία"
 
 #. file 'ocv_util.py', line 34
 msgid "unknown time "
-msgstr "ukjent tid "
+msgstr "άγνωστος χρόνος "
 
 #. file 'ocv_util.py', line 44
 msgid "1 hour"
-msgstr "1 time"
+msgstr "1 ώρα"
 
 #. file 'ocv_util.py', line 46
 msgid "%i hours"
-msgstr "%i timer"
+msgstr "%i ώρες"
 
 #. file 'ocv_util.py', line 52
 msgid "1 minute"
-msgstr "1 minutt"
+msgstr "1 λεπτό"
 
 #. file 'ocv_util.py', line 54
 msgid "%i minutes"
-msgstr "%i minutter"
+msgstr "%i λεπτά"
 
 #. file 'ocv_util.py', line 61
 msgid "1 second"
-msgstr "1 sekund"
+msgstr "1 δευτερόλεπτο"
 
 #. file 'ocv_util.py', line 63
 msgid "%i seconds"
-msgstr "%i sekunder"
+msgstr "%i δευτερόλεπτα"
 
 #. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
-"Filen finnes allerede i \"%s\". Å erstatte den vil overskrive innholdet."
+"Το αρχείο ήδη υπάρχει στο \"%s\". Αν το αποθηκεύσετε τα περιεχόμενα θα "
+"αντικατασταθούν."
 
 #. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
-msgstr "Er du sikker på at du vil stoppe?"
+msgstr "Είστε σίγουροι ότι θέλετε να σταματήσετε;"
 
 #. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Marstein https://launchpad.net/~clmar\n"
-"  OttifantSir https://launchpad.net/~ottifantsirtarrant\n"
-"  kingu https://launchpad.net/~comradekingu"
+"  Kainourgiakis Giorgos https://launchpad.net/~kaingeo"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
-msgstr "<b>Kilde</b>"
+msgstr "<b>Πηγή</b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -106,15 +107,15 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
-msgstr "Videoformat:"
+msgstr "Μορφή βίντεο:"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
-msgstr "Videokvalitet:"
+msgstr "Ποιότητα βίντεο:"
 
 #. file 'oggcv.glade', line ?
 msgid "Audio Quality:"
-msgstr "Lydkvalitet:"
+msgstr "Ποιότητα ήχου:"
 
 #. file 'oggcv.glade', line ?
 msgid ""
@@ -134,87 +135,89 @@ msgstr ""
 
 #. file 'oggcv.glade', line ?
 msgid "File Format:"
-msgstr "Filformat:"
+msgstr "Μορφή αρχείου:"
 
 #. file 'oggcv.glade', line ?
 msgid "Advanced"
-msgstr "Avansert"
+msgstr "Για προχωρημένους"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
-msgstr "Konvertering"
+msgstr "<b>Μετατροπή</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "File Name:"
-msgstr "Filnavn:"
+msgstr "Όνομα αρχείου:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
-msgstr "Lagre mappe:"
+msgstr "Φάκελος αποθήκευσης:"
 
 #. file 'oggcv.glade', line ?
 msgid "Select A Folder"
-msgstr "Velg en mappe"
+msgstr "Επιλέξτε ένα φάκελο"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
-msgstr "<b>Mål</b>"
+msgstr "<b>Προορισμός</b>"
 
 #. file 'oggcv.glade', line ?
 msgid "OggConvert"
-msgstr "OggOmformer"
+msgstr "OggConvert"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "<b><big>Converting File\n"
 "</big></b>"
 msgstr ""
-"<b><big>Konverterer fil\n"
+"<b><big>Μετατροπή αρχείου\n"
 "</big></b>"
 
 #. file 'oggcv.glade', line ?
 msgid ""
 "Your media file is currently being converted to Ogg format. This may take a "
 "long time."
-msgstr "Din mediafil blir konvertert til Ogg-format. Dette kan ta lang tid."
+msgstr ""
+"Το αρχείο σας μετατρέπεται σε μορφή Ogg. Αυτό μπορεί να διαρκέσει αρκετό "
+"χρόνο."
 
 #. file 'oggcv.glade', line ?
 #. file 'ocv_in_progress.py', line 88
 msgid "_Pause"
-msgstr "_Pause"
+msgstr "_Παύση"
 
 #. file 'ocv_in_progress.py', line 61
 msgid "<i>Converting \"%s\"</i>"
-msgstr "<i>Konverterer \"%s\"</i>"
+msgstr "<i>Μετατροπή του \"%s\"</i>"
 
 #. file 'ocv_in_progress.py', line 78
 msgid "_Resume"
-msgstr "_Fortsett"
+msgstr "_Συνέχεια"
 
 #. file 'ocv_in_progress.py', line 104
 msgid "Starting up"
-msgstr "Starter"
+msgstr "Γίνεται εκκίνηση"
 
 #. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
-msgstr "%.1f%% ferdig, rundt %sleft"
+msgstr "%.1f%% ολοκληρωμένο, περίπου %s απομένει"
 
 #. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
-msgstr "Satt på pause (%.1f%% completed)"
+msgstr "Παύση (%.1f%% ολοκληρωμένο)"
 
 #. file 'ocv_in_progress.py', line 119
 msgid "Paused"
-msgstr "Pause"
+msgstr "Παύση"
 
 #. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
-msgstr "Omkoding ferdig"
+msgstr "Η κωδικοποίηση ολοκληρώθηκε"
 
 #. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
-msgstr "Filen ble lagret i \"%s\"."
+msgstr "Το αρχείο αποθηκεύτηκε στο \"%s\"."
 
 #. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
-msgstr "GStreamer feil: forhåndsutrullingen feilet"
+msgstr "Σφάλμα GStreamer: preroll failed"

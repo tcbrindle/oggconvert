@@ -7,94 +7,86 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2008-08-02 06:43+0000\n"
-"Last-Translator: Cristian OLATE OPAZO <cristian.olate@gmail.com>\n"
+"POT-Creation-Date: 2008-09-12 23:34+0000\n"
+"PO-Revision-Date: 2010-02-09 18:52+0000\n"
+"Last-Translator: Gabriel <galvarez_mdp@yahoo.com.ar>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 15:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#. file 'ocv_main.py', line 144
+#. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
 msgstr "No se puede guardar en esta carpeta"
 
-#. file 'ocv_main.py', line 156
+#. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr ""
 "Elija un nombre diferente para el archivo a guardar, o guárdelo en un lugar "
 "diferente."
 
-#. file 'ocv_main.py', line 188
+#. file 'ocv_main.py', line 181
 msgid "Bye then!"
 msgstr "¡Hasta luego!"
 
-#. file 'ocv_main.py', line 303
+#. file 'ocv_main.py', line 299
 msgid "Video Files"
 msgstr "Archivos de video"
 
-#. file 'ocv_main.py', line 306
+#. file 'ocv_main.py', line 304
 msgid "Audio Files"
 msgstr "Archivos de audio"
 
-#. file 'ocv_main.py', line 309
+#. file 'ocv_main.py', line 307
 msgid "All Media Files"
 msgstr "Todos los archivos multimedia"
 
-#. file 'ocv_main.py', line 313
+#. file 'ocv_main.py', line 312
 msgid "All Files"
 msgstr "Todos los archivos"
 
-#. file 'ocv_util.py', line 36
+#. file 'ocv_util.py', line 34
 msgid "unknown time "
 msgstr "tiempo desconocido "
 
-#. file 'ocv_util.py', line 46
+#. file 'ocv_util.py', line 44
 msgid "1 hour"
 msgstr "1 hora"
 
-#. file 'ocv_util.py', line 48
+#. file 'ocv_util.py', line 46
 msgid "%i hours"
 msgstr "%i horas"
 
-#. file 'ocv_util.py', line 54
+#. file 'ocv_util.py', line 52
 msgid "1 minute"
 msgstr "1 minuto"
 
-#. file 'ocv_util.py', line 56
+#. file 'ocv_util.py', line 54
 msgid "%i minutes"
 msgstr "%i minutos"
 
-#. file 'ocv_util.py', line 63
+#. file 'ocv_util.py', line 61
 msgid "1 second"
-msgstr "1 segundo"
+msgstr "_n: 1 segundo"
 
-#. file 'ocv_util.py', line 65
+#. file 'ocv_util.py', line 63
 msgid "%i seconds"
 msgstr "%i segundos"
 
-#. file 'ocv_util.py', line 91
+#. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "El archivo ya existe en \"%s\". Reemplazarlo sobrescribirá su contenido."
 
-#. file 'ocv_util.py', line 111
-msgid ""
-"The Dirac encoder is still experimental. Files you convert with this version "
-"may not be viewable with future versions of the decoder."
-msgstr ""
-"El codificador Dirac todavía es experimental. Los archivos que convierta con "
-"esta versión pueden no ser visibles con versiones futuras del decodificador."
-
-#. file 'ocv_util.py', line 128
+#. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
-msgstr "¿Está seguro que desea detenerse?"
+msgstr "¿Está seguro que quiere terminar?"
 
-#. file 'ocv_util.py', line 151
+#. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
@@ -102,74 +94,78 @@ msgstr ""
 "  Dante Díaz https://launchpad.net/~dante\n"
 "  Felipe Lerena https://launchpad.net/~lipe\n"
 "  Felipe Venegas https://launchpad.net/~fantomzz\n"
-"  Leonardo Gastón De Luca https://launchpad.net/~leodeluca\n"
+"  Guillermo Lo Coco https://launchpad.net/~glococo\n"
+"  JorSol https://launchpad.net/~jorsol\n"
+"  Leonardo Gastón De Luca https://launchpad.net/~leorockway\n"
 "  Manuel Kaufmann https://launchpad.net/~humitos\n"
-"  astiam https://launchpad.net/~astiamm\n"
-"  skarevoluti https://launchpad.net/~garciamanu49"
+"  astiam https://launchpad.net/~astiam\n"
+"  felixion https://launchpad.net/~felixion\n"
+"  jeann https://launchpad.net/~jeancarlosn\n"
+"  skarevoluti https://launchpad.net/~skarevoluti"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
 msgstr "<b>Origen</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "File Format:"
-msgstr "Formato del archivo:"
-
-#. file 'oggcv.glade', line ?
 msgid ""
-"Ogg:\n"
-"Matroska:"
+"Theora\n"
+"Dirac"
 msgstr ""
-"Ogg:\n"
-"Matroska:"
+"Theora\n"
+"Dirac"
 
 #. file 'oggcv.glade', line ?
-msgid ""
-"Ogg\n"
-"Matroska"
-msgstr ""
-"Ogg\n"
-"Matroska"
-
-#. file 'oggcv.glade', line ?
-msgid "Advanced"
-msgstr "Avanzado"
-
-#. file 'oggcv.glade', line ?
-msgid "Audio Quality:"
-msgstr "Calidad de audio:"
+msgid "Video Format:"
+msgstr "Formato de vídeo:"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
 msgstr "Calidad de video:"
 
 #. file 'oggcv.glade', line ?
-msgid "Video Format:"
-msgstr "Formato de video:"
+msgid "Audio Quality:"
+msgstr "Calidad de audio:"
 
 #. file 'oggcv.glade', line ?
 msgid ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
 msgstr ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg\n"
+"Matroska"
+
+#. file 'oggcv.glade', line ?
+msgid "File Format:"
+msgstr "Formato del archivo:"
+
+#. file 'oggcv.glade', line ?
+msgid "Advanced"
+msgstr "Avanzado"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
 msgstr "<b>Conversión</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "Select A Folder"
-msgstr "Seleccione una carpeta"
+msgid "File Name:"
+msgstr "Nombre del archivo:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
-msgstr "Carpeta:"
+msgstr "Guardar Carpeta:"
 
 #. file 'oggcv.glade', line ?
-msgid "File Name:"
-msgstr "Nombre del archivo:"
+msgid "Select A Folder"
+msgstr "Seleccionar una Carpeta"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
@@ -208,26 +204,30 @@ msgstr "<i>Convirtiendo \"%s\"</i>"
 msgid "_Resume"
 msgstr "_Reanudar"
 
-#. file 'ocv_in_progress.py', line 100
+#. file 'ocv_in_progress.py', line 104
+msgid "Starting up"
+msgstr "Iniciando"
+
+#. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
 msgstr "%.1f%% completado, falta %saproximadamente"
 
-#. file 'ocv_in_progress.py', line 103
+#. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
 msgstr "Pausado (%.1f%% completado)"
 
-#. file 'ocv_in_progress.py', line 111
+#. file 'ocv_in_progress.py', line 119
 msgid "Paused"
 msgstr "Pausado"
 
-#. file 'ocv_in_progress.py', line 133
+#. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
 msgstr "Codificación completa"
 
-#. file 'ocv_in_progress.py', line 138
+#. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
 msgstr "Archivo guardado en \"%s\"."
 
-#. file 'ocv_in_progress.py', line 149
+#. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
 msgstr "Error en GStreamer: falló la carga del buffer inicial"

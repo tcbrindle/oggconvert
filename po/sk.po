@@ -7,163 +7,156 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2008-05-21 15:10+0000\n"
-"Last-Translator: Alexander Yuriev <Cooler@email.cz>\n"
+"POT-Creation-Date: 2008-09-12 23:34+0000\n"
+"PO-Revision-Date: 2009-11-17 21:24+0000\n"
+"Last-Translator: Roman Horník <Unknown>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 15:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#. file 'ocv_main.py', line 144
+#. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
 msgstr "Nie je možné ukladať do tohto priečinka"
 
-#. file 'ocv_main.py', line 156
+#. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr ""
 "Zvoľte iné meno pre ukladaný súbor, alebo zmeňte miesto pre uloženie."
 
-#. file 'ocv_main.py', line 188
+#. file 'ocv_main.py', line 181
 msgid "Bye then!"
 msgstr "Dovidenia!"
 
-#. file 'ocv_main.py', line 303
+#. file 'ocv_main.py', line 299
 msgid "Video Files"
 msgstr "Súbory videa"
 
-#. file 'ocv_main.py', line 306
-#, fuzzy
+#. file 'ocv_main.py', line 304
 msgid "Audio Files"
-msgstr "Audio súbory"
+msgstr "Zvukové súbory"
 
-#. file 'ocv_main.py', line 309
+#. file 'ocv_main.py', line 307
 msgid "All Media Files"
 msgstr "Multimediálne súbory"
 
-#. file 'ocv_main.py', line 313
+#. file 'ocv_main.py', line 312
 msgid "All Files"
 msgstr "Všetky súbory"
 
-#. file 'ocv_util.py', line 36
+#. file 'ocv_util.py', line 34
 msgid "unknown time "
 msgstr "Neznámy čas "
 
-#. file 'ocv_util.py', line 46
+#. file 'ocv_util.py', line 44
 msgid "1 hour"
 msgstr "1 hodina"
 
-#. file 'ocv_util.py', line 48
+#. file 'ocv_util.py', line 46
 msgid "%i hours"
 msgstr "%i hodiny"
 
-#. file 'ocv_util.py', line 54
+#. file 'ocv_util.py', line 52
 msgid "1 minute"
 msgstr "1 minúta"
 
-#. file 'ocv_util.py', line 56
+#. file 'ocv_util.py', line 54
 msgid "%i minutes"
 msgstr "%i minúty"
 
-#. file 'ocv_util.py', line 63
+#. file 'ocv_util.py', line 61
 msgid "1 second"
 msgstr "1 sekunda"
 
-#. file 'ocv_util.py', line 65
+#. file 'ocv_util.py', line 63
 msgid "%i seconds"
 msgstr "%i sekundy"
 
-#. file 'ocv_util.py', line 91
+#. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr "Súbor už existuje v \"%s\". Nahradenie prepíše jeho obsah."
 
-#. file 'ocv_util.py', line 111
-msgid ""
-"The Dirac encoder is still experimental. Files you convert with this version "
-"may not be viewable with future versions of the decoder."
-msgstr ""
-"encoder Dirac je stále experimentálny. Súbory prekonvertované touto verziou "
-"nemusia byť čitatelné pre budúce verzie dekódera."
-
-#. file 'ocv_util.py', line 128
+#. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
 msgstr "Naozaj si prajete skončiť?"
 
-#. file 'ocv_util.py', line 151
+#. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
 "  Alexander Yuriev https://launchpad.net/~cooler-email\n"
 "  Jakub Kapuš https://launchpad.net/~kapo\n"
-"  Miroslav Mereďa https://launchpad.net/~miro-me"
+"  Miroslav Mereďa https://launchpad.net/~miro-me\n"
+"  Miroslav Ďurian https://launchpad.net/~aasami\n"
+"  Roman Horník https://launchpad.net/~roman.hornik"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
 msgstr "<b>Zdroj</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "File Format:"
-msgstr "Formát súboru"
-
-#. file 'oggcv.glade', line ?
 msgid ""
-"Ogg:\n"
-"Matroska:"
+"Theora\n"
+"Dirac"
 msgstr ""
-"Ogg:\n"
-"Matroska:"
-
-#. file 'oggcv.glade', line ?
-msgid ""
-"Ogg\n"
-"Matroska"
-msgstr ""
-"Ogg\n"
-"Matroska"
-
-#. file 'oggcv.glade', line ?
-msgid "Advanced"
-msgstr "Pokročilé"
-
-#. file 'oggcv.glade', line ?
-msgid "Audio Quality:"
-msgstr "Kvalita zvuku"
-
-#. file 'oggcv.glade', line ?
-msgid "Video Quality:"
-msgstr "Kvalita videa"
+"Theora\n"
+"Dirac"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
 msgstr "Video formát:"
 
 #. file 'oggcv.glade', line ?
+msgid "Video Quality:"
+msgstr "Kvalita videa"
+
+#. file 'oggcv.glade', line ?
+msgid "Audio Quality:"
+msgstr "Kvalita zvuku"
+
+#. file 'oggcv.glade', line ?
 msgid ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
 msgstr ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg\n"
+"Matroska"
+
+#. file 'oggcv.glade', line ?
+msgid "File Format:"
+msgstr "Formát súboru"
+
+#. file 'oggcv.glade', line ?
+msgid "Advanced"
+msgstr "Pokročilé"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
 msgstr "<b>Konverzia</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "Select A Folder"
-msgstr "Vybrať priečinok"
+msgid "File Name:"
+msgstr "Názov súboru:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
 msgstr "Uložiť priečinok:"
 
 #. file 'oggcv.glade', line ?
-msgid "File Name:"
-msgstr "Názov súboru:"
+msgid "Select A Folder"
+msgstr "Vybrať priečinok"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
@@ -201,26 +194,30 @@ msgstr "<i>Konverzia\"%s\"</i>"
 msgid "_Resume"
 msgstr "_Pokračovať"
 
-#. file 'ocv_in_progress.py', line 100
+#. file 'ocv_in_progress.py', line 104
+msgid "Starting up"
+msgstr "Spúšťa sa"
+
+#. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
 msgstr "%.1f%% hotovo, okolo %zostáva"
 
-#. file 'ocv_in_progress.py', line 103
+#. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
 msgstr "Pozastavené (%.1f%% dokončené)"
 
-#. file 'ocv_in_progress.py', line 111
+#. file 'ocv_in_progress.py', line 119
 msgid "Paused"
 msgstr "Pozastavené"
 
-#. file 'ocv_in_progress.py', line 133
+#. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
 msgstr "Prevod dokončený"
 
-#. file 'ocv_in_progress.py', line 138
+#. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
 msgstr "Súbor uložený do \"%s\""
 
-#. file 'ocv_in_progress.py', line 149
+#. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
 msgstr "Chyba GStreameru: preroll zlyhal"

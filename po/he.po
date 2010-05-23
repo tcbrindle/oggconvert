@@ -7,159 +7,154 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2008-04-26 03:27+0000\n"
-"Last-Translator: Hezy Amiel <Unknown>\n"
+"POT-Creation-Date: 2008-09-12 23:34+0000\n"
+"PO-Revision-Date: 2010-05-06 12:30+0000\n"
+"Last-Translator: el.il <Unknown>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 15:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#. file 'ocv_main.py', line 144
+#. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
 msgstr "לא ניתן לשמור לתיקייה זו"
 
-#. file 'ocv_main.py', line 156
+#. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr "בחר שם אחר לשמירת הקובץ, או שמור במיקום אחר."
 
-#. file 'ocv_main.py', line 188
+#. file 'ocv_main.py', line 181
 msgid "Bye then!"
 msgstr "להתראות!"
 
-#. file 'ocv_main.py', line 303
+#. file 'ocv_main.py', line 299
 msgid "Video Files"
 msgstr "קבצי וידאו"
 
-#. file 'ocv_main.py', line 306
+#. file 'ocv_main.py', line 304
 msgid "Audio Files"
 msgstr "קבצי שמע"
 
-#. file 'ocv_main.py', line 309
+#. file 'ocv_main.py', line 307
 msgid "All Media Files"
 msgstr "כל קבצי המדיה"
 
-#. file 'ocv_main.py', line 313
+#. file 'ocv_main.py', line 312
 msgid "All Files"
 msgstr "כל הקבצים"
 
-#. file 'ocv_util.py', line 36
+#. file 'ocv_util.py', line 34
 msgid "unknown time "
 msgstr "זמן לא ידוע "
 
-#. file 'ocv_util.py', line 46
+#. file 'ocv_util.py', line 44
 msgid "1 hour"
 msgstr "שעה אחת"
 
-#. file 'ocv_util.py', line 48
+#. file 'ocv_util.py', line 46
 msgid "%i hours"
 msgstr "%i שעות"
 
-#. file 'ocv_util.py', line 54
+#. file 'ocv_util.py', line 52
 msgid "1 minute"
 msgstr "דקה אחת"
 
-#. file 'ocv_util.py', line 56
+#. file 'ocv_util.py', line 54
 msgid "%i minutes"
 msgstr "%i דקות"
 
-#. file 'ocv_util.py', line 63
+#. file 'ocv_util.py', line 61
 msgid "1 second"
 msgstr "שנייה אחת"
 
-#. file 'ocv_util.py', line 65
+#. file 'ocv_util.py', line 63
 msgid "%i seconds"
 msgstr "%i שניות"
 
-#. file 'ocv_util.py', line 91
+#. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr "הקובץ כבר קיים ב-\"%s\". החלפתו תגרום למחיקת התוכן הקיים."
 
-#. file 'ocv_util.py', line 111
-msgid ""
-"The Dirac encoder is still experimental. Files you convert with this version "
-"may not be viewable with future versions of the decoder."
-msgstr ""
-"מקודד Dirac עדיין ניסיוני. יתכן שקבצים שתמיר בעזרת גירסה זו לא יהיו ברי צפיה "
-"בעזרת גירסאות עתידיות של המפענח."
-
-#. file 'ocv_util.py', line 128
+#. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
 msgstr "האם אתה בטוח שברצונך לעצור?"
 
-#. file 'ocv_util.py', line 151
+#. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
-"  Hezy Amiel https://launchpad.net/~hezy"
+"  Ddorda https://launchpad.net/~ddorda\n"
+"  Hezy Amiel https://launchpad.net/~hezy\n"
+"  Yaron https://launchpad.net/~sh-yaron\n"
+"  el.il https://launchpad.net/~el-il"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Source</b>"
 msgstr "<b>מקור</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "File Format:"
-msgstr "סוג קובץ:"
-
-#. file 'oggcv.glade', line ?
 msgid ""
-"Ogg:\n"
-"Matroska:"
+"Theora\n"
+"Dirac"
 msgstr ""
-"Ogg:\n"
-"Matroska:"
+"Theora\n"
+"Dirac"
 
 #. file 'oggcv.glade', line ?
-msgid ""
-"Ogg\n"
-"Matroska"
-msgstr ""
-"Ogg\n"
-"Matroska"
-
-#. file 'oggcv.glade', line ?
-msgid "Advanced"
-msgstr "מתקדם"
-
-#. file 'oggcv.glade', line ?
-msgid "Audio Quality:"
-msgstr "איכות שמע:"
+msgid "Video Format:"
+msgstr "פורמט וידאו:"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Quality:"
 msgstr "איכות ווידאו:"
 
 #. file 'oggcv.glade', line ?
-msgid "Video Format:"
-msgstr "סוג קובץ וידאו:"
+msgid "Audio Quality:"
+msgstr "איכות שמע:"
 
 #. file 'oggcv.glade', line ?
 msgid ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
 msgstr ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg\n"
+"Matroska"
+
+#. file 'oggcv.glade', line ?
+msgid "File Format:"
+msgstr "סוג קובץ:"
+
+#. file 'oggcv.glade', line ?
+msgid "Advanced"
+msgstr "מתקדם"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
-msgstr "<b>שיחה</b>"
+msgstr "<b>המרה</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "Select A Folder"
-msgstr "בחר תיקייה"
+msgid "File Name:"
+msgstr "שם הקובץ:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
 msgstr "שמור תיקייה:"
 
 #. file 'oggcv.glade', line ?
-msgid "File Name:"
-msgstr "שם הקובץ:"
+msgid "Select A Folder"
+msgstr "בחר תיקייה"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
@@ -196,26 +191,30 @@ msgstr "<i>\"%s\"ממיר את </i>"
 msgid "_Resume"
 msgstr "ה_משך"
 
-#. file 'ocv_in_progress.py', line 100
+#. file 'ocv_in_progress.py', line 104
+msgid "Starting up"
+msgstr "מתחיל"
+
+#. file 'ocv_in_progress.py', line 108
 msgid "%.1f%% completed, about %sleft"
 msgstr "%.1f%% הסתיימו, כ-%s נותרו"
 
-#. file 'ocv_in_progress.py', line 103
+#. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
 msgstr "מושהה (%.1f%% הסתיימו)"
 
-#. file 'ocv_in_progress.py', line 111
+#. file 'ocv_in_progress.py', line 119
 msgid "Paused"
 msgstr "מושהה"
 
-#. file 'ocv_in_progress.py', line 133
+#. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
 msgstr "הקידוד הסתיים"
 
-#. file 'ocv_in_progress.py', line 138
+#. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
 msgstr "הקובץ נשמר אל \"%s\"."
 
-#. file 'ocv_in_progress.py', line 149
+#. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
 msgstr "GStreamer error: preroll failed"

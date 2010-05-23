@@ -7,93 +7,85 @@ msgid ""
 msgstr ""
 "Project-Id-Version: oggconvert\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-11-20 23:33+0000\n"
-"PO-Revision-Date: 2008-02-06 20:30+0000\n"
-"Last-Translator: nicke <niklas.aronsson@gmail.com>\n"
+"POT-Creation-Date: 2008-09-12 23:34+0000\n"
+"PO-Revision-Date: 2009-11-13 22:08+0000\n"
+"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-09-12 16:04+0000\n"
+"X-Launchpad-Export-Date: 2010-05-23 15:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#. file 'ocv_main.py', line 144
+#. file 'ocv_main.py', line 143
 msgid "Cannot save to this folder"
 msgstr "Kan inte spara till denna mapp"
 
-#. file 'ocv_main.py', line 156
+#. file 'ocv_main.py', line 155
 msgid ""
 "Choose a different name for the save file, or save to a different location."
 msgstr "Välj ett annat namn för filen, eller spara till en annan plats."
 
-#. file 'ocv_main.py', line 188
+#. file 'ocv_main.py', line 181
 msgid "Bye then!"
 msgstr "Hej då!"
 
-#. file 'ocv_main.py', line 303
+#. file 'ocv_main.py', line 299
 msgid "Video Files"
 msgstr "Videofiler"
 
-#. file 'ocv_main.py', line 306
+#. file 'ocv_main.py', line 304
 msgid "Audio Files"
 msgstr "Ljudfiler"
 
-#. file 'ocv_main.py', line 309
+#. file 'ocv_main.py', line 307
 msgid "All Media Files"
 msgstr "Alla mediafiler"
 
-#. file 'ocv_main.py', line 313
+#. file 'ocv_main.py', line 312
 msgid "All Files"
 msgstr "Alla filer"
 
-#. file 'ocv_util.py', line 36
+#. file 'ocv_util.py', line 34
 msgid "unknown time "
 msgstr "okänd tid "
 
-#. file 'ocv_util.py', line 46
+#. file 'ocv_util.py', line 44
 msgid "1 hour"
 msgstr "1 timme"
 
-#. file 'ocv_util.py', line 48
+#. file 'ocv_util.py', line 46
 msgid "%i hours"
 msgstr "%i timmar"
 
-#. file 'ocv_util.py', line 54
+#. file 'ocv_util.py', line 52
 msgid "1 minute"
 msgstr "1 minut"
 
-#. file 'ocv_util.py', line 56
+#. file 'ocv_util.py', line 54
 msgid "%i minutes"
 msgstr "%i minuter"
 
-#. file 'ocv_util.py', line 63
+#. file 'ocv_util.py', line 61
 msgid "1 second"
 msgstr "1 sekund"
 
-#. file 'ocv_util.py', line 65
+#. file 'ocv_util.py', line 63
 msgid "%i seconds"
 msgstr "%i sekunder"
 
-#. file 'ocv_util.py', line 91
+#. file 'ocv_util.py', line 89
 msgid ""
 "The file already exists in \"%s\". Replacing it will overwrite its contents."
 msgstr ""
 "Filen finns redan i \"%s\". Om den ersätts kommer dess innehåll att skrivas "
 "över."
 
-#. file 'ocv_util.py', line 111
-msgid ""
-"The Dirac encoder is still experimental. Files you convert with this version "
-"may not be viewable with future versions of the decoder."
-msgstr ""
-"Dirac-kodaren är fortfarande experimentell. Filer som du konverterar med "
-"denna version kanske inte är användbara med framtida versioner av avkodaren."
-
-#. file 'ocv_util.py', line 128
+#. file 'ocv_util.py', line 107
 msgid "Are you sure you wish to stop?"
 msgstr "Är du säker på att du vill stoppa?"
 
-#. file 'ocv_util.py', line 151
+#. file 'ocv_util.py', line 130
 msgid "translator-credits"
 msgstr ""
 "Launchpad Contributions:\n"
@@ -106,64 +98,64 @@ msgid "<b>Source</b>"
 msgstr "<b>Källa</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "File Format:"
-msgstr "Filformat:"
-
-#. file 'oggcv.glade', line ?
 msgid ""
-"Ogg:\n"
-"Matroska:"
+"Theora\n"
+"Dirac"
 msgstr ""
-"Ogg:\n"
-"Matroska:"
-
-#. file 'oggcv.glade', line ?
-msgid ""
-"Ogg\n"
-"Matroska"
-msgstr ""
-"Ogg\n"
-"Matroska"
-
-#. file 'oggcv.glade', line ?
-msgid "Advanced"
-msgstr "Avancerat"
-
-#. file 'oggcv.glade', line ?
-msgid "Audio Quality:"
-msgstr "Ljudkvalitet:"
-
-#. file 'oggcv.glade', line ?
-msgid "Video Quality:"
-msgstr "Videokvalitet:"
+"Theora\n"
+"Dirac"
 
 #. file 'oggcv.glade', line ?
 msgid "Video Format:"
 msgstr "Videoformat:"
 
 #. file 'oggcv.glade', line ?
+msgid "Video Quality:"
+msgstr "Videokvalitet:"
+
+#. file 'oggcv.glade', line ?
+msgid "Audio Quality:"
+msgstr "Ljudkvalitet:"
+
+#. file 'oggcv.glade', line ?
 msgid ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
 msgstr ""
-"Theora\n"
-"Dirac"
+"Ogg:\n"
+"Matroska:"
+
+#. file 'oggcv.glade', line ?
+msgid ""
+"Ogg\n"
+"Matroska"
+msgstr ""
+"Ogg\n"
+"Matroska"
+
+#. file 'oggcv.glade', line ?
+msgid "File Format:"
+msgstr "Filformat:"
+
+#. file 'oggcv.glade', line ?
+msgid "Advanced"
+msgstr "Avancerat"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Conversion</b>"
 msgstr "<b>Konvertering</b>"
 
 #. file 'oggcv.glade', line ?
-msgid "Select A Folder"
-msgstr "Välj en mapp"
+msgid "File Name:"
+msgstr "Filnamn:"
 
 #. file 'oggcv.glade', line ?
 msgid "Save Folder:"
 msgstr "Mapp att spara i:"
 
 #. file 'oggcv.glade', line ?
-msgid "File Name:"
-msgstr "Filnamn:"
+msgid "Select A Folder"
+msgstr "Välj en mapp"
 
 #. file 'oggcv.glade', line ?
 msgid "<b>Destination</b>"
@@ -201,28 +193,30 @@ msgstr "<i>Konverterar \"%s\"</i>"
 msgid "_Resume"
 msgstr "_Återuppta"
 
-#. file 'ocv_in_progress.py', line 100
-msgid "%.1f%% completed, about %sleft"
-msgstr ""
-"Copy text   \t\n"
-"%.1f%% klart, ungefär %skvar"
+#. file 'ocv_in_progress.py', line 104
+msgid "Starting up"
+msgstr "Startar upp"
 
-#. file 'ocv_in_progress.py', line 103
+#. file 'ocv_in_progress.py', line 108
+msgid "%.1f%% completed, about %sleft"
+msgstr "%.1f%% färdigt, ungefär %skvar"
+
+#. file 'ocv_in_progress.py', line 111
 msgid "Paused (%.1f%% completed)"
 msgstr "Pausad (%.1f%% färdigt)"
 
-#. file 'ocv_in_progress.py', line 111
+#. file 'ocv_in_progress.py', line 119
 msgid "Paused"
 msgstr "Pausad"
 
-#. file 'ocv_in_progress.py', line 133
+#. file 'ocv_in_progress.py', line 140
 msgid "Encoding complete"
 msgstr "Kodningen är färdig"
 
-#. file 'ocv_in_progress.py', line 138
+#. file 'ocv_in_progress.py', line 145
 msgid "File saved to \"%s\"."
 msgstr "Filen sparades som \"%s\"."
 
-#. file 'ocv_in_progress.py', line 149
+#. file 'ocv_in_progress.py', line 156
 msgid "GStreamer error: preroll failed"
 msgstr "GStreamer-fel: förläsning misslyckades"

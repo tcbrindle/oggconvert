@@ -1,5 +1,16 @@
 
-0.3.1:
+0.3.3:
+------
+
+* Add support for the newly-opened VP8 codec.
+
+* Add support for the WebM version of Matroska, but only use .webm as an the
+  extension if this is used in combination with the VP8 encoder.
+  
+* Fix Dirac encoder detection not working since schroenc moved to 
+  gst-plugins-bad. Fixes LP: #573603
+
+0.3.2:
 ------
 
 * Use time() rather than clock() for working out elapsed encoding time, 
