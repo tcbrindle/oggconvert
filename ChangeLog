@@ -9,6 +9,12 @@
   
 * Fix Dirac encoder detection not working since schroenc moved to 
   gst-plugins-bad. Fixes LP: #573603
+  
+* Use the "quality" property to select the quality on for schroenc, rather than
+  the "noise-threshold" as before.
+  
+* Added new tranlations: ar, da, el, ja, lv and ro, plus other translations
+  updated. Many thanks to all the translators.
 
 0.3.2:
 ------

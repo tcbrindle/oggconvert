@@ -24,7 +24,7 @@ import sys
 
 app_name = "oggconvert"
 
-version = "0.3.2"
+version = "0.3.3"
 
 authors = ["Written by:"
           ,"Tristan Brindle <t.c.brindle@gmail.com>"
@@ -36,7 +36,7 @@ authors = ["Written by:"
 
 artists = ["A. Bram Neijt <bneijt@gmail.com>"]
 
-copyright = "© 2007, 2008 Tristan Brindle"
+copyright = "© 2007-2010 Tristan Brindle"
 
 website = "http://oggconvert.tristanb.net/"
 
