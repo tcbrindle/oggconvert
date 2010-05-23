@@ -65,17 +65,18 @@ THEORA_QUALITY_MAPPING = { 0 : 0
 
 THEORA_OPTS = {"sharpness" : 1}
  
-SCHRO_QUALITY_MAPPING = { 0 : 0
-                        , 1 : 5
-                        , 2 : 10
-                        , 3 : 15
-                        , 4 : 20
-                        , 5 : 25 
-                        , 6 : 30
-                        , 7 : 35
-                        , 8 : 40
-                        , 9 : 45
-                        , 10: 50}
+SCHRO_QUALITY_MAPPING = { 0 : 0.0
+                        , 1 : 1.0
+                        , 2 : 2.0
+                        , 3 : 3.0
+                        , 4 : 4.0
+                        , 5 : 5.0
+                        , 6 : 6.0
+                        , 7 : 7.0
+                        , 8 : 8.0
+                        , 9 : 9.0
+                        , 10 : 10.0 }
+
  
 SCHRO_OPTS = { "perceptual_weighting" : 1 }
 

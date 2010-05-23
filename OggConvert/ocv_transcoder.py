@@ -177,7 +177,7 @@ class VideoEncoder(gst.Bin):
             self.encoder = gst.element_factory_make("schroenc")
             for prop in ocv_constants.SCHRO_OPTS:
                 self.encoder.set_property(prop, ocv_constants.SCHRO_OPTS[prop])
-                self.encoder.set_property("noise-threshold", quality)
+                self.encoder.set_property("quality", quality)
         elif format == "VP8":
             self.encoder = gst.element_factory_make("vp8enc")
             for prop in ocv_constants.VP8_OPTS:
