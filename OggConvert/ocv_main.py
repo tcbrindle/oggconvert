@@ -103,14 +103,18 @@ class Main:
         self._container_combobox = self._wtree.get_widget("container_combobox")
         self._container_expander = self._wtree.get_widget("container_expander")
 
+        self._set_up_liststores()
+        self._format_combobox.set_model(self._formats_liststore)
+        self._container_combobox.set_model(self._containers_liststore)
+
         self._format_combobox.set_active(0)
-        if ocv_constants.HAVE_SCHRO:
+        if (ocv_constants.HAVE_SCHRO or ocv_constants.HAVE_VP8):
             self._format_combobox.show()
             self._format_label.show()
 
+        self._container_combobox.set_active(0)
         if ocv_constants.HAVE_MATROSKA:
             self._container_expander.show()
-            self._container_combobox.set_active(0)
             self._container_combobox.show()
 
         self._set_up_filechooser()
@@ -161,9 +165,8 @@ class Main:
                     return
 
         # Get video and file formats choosen.
-        format = ocv_constants.FORMATS[int(self._format_combobox.get_active())]
-        container = ocv_constants.CONTAINER_FORMATS[int(
-            self._container_combobox.get_active())]
+        format = self._formats_liststore.get(self._format_combobox.get_active_iter(), 1)[0]
+        container = self._containers_liststore.get(self._container_combobox.get_active_iter(), 1)[0]
 
         # Now if we're still good to go...        
         #self._window.hide()
@@ -231,7 +234,12 @@ class Main:
         
         
     def _set_extension(self):
-        container = ocv_constants.CONTAINER_FORMATS[int(self._container_combobox.get_active())] 
+        container = self._containers_liststore.get(self._container_combobox.get_active_iter(), 1)[0]
+        format = self._formats_liststore.get(self._format_combobox.get_active_iter(), 1)[0]
+        
+        # This is a bit confusing, but basically we only use the webm extension
+        # if we're using VP8 as the video format, otherwise it's plain mkv
+        
         if container=='OGG':
             if self._input_has_video:
                 new_ext = 'ogv'
@@ -242,10 +250,16 @@ class Main:
                 new_ext = 'mkv'
             else:
                 new_ext = 'mka'
+        elif container == 'WEBM':
+            if self._input_has_video:
+                if format == 'VP8':
+                    new_ext = 'webm'
+                else:
+                    new_ext = 'mkv'
+            else:
+                new_ext = 'webm'
         else:
-            # When a new container support is added this code needs to be
-            # updated.
-            raise AssertionError('Unknown container format')
+            raise AssertionError('Unknown container format %s' %(container) )
                     
         self._outfile_name = self._outfile_entry.get_text()
         if self._outfile_name:
@@ -263,33 +277,11 @@ class Main:
         self._outfile_entry.set_text(self._outfile_name)
 
     def _on_container_changed(self, combobox):
-        container = ocv_constants.CONTAINER_FORMATS[int(combobox.get_active())]
-        if ((container == 'MATROSKA') & (ocv_constants.FORMATS[int(self._format_combobox.get_active())] == 'SCHRO')):
-            # DIRAC format selected. It cannot be stored in Matroska
-            # container, warn the user and change the format to Theora.
-            dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
-                gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, 
-                _("Dirac video cannot be stored in Matroska files. Using Theora instead.") )
-            dialogue.run()
-            dialogue.destroy()
-            self._format_combobox.set_active(
-                ocv_constants.FORMATS.index('THEORA'))
         self._set_extension()
 
 
     def _on_format_changed(self, combobox):
-        if (ocv_constants.FORMATS[int(combobox.get_active())] == 'SCHRO'):
-             #DIRAC format selected. It cannot be stored in Matroska
-             #container, warn the user and change container to Ogg.
-            if (ocv_constants.CONTAINER_FORMATS[
-                int(self._container_combobox.get_active())] == 'MATROSKA'):
-                dialogue = gtk.MessageDialog(self._window, gtk.DIALOG_MODAL,
-                    gtk.MESSAGE_WARNING, gtk.BUTTONS_OK, 
-                    _("Dirac video cannot be stored in Matroska files. Using Ogg instead.") )
-                dialogue.run()
-                dialogue.destroy()
-                self._container_combobox.set_active(
-                    ocv_constants.CONTAINER_FORMATS.index('OGG'))
+        self._set_extension()
 
     def _about(self, button):
         about_dialogue(self._window)
@@ -320,7 +312,25 @@ class Main:
                         os.path.expanduser("~"))
         
         self._file_chooser_button.set_local_only(False)
-                        
+               
+    def _set_up_liststores(self):
+        self._formats_liststore = gtk.ListStore(gobject.TYPE_STRING,
+                                                gobject.TYPE_STRING)
+        # Assume we always have Theora
+        self._formats_liststore.append(("Theora", "THEORA"))
+        if ocv_constants.HAVE_SCHRO:
+            self._formats_liststore.append(("Dirac", "SCHRO"))
+        if ocv_constants.HAVE_VP8:
+            self._formats_liststore.append(("VP8", "VP8"))
+            
+        self._containers_liststore = gtk.ListStore(gobject.TYPE_STRING,
+                                                   gobject.TYPE_STRING)
+
+        self._containers_liststore.append(("Ogg", "OGG"))
+        if ocv_constants.HAVE_MATROSKA:
+            self._containers_liststore.append(("Matroska", "MATROSKA"))
+        if ocv_constants.HAVE_WEBM:
+            self._containers_liststore.append(("WebM", "WEBM"))
 
     def _set_sensitivities(self,status):
         if (status == "NO_MEDIA"):

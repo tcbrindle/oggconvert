@@ -37,7 +37,7 @@ if ocv_constants.HAVE_SCHRO is None:
     if gstver[2] > 10:
         schrofac = gst.element_factory_find("schroenc")
         if schrofac is not None:
-            if schrofac.check_version(1,0,0):
+            if schrofac.check_version(0,10,14):
                 print "Schrödinger encoder found, using"
                 ocv_constants.HAVE_SCHRO = True
             else:
@@ -48,3 +48,18 @@ if ocv_constants.HAVE_MATROSKA is None:
         ocv_constants.HAVE_MATROSKA = False
     else:
         ocv_constants.HAVE_MATROSKA = True
+        
+if ocv_constants.HAVE_WEBM is None:
+    if (ocv_constants.HAVE_MATROSKA is True) and \
+       gst.element_factory_find("matroskamux").check_version(0, 10, 22):
+        print "Webm container multiplexer found, using"
+        ocv_constants.HAVE_WEBM = True
+    else:
+        ocv_constants.HAVE_WEBM = False
+           
+if ocv_constants.HAVE_VP8 is None:
+    if gst.element_factory_find("vp8enc"):
+        print "VP8 encoder found, using"
+        ocv_constants.HAVE_VP8 = True
+    else:
+        ocv_constants.HAVE_VP8 = False

@@ -38,7 +38,17 @@ HAVE_SCHRO = None
 # to disable choosing an alternative container format
 HAVE_MATROSKA = None
 
-FORMATS = ["THEORA", "SCHRO"]
+# Leave this set to None to have OggConvert detect whether you've got the VP8
+# encoder installed. If you really want to however, you can force it to either
+# True or False.
+HAVE_VP8 = None
+
+# Leave this set to None to have OggConvert detect whether you've got a recent
+# enough version of matroskamux that includes the cut-down webm profile. As with
+# the other settings, you can of course force it to True or False as you like
+HAVE_WEBM = None
+
+FORMATS = ["THEORA", "SCHRO", "VP8"]
 
 
 THEORA_QUALITY_MAPPING = { 0 : 0
@@ -69,6 +79,21 @@ SCHRO_QUALITY_MAPPING = { 0 : 0
  
 SCHRO_OPTS = { "perceptual_weighting" : 1 }
 
+VP8_QUALITY_MAPPING = { 0 : 0.0
+                      , 1 : 1.0
+                      , 2 : 2.0
+                      , 3 : 3.0
+                      , 4 : 4.0
+                      , 5 : 5.0
+                      , 6 : 6.0
+                      , 7 : 7.0
+                      , 8 : 8.0
+                      , 9 : 9.0
+                      , 10 : 10.0 }
+
+# VP8 seems to be intolerably slow if this isn't set
+VP8_OPTS = { "speed" : 2 }
+
 VORBIS_QUALITY_MAPPING = { 0 : 0.0
                         , 1 : 0.1
                         , 2 : 0.2
@@ -83,8 +108,11 @@ VORBIS_QUALITY_MAPPING = { 0 : 0.0
 
 VORBIS_OPTS = {}
 
-CONTAINER_FORMATS = ["OGG", "MATROSKA"]
+CONTAINER_FORMATS = ["OGG", "MATROSKA", "WEBM"]
 
 OGGMUX_OPTS = {}
 
 MATROSKAMUX_OPTS = { "writing-app" : "OggConvert " + version}
+
+WEBM_OPTS = { "writing-app" : "OggConvert " + version,
+              "doctype" : "webm" }

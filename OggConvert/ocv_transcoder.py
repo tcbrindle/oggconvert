@@ -43,6 +43,8 @@ class Transcoder(gobject.GObject):
             self._vquality = ocv_constants.THEORA_QUALITY_MAPPING[vquality]
         elif self._vformat == "SCHRO":
             self._vquality = ocv_constants.SCHRO_QUALITY_MAPPING[vquality]
+        elif self._vformat == "VP8":
+            self._vquality = ocv_constants.VP8_QUALITY_MAPPING[vquality]
         else:
             # We should never get here
             self._vquality = 0
@@ -176,6 +178,11 @@ class VideoEncoder(gst.Bin):
             for prop in ocv_constants.SCHRO_OPTS:
                 self.encoder.set_property(prop, ocv_constants.SCHRO_OPTS[prop])
                 self.encoder.set_property("noise-threshold", quality)
+        elif format == "VP8":
+            self.encoder = gst.element_factory_make("vp8enc")
+            for prop in ocv_constants.VP8_OPTS:
+                self.encoder.set_property(prop, ocv_constants.VP8_OPTS[prop])
+                self.encoder.set_property("quality", quality)
         else:
             self.encoder = gst.element_factory_make("theoraenc")
             for prop in ocv_constants.THEORA_OPTS:
