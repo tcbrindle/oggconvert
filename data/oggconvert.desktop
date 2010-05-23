@@ -8,5 +8,5 @@ Exec=oggconvert
 Icon=oggconvert
 Categories=AudioVideo;
 Terminal=false
-StartupNotify=false
+StartupNotify=true
 
